@@ -96,11 +96,11 @@ architecture rtl of pacman_core is
 	signal ghost_b_direction              : ghost_direction_t;
 	signal ghost_c_direction              : ghost_direction_t;
 	signal ghost_rev_direction            : ghost_direction_t;
-	signal ghost_ai_direction             : ghost_direction_t;
+	--signal ghost_ai_direction             : ghost_direction_t;
 	signal ghost_ai_selection             : ghost_ai_t;
-	signal ghost_action                   : ghost_action_t;
-	signal ghost_target_x                 : ghost_position_t;
-	signal ghost_target_y                 : ghost_position_t;
+	--signal ghost_action                   : ghost_action_t;
+	--signal ghost_target_x                 : ghost_position_t;
+	--signal ghost_target_y                 : ghost_position_t;
 	signal ghost_next_x                   : ghost_position_t;
 	signal ghost_next_y                   : ghost_position_t;
 	signal ghost_next                     : ghost_adjacency_t;
@@ -254,11 +254,11 @@ architecture rtl of pacman_core is
 	signal ghost_b_direction_signal       : ghost_direction_t;
 	signal ghost_c_direction_signal       : ghost_direction_t;
 	signal ghost_rev_direction_signal     : ghost_direction_t;
-	signal ghost_ai_direction_signal      : ghost_direction_t;
+	--signal ghost_ai_direction_signal      : ghost_direction_t;
 	signal ghost_ai_selection_signal      : ghost_ai_t;
-	signal ghost_action_signal            : ghost_action_t;
-	signal ghost_target_x_signal          : ghost_position_t;
-	signal ghost_target_y_signal          : ghost_position_t;
+	--signal ghost_action_signal            : ghost_action_t;
+	--signal ghost_target_x_signal          : ghost_position_t;
+	--signal ghost_target_y_signal          : ghost_position_t;
 	signal ghost_next_x_signal            : ghost_position_t;
 	signal ghost_next_y_signal            : ghost_position_t;
 	signal ghost_next_signal              : ghost_adjacency_t;
@@ -346,8 +346,8 @@ begin
 	LFSR32_0:    LFSR32    generic map(output_length => MAX_GHOSTS) port map(clk => clk_25MHz, seed_enable_n => random_seed_write_n, seed_input => random_seed, output => random_output);
 
 	-- Game switches & controls section
-	--game_speed_base <= not game_speed & not level_speed & "11";
-	game_speed_base <= not game_speed & "000011";
+	--game_speed_base <= "10" & not game_speed & not level_speed;
+	game_speed_base <= "10" & not game_speed & "1111";
 	game_data(3 downto 0)   <= pacman_lives;
 	game_data(13 downto 4)  <= pacman_pellets;
 	--game_data(29 downto 14) <= pacman_score;
@@ -363,8 +363,10 @@ begin
 	random_seed <= (others => '0');
 
 	-- RAM & ROM section
-	ram_0: lpm_ram_dq generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "UNUSED", lpm_indata => "UNREGISTERED", lpm_address_control => "UNREGISTERED", lpm_outdata => "UNREGISTERED") port map(data => ram_0_data_in, address => ram_address, we => ram_0_write, q => ram_0_data_out);
-	rom_0: lpm_rom    generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "maps\\map_01.hex", lpm_address_control => "UNREGISTERED", lpm_outdata => "UNREGISTERED")                     port map(address => rom_address, memenab => vcc, q => rom_0_data);
+	--ram_0: lpm_ram_dq generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "UNUSED", lpm_indata => "UNREGISTERED", lpm_address_control => "UNREGISTERED", lpm_outdata => "UNREGISTERED") port map(data => ram_0_data_in, address => ram_address, we => ram_0_write, q => ram_0_data_out);
+	--rom_0: lpm_rom    generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "maps\\map_01.hex", lpm_address_control => "UNREGISTERED", lpm_outdata => "UNREGISTERED")                     port map(address => rom_address, memenab => vcc, q => rom_0_data);
+	ram_0: lpm_ram_dq generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "UNUSED")           port map(data => ram_0_data_in, address => ram_address, we => ram_0_write, inclock => clk_25MHz, outclock => clk_25MHz, q => ram_0_data_out);
+	rom_0: lpm_rom    generic map(lpm_width => 3, lpm_widthad => ROM_ADDR_LENGTH, lpm_numwords => ROM_LENGTH, lpm_file => "maps\\map_01.hex") port map(address => rom_address, inclock => clk_25MHz, outclock => clk_25MHz, memenab => vcc, q => rom_0_data);
 
 	with ram_address_sel select ram_address <= ram_address_main when '0', ram_address_aux when '1', null when others;
 
@@ -584,7 +586,7 @@ begin
 			ghost_east_signal <= (others => FREE_CELL);
 		elsif rising_edge(clk_25MHz) then
 			case game_state is
-				when game_splash | game_playing =>
+				when game_splash | game_playing | game_eat_pellet_start | game_eat_pellet_step_1 | game_eat_pellet_step_2 | game_eat_pellet_end =>
 					-- Update auxiliary pacman data
 					if ram_x_cell = pacman_x and ram_y_cell = pacman_y-1 then
 						pacman_north_signal <= ram_0_data_out;
@@ -663,7 +665,7 @@ begin
 							-- Check direction changing
 							pacman_next_direction_signal <= pacman_change_direction;
 							pacman_next_dir := pacman_change_direction;
-							if pacman_next = WALL then
+							if pacman_current = GAP then
 								pacman_next_direction_signal <= pacman_direction;
 								pacman_next_dir := pacman_direction;
 							end if;
@@ -733,11 +735,11 @@ begin
 				ghost_b_direction_signal(i) <= left;
 				ghost_c_direction_signal(i) <= left;
 				ghost_rev_direction_signal(i) <= left;
-				ghost_ai_direction_signal(i) <= left;
+				--ghost_ai_direction_signal(i) <= left;
 				ghost_ai_selection_signal(i) <= wander_around;
-				ghost_action_signal(i) <= random;
-				ghost_target_x_signal(i) <= (others => '0');
-				ghost_target_y_signal(i) <= (others => '0');
+				--ghost_action_signal(i) <= random;
+				--ghost_target_x_signal(i) <= (others => '0');
+				--ghost_target_y_signal(i) <= (others => '0');
 				ghost_next_x_signal(i) <= (others => '0');
 				ghost_next_y_signal(i) <= (others => '0');
 				ghost_next_signal(i) <= FREE_CELL;
@@ -774,22 +776,22 @@ begin
 								ghost_ai_state_signal(i) <= analysing;
 							when analysing =>
 								-- AI analysis
-								case ghost_ai_selection(i) is
-									when wander_around =>
-										ghost_action_signal(i) <= random;
-									when follow_pacman =>
-										ghost_action_signal(i) <= follow;
-										ghost_target_x_signal(i) <= pacman_x;
-										ghost_target_y_signal(i) <= pacman_y;
-									when run_pacman =>
-										ghost_action_signal(i) <= run;
-										ghost_target_x_signal(i) <= pacman_x;
-										ghost_target_y_signal(i) <= pacman_y;
-									when follow_pen =>
-										ghost_action_signal(i) <= follow;
-										ghost_target_x_signal(i) <= ghost_pen_x;
-										ghost_target_y_signal(i) <= ghost_pen_y;
-								end case;
+								--case ghost_ai_selection(i) is
+								--	when wander_around =>
+								--		ghost_action_signal(i) <= random;
+								--	when follow_pacman =>
+								--		ghost_action_signal(i) <= follow;
+								--		ghost_target_x_signal(i) <= pacman_x;
+								--		ghost_target_y_signal(i) <= pacman_y;
+								--	when run_pacman =>
+								--		ghost_action_signal(i) <= run;
+								--		ghost_target_x_signal(i) <= pacman_x;
+								--		ghost_target_y_signal(i) <= pacman_y;
+								--	when follow_pen =>
+								--		ghost_action_signal(i) <= follow;
+								--		ghost_target_x_signal(i) <= ghost_pen_x;
+								--		ghost_target_y_signal(i) <= ghost_pen_y;
+								--end case;
 								ghost_ai_state_signal(i) <= acquiring;
 							when acquiring =>
 								-- AI data acquisition
@@ -830,34 +832,34 @@ begin
 								ghost_ai_state_signal(i) <= deciding;
 							when deciding =>
 								-- AI best decision
-								if (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_x(i) < ghost_target_x(i) then
-									ghost_ai_dir := right;
-								elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_target_x(i) < ghost_x(i) then
-									ghost_ai_dir := left;
-								elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_y(i) < ghost_target_y(i) then
-									ghost_ai_dir := down;
-								elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_target_y(i) < ghost_y(i) then
-									ghost_ai_dir := up;
-								elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_y(i) < ghost_target_y(i) then
-									ghost_ai_dir := down;
-								elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_target_y(i) < ghost_y(i) then
-									ghost_ai_dir := up;
-								elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_x(i) < ghost_target_x(i) then
-									ghost_ai_dir := right;
-								elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_target_x(i) < ghost_x(i) then
-									ghost_ai_dir := left;
-								end if;
+								--if (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_x(i) < ghost_target_x(i) then
+								--	ghost_ai_dir := right;
+								--elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_target_x(i) < ghost_x(i) then
+								--	ghost_ai_dir := left;
+								--elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_y(i) < ghost_target_y(i) then
+								--	ghost_ai_dir := down;
+								--elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_target_y(i) < ghost_y(i) then
+								--	ghost_ai_dir := up;
+								--elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_y(i) < ghost_target_y(i) then
+								--	ghost_ai_dir := down;
+								--elsif (ghost_direction(i) = up or ghost_direction(i) = down) and ghost_target_y(i) < ghost_y(i) then
+								--	ghost_ai_dir := up;
+								--elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_x(i) < ghost_target_x(i) then
+								--	ghost_ai_dir := right;
+								--elsif (ghost_direction(i) = left or ghost_direction(i) = right) and ghost_target_x(i) < ghost_x(i) then
+								--	ghost_ai_dir := left;
+								--end if;
 
 								-- Reverse direction if running away from target
-								if ghost_action(i) = run then
-									case ghost_ai_dir is
-										when up    => ghost_ai_dir := down;
-										when down  => ghost_ai_dir := up;
-										when left  => ghost_ai_dir := right;
-										when right => ghost_ai_dir := left;
-									end case;
-								end if;
-								ghost_ai_direction_signal(i) <= ghost_ai_dir;
+								--if ghost_action(i) = run then
+								--	case ghost_ai_dir is
+								--		when up    => ghost_ai_dir := down;
+								--		when down  => ghost_ai_dir := up;
+								--		when left  => ghost_ai_dir := right;
+								--		when right => ghost_ai_dir := left;
+								--	end case;
+								--end if;
+								--ghost_ai_direction_signal(i) <= ghost_ai_dir;
 								ghost_ai_state_signal(i) <= asserting;
 							when asserting =>
 								-- Assert the direction decision
@@ -1120,13 +1122,13 @@ begin
 					case game_process_state is
 						when process_movement =>
 							-- Detect player movement
-							if game_control_up = '1' then
+							if game_control_up = '1' and pacman_north /= WALL and pacman_north /= GHOST_WALL then
 								pacman_change_direction_signal <= up;
-							elsif game_control_down = '1' then
+							elsif game_control_down = '1' and pacman_south /= WALL and pacman_south /= GHOST_WALL then
 								pacman_change_direction_signal <= down;
-							elsif game_control_left = '1' then
+							elsif game_control_left = '1' and pacman_west /= WALL and pacman_west /= GHOST_WALL then
 								pacman_change_direction_signal <= left;
-							elsif game_control_right = '1' then
+							elsif game_control_right = '1' and pacman_east /= WALL and pacman_east /= GHOST_WALL then
 								pacman_change_direction_signal <= right;
 							end if;
 							game_process_state_signal <= process_pellet;
@@ -1146,6 +1148,7 @@ begin
 							game_process_state_signal <= assert_collision;
 						when assert_collision =>
 							-- Detect collisions
+							ghost_collision_signal <= (others => false);
 							for i in 0 to MAX_GHOSTS-1 loop
 								if ghost_health(i) = weak and pacman_super_time = 0 then
 									ghost_health_signal(i) <= alive;
@@ -1320,11 +1323,11 @@ begin
 			ghost_b_direction <= (others => left);
 			ghost_c_direction <= (others => left);
 			ghost_rev_direction <= (others => left);
-			ghost_ai_direction <= (others => left);
+			--ghost_ai_direction <= (others => left);
 			ghost_ai_selection <= (others => wander_around);
-			ghost_action <= (others => random);
-			ghost_target_x <= (others => (others => '0'));
-			ghost_target_y <= (others => (others => '0'));
+			--ghost_action <= (others => random);
+			--ghost_target_x <= (others => (others => '0'));
+			--ghost_target_y <= (others => (others => '0'));
 			ghost_next_x <= (others => (others => '0'));
 			ghost_next_y <= (others => (others => '0'));
 			ghost_next <= (others => FREE_CELL);
@@ -1389,11 +1392,11 @@ begin
 			ghost_b_direction <= ghost_b_direction_signal;
 			ghost_c_direction <= ghost_c_direction_signal;
 			ghost_rev_direction <= ghost_rev_direction_signal;
-			ghost_ai_direction <= ghost_ai_direction_signal;
+			--ghost_ai_direction <= ghost_ai_direction_signal;
 			ghost_ai_selection <= ghost_ai_selection_signal;
-			ghost_action <= ghost_action_signal;
-			ghost_target_x <= ghost_target_x_signal;
-			ghost_target_y <= ghost_target_y_signal;
+			--ghost_action <= ghost_action_signal;
+			--ghost_target_x <= ghost_target_x_signal;
+			--ghost_target_y <= ghost_target_y_signal;
 			ghost_next_x <= ghost_next_x_signal;
 			ghost_next_y <= ghost_next_y_signal;
 			ghost_next <= ghost_next_signal;

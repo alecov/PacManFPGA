@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pacman
-Tue Aug 28 23:34:20 2007
+Sat Sep 01 09:06:07 2007
 Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
 
 
@@ -23,152 +23,132 @@ Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
  15. State Machine - |pacman|pacman_core:core_0|ghost_ai_state[1]
  16. State Machine - |pacman|pacman_core:core_0|ghost_ai_state[2]
  17. State Machine - |pacman|pacman_core:core_0|ghost_ai_state[3]
- 18. State Machine - |pacman|pacman_core:core_0|ghost_action[0]
- 19. State Machine - |pacman|pacman_core:core_0|ghost_action[1]
- 20. State Machine - |pacman|pacman_core:core_0|ghost_action[2]
- 21. State Machine - |pacman|pacman_core:core_0|ghost_action[3]
- 22. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[0]
- 23. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[1]
- 24. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[2]
- 25. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[3]
- 26. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[0]
- 27. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[1]
- 28. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[2]
- 29. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[3]
- 30. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[0]
- 31. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[1]
- 32. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[2]
- 33. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[3]
- 34. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[0]
- 35. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[1]
- 36. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[2]
- 37. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[3]
- 38. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[0]
- 39. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[1]
- 40. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[2]
- 41. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[3]
- 42. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[0]
- 43. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[1]
- 44. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[2]
- 45. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[3]
- 46. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[0]
- 47. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[1]
- 48. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[2]
- 49. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[3]
- 50. State Machine - |pacman|pacman_core:core_0|ghost_direction[0]
- 51. State Machine - |pacman|pacman_core:core_0|ghost_direction[1]
- 52. State Machine - |pacman|pacman_core:core_0|ghost_direction[2]
- 53. State Machine - |pacman|pacman_core:core_0|ghost_direction[3]
- 54. State Machine - |pacman|pacman_core:core_0|pacman_next_direction
- 55. State Machine - |pacman|pacman_core:core_0|pacman_change_direction
- 56. State Machine - |pacman|pacman_core:core_0|pacman_direction
- 57. State Machine - |pacman|pacman_core:core_0|game_process_state_signal
- 58. State Machine - |pacman|pacman_core:core_0|game_state_signal
- 59. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[0]
- 60. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[1]
- 61. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[2]
- 62. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[3]
- 63. State Machine - |pacman|pacman_core:core_0|pacman_change_direction_signal
- 64. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[3]
- 65. State Machine - |pacman|pacman_core:core_0|ghost_action_signal[3]
- 66. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[3]
- 67. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[3]
- 68. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[3]
- 69. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[3]
- 70. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[3]
- 71. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[3]
- 72. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[3]
- 73. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[3]
- 74. State Machine - |pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir
- 75. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[2]
- 76. State Machine - |pacman|pacman_core:core_0|ghost_action_signal[2]
- 77. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[2]
- 78. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[2]
- 79. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[2]
- 80. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[2]
- 81. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[2]
- 82. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[2]
- 83. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[2]
- 84. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[2]
- 85. State Machine - |pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir
- 86. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[1]
- 87. State Machine - |pacman|pacman_core:core_0|ghost_action_signal[1]
- 88. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[1]
- 89. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[1]
- 90. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[1]
- 91. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[1]
- 92. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[1]
- 93. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[1]
- 94. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[1]
- 95. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[1]
- 96. State Machine - |pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir
- 97. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[0]
- 98. State Machine - |pacman|pacman_core:core_0|ghost_action_signal[0]
- 99. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[0]
-100. State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[0]
-101. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[0]
-102. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[0]
-103. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[0]
-104. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[0]
-105. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[0]
-106. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[0]
-107. State Machine - |pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir
-108. State Machine - |pacman|pacman_core:core_0|pacman_next_direction_signal
-109. State Machine - |pacman|pacman_core:core_0|pacman_direction_signal
-110. State Machine - |pacman|pacman_core:core_0|\pacman:pacman_next_dir
-111. Registers Removed During Synthesis
-112. General Register Statistics
-113. Inverted Register Statistics
-114. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_0
-115. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_1
-116. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_2
-117. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_3
-118. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_0
-119. Parameter Settings for User Entity Instance: pacman_core:core_0|LFSR32:LFSR32_0
-120. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_RAM_DQ:ram_0
-121. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:rom_0
-122. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_font
-123. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_0
-124. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_1
-125. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_2
-126. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_pacman
-127. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast
-128. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal
-129. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow
-130. Parameter Settings for User Entity Instance: debouncer:debouncer_0
-131. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0
-132. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1
-133. Parameter Settings for Inferred Entity Instance: debouncer:debouncer_0|lpm_counter:count_rtl_2
-134. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3
-135. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4
-136. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5
-137. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6
-138. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7
-139. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_counter:v_count_rtl_8
-140. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9
-141. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0
-142. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add0
-143. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add7
-144. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add45
-145. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add46
-146. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add47
-147. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add44
-148. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add34
-149. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add9
-150. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add37
-151. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add38
-152. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add8
-153. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add4
-154. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add5
-155. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add6
-156. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add33
-157. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add39
-158. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add41
-159. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add40
-160. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add42
-161. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add35
-162. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add36
-163. Analysis & Synthesis Messages
+ 18. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[0]
+ 19. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[1]
+ 20. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[2]
+ 21. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[3]
+ 22. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[0]
+ 23. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[1]
+ 24. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[2]
+ 25. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[3]
+ 26. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[0]
+ 27. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[1]
+ 28. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[2]
+ 29. State Machine - |pacman|pacman_core:core_0|ghost_c_direction[3]
+ 30. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[0]
+ 31. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[1]
+ 32. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[2]
+ 33. State Machine - |pacman|pacman_core:core_0|ghost_b_direction[3]
+ 34. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[0]
+ 35. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[1]
+ 36. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[2]
+ 37. State Machine - |pacman|pacman_core:core_0|ghost_a_direction[3]
+ 38. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[0]
+ 39. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[1]
+ 40. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[2]
+ 41. State Machine - |pacman|pacman_core:core_0|ghost_next_direction[3]
+ 42. State Machine - |pacman|pacman_core:core_0|ghost_direction[0]
+ 43. State Machine - |pacman|pacman_core:core_0|ghost_direction[1]
+ 44. State Machine - |pacman|pacman_core:core_0|ghost_direction[2]
+ 45. State Machine - |pacman|pacman_core:core_0|ghost_direction[3]
+ 46. State Machine - |pacman|pacman_core:core_0|pacman_next_direction
+ 47. State Machine - |pacman|pacman_core:core_0|pacman_change_direction
+ 48. State Machine - |pacman|pacman_core:core_0|pacman_direction
+ 49. State Machine - |pacman|pacman_core:core_0|game_process_state_signal
+ 50. State Machine - |pacman|pacman_core:core_0|game_state_signal
+ 51. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[0]
+ 52. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[1]
+ 53. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[2]
+ 54. State Machine - |pacman|pacman_core:core_0|ghost_health_signal[3]
+ 55. State Machine - |pacman|pacman_core:core_0|pacman_change_direction_signal
+ 56. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[3]
+ 57. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[3]
+ 58. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[3]
+ 59. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[3]
+ 60. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[3]
+ 61. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[3]
+ 62. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[3]
+ 63. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[3]
+ 64. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[2]
+ 65. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[2]
+ 66. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[2]
+ 67. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[2]
+ 68. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[2]
+ 69. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[2]
+ 70. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[2]
+ 71. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[2]
+ 72. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[1]
+ 73. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[1]
+ 74. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[1]
+ 75. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[1]
+ 76. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[1]
+ 77. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[1]
+ 78. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[1]
+ 79. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[1]
+ 80. State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[0]
+ 81. State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[0]
+ 82. State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[0]
+ 83. State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[0]
+ 84. State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[0]
+ 85. State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[0]
+ 86. State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[0]
+ 87. State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[0]
+ 88. State Machine - |pacman|pacman_core:core_0|pacman_next_direction_signal
+ 89. State Machine - |pacman|pacman_core:core_0|pacman_direction_signal
+ 90. State Machine - |pacman|pacman_core:core_0|\pacman:pacman_next_dir
+ 91. Registers Removed During Synthesis
+ 92. General Register Statistics
+ 93. Inverted Register Statistics
+ 94. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_0
+ 95. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_1
+ 96. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_2
+ 97. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_3
+ 98. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_0
+ 99. Parameter Settings for User Entity Instance: pacman_core:core_0|LFSR32:LFSR32_0
+100. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_RAM_DQ:ram_0
+101. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:rom_0
+102. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_font
+103. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_0
+104. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_1
+105. Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_ROM:bitmap_2
+106. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div:clk_div_pacman
+107. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast
+108. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal
+109. Parameter Settings for User Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow
+110. Parameter Settings for User Entity Instance: debouncer:debouncer_0
+111. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0
+112. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1
+113. Parameter Settings for Inferred Entity Instance: debouncer:debouncer_0|lpm_counter:count_rtl_2
+114. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3
+115. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4
+116. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5
+117. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6
+118. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7
+119. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_counter:v_count_rtl_8
+120. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9
+121. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0
+122. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add0
+123. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add44
+124. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add34
+125. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add7
+126. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add45
+127. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add46
+128. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add47
+129. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add9
+130. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add37
+131. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add38
+132. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add8
+133. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add4
+134. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add5
+135. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add6
+136. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add33
+137. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add39
+138. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add41
+139. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add40
+140. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add42
+141. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add35
+142. Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add36
+143. Analysis & Synthesis Messages
 
 
 
@@ -194,13 +174,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug 28 23:34:19 2007    ;
+; Analysis & Synthesis Status ; Successful - Sat Sep 01 09:06:07 2007    ;
 ; Quartus II Version          ; 6.1 Build 201 11/27/2006 SJ Full Version ;
 ; Revision Name               ; pacman                                   ;
 ; Top-level Entity Name       ; pacman                                   ;
 ; Family                      ; FLEX10K                                  ;
-; Total logic elements        ; 2,947                                    ;
-; Total pins                  ; 28                                       ;
+; Total logic elements        ; 3,011                                    ;
+; Total pins                  ; 26                                       ;
 ; Total memory bits           ; 12,568                                   ;
 +-----------------------------+------------------------------------------+
 
@@ -262,14 +242,15 @@ applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
 ; vga_sync.vhdl                    ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/vga_sync.vhdl      ;
+; clk_div.vhdl                     ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/clk_div.vhdl       ;
 ; clk_div_n.vhdl                   ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/clk_div_n.vhdl     ;
 ; debouncer.vhdl                   ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/debouncer.vhdl     ;
 ; display7.vhdl                    ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/display7.vhdl      ;
+; keyboard.vhdl                    ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/keyboard.vhdl      ;
 ; lfsr32.vhdl                      ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/lfsr32.vhdl        ;
 ; pacman.vhdl                      ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/pacman.vhdl        ;
 ; pacman_core.vhdl                 ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/pacman_core.vhdl   ;
 ; pacman_types.vhdl                ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/pacman_types.vhdl  ;
-; clk_div.vhdl                     ; yes             ; User VHDL File  ; C:/Documents and Settings/ra030845/Desktop/Pacman/clk_div.vhdl       ;
 ; LPM_RAM_DQ.tdf                   ; yes             ; Megafunction    ; c:/altera/61/quartus/libraries/megafunctions/LPM_RAM_DQ.tdf          ;
 ; altram.inc                       ; yes             ; Megafunction    ; c:/altera/61/quartus/libraries/megafunctions/altram.inc              ;
 ; lpm_mux.inc                      ; yes             ; Megafunction    ; c:/altera/61/quartus/libraries/megafunctions/lpm_mux.inc             ;
@@ -317,21 +298,21 @@ applicable agreement for further details.
 +-----------------------------------+---------------------------------+
 ; Resource                          ; Usage                           ;
 +-----------------------------------+---------------------------------+
-; Total logic elements              ; 2947                            ;
-; Total combinational functions     ; 2288                            ;
-;     -- Total 4-input functions    ; 1437                            ;
-;     -- Total 3-input functions    ; 448                             ;
-;     -- Total 2-input functions    ; 183                             ;
+; Total logic elements              ; 3011                            ;
+; Total combinational functions     ; 2335                            ;
+;     -- Total 4-input functions    ; 1465                            ;
+;     -- Total 3-input functions    ; 469                             ;
+;     -- Total 2-input functions    ; 185                             ;
 ;     -- Total 1-input functions    ; 154                             ;
-;     -- Total 0-input functions    ; 66                              ;
-; Total registers                   ; 1244                            ;
+;     -- Total 0-input functions    ; 62                              ;
+; Total registers                   ; 1263                            ;
 ; Total logic cells in carry chains ; 225                             ;
-; I/O pins                          ; 28                              ;
+; I/O pins                          ; 26                              ;
 ; Total memory bits                 ; 12568                           ;
 ; Maximum fan-out node              ; debouncer:debouncer_0|output[0] ;
-; Maximum fan-out                   ; 1004                            ;
-; Total fan-out                     ; 11238                           ;
-; Average fan-out                   ; 3.76                            ;
+; Maximum fan-out                   ; 1012                            ;
+; Total fan-out                     ; 11488                           ;
+; Average fan-out                   ; 3.77                            ;
 +-----------------------------------+---------------------------------+
 
 
@@ -340,11 +321,14 @@ applicable agreement for further details.
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                ;
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; |pacman                                      ; 2947 (0)    ; 1244         ; 12568       ; 28   ; 1703 (0)     ; 659 (0)           ; 585 (0)          ; 225 (0)         ; 0 (0)      ; |pacman                                                                                                            ;
-;    |debouncer:debouncer_0|                   ; 72 (62)     ; 50           ; 0           ; 0    ; 22 (22)      ; 32 (32)           ; 18 (8)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0                                                                                      ;
+; |pacman                                      ; 3011 (12)   ; 1263         ; 12568       ; 26   ; 1748 (4)     ; 676 (8)           ; 587 (0)          ; 225 (0)         ; 0 (0)      ; |pacman                                                                                                            ;
+;    |debouncer:debouncer_0|                   ; 44 (34)     ; 30           ; 0           ; 0    ; 14 (14)      ; 16 (16)           ; 14 (4)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0                                                                                      ;
 ;       |lpm_counter:count_rtl_2|              ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_2                                                              ;
 ;          |alt_counter_f10ke:wysi_counter|    ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_2|alt_counter_f10ke:wysi_counter                               ;
-;    |pacman_core:core_0|                      ; 2875 (2519) ; 1194         ; 12568       ; 0    ; 1681 (1492)  ; 627 (567)         ; 567 (460)        ; 215 (13)        ; 0 (0)      ; |pacman|pacman_core:core_0                                                                                         ;
+;    |display7:display7_0|                     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|display7:display7_0                                                                                        ;
+;    |display7:display7_1|                     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|display7:display7_1                                                                                        ;
+;    |keyboard:keyboard_0|                     ; 43 (43)     ; 31           ; 0           ; 0    ; 12 (12)      ; 25 (25)           ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |pacman|keyboard:keyboard_0                                                                                        ;
+;    |pacman_core:core_0|                      ; 2898 (2535) ; 1194         ; 12568       ; 0    ; 1704 (1508)  ; 627 (567)         ; 567 (460)        ; 215 (13)        ; 0 (0)      ; |pacman|pacman_core:core_0                                                                                         ;
 ;       |LFSR32:LFSR32_0|                      ; 36 (36)     ; 36           ; 0           ; 0    ; 0 (0)        ; 35 (35)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|LFSR32:LFSR32_0                                                                         ;
 ;       |VGA_SYNC:vga_sync_0|                  ; 77 (58)     ; 48           ; 0           ; 0    ; 29 (20)      ; 25 (25)           ; 23 (13)          ; 21 (2)          ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0                                                                     ;
 ;          |lpm_add_sub:Add0|                  ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0                                                    ;
@@ -365,16 +349,16 @@ applicable agreement for further details.
 ;          |lpm_counter:count_rtl_3|           ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3                                               ;
 ;             |alt_counter_f10ke:wysi_counter| ; 22 (22)     ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (22)          ; 22 (22)         ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter                ;
 ;       |clk_div:clk_div_pacman|               ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_pacman                                                                  ;
-;       |clk_div_n:clk_div_n_0|                ; 13 (5)      ; 9            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0                                                                   ;
+;       |clk_div_n:clk_div_n_0|                ; 14 (6)      ; 9            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0                                                                   ;
 ;          |lpm_counter:count_rtl_9|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9                                           ;
 ;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9|alt_counter_f10ke:wysi_counter            ;
 ;       |clk_div_n:clk_div_n_ghost_fast|       ; 15 (7)      ; 9            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast                                                          ;
 ;          |lpm_counter:count_rtl_4|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4                                  ;
 ;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4|alt_counter_f10ke:wysi_counter   ;
-;       |clk_div_n:clk_div_n_ghost_normal|     ; 12 (4)      ; 9            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal                                                        ;
+;       |clk_div_n:clk_div_n_ghost_normal|     ; 16 (8)      ; 9            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal                                                        ;
 ;          |lpm_counter:count_rtl_6|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6                                ;
 ;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6|alt_counter_f10ke:wysi_counter ;
-;       |clk_div_n:clk_div_n_ghost_slow|       ; 14 (6)      ; 9            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow                                                          ;
+;       |clk_div_n:clk_div_n_ghost_slow|       ; 16 (8)      ; 9            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow                                                          ;
 ;          |lpm_counter:count_rtl_7|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7                                  ;
 ;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7|alt_counter_f10ke:wysi_counter   ;
 ;       |lpm_add_sub:Add0|                     ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add0                                                                        ;
@@ -629,54 +613,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action[0]                                     ;
-+------------------------+---------------------+------------------------+------------------------+
-; Name                   ; ghost_action[0].run ; ghost_action[0].follow ; ghost_action[0].random ;
-+------------------------+---------------------+------------------------+------------------------+
-; ghost_action[0].random ; 0                   ; 0                      ; 0                      ;
-; ghost_action[0].follow ; 0                   ; 1                      ; 1                      ;
-; ghost_action[0].run    ; 1                   ; 0                      ; 1                      ;
-+------------------------+---------------------+------------------------+------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action[1]                                     ;
-+------------------------+---------------------+------------------------+------------------------+
-; Name                   ; ghost_action[1].run ; ghost_action[1].follow ; ghost_action[1].random ;
-+------------------------+---------------------+------------------------+------------------------+
-; ghost_action[1].random ; 0                   ; 0                      ; 0                      ;
-; ghost_action[1].follow ; 0                   ; 1                      ; 1                      ;
-; ghost_action[1].run    ; 1                   ; 0                      ; 1                      ;
-+------------------------+---------------------+------------------------+------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action[2]                                     ;
-+------------------------+---------------------+------------------------+------------------------+
-; Name                   ; ghost_action[2].run ; ghost_action[2].follow ; ghost_action[2].random ;
-+------------------------+---------------------+------------------------+------------------------+
-; ghost_action[2].random ; 0                   ; 0                      ; 0                      ;
-; ghost_action[2].follow ; 0                   ; 1                      ; 1                      ;
-; ghost_action[2].run    ; 1                   ; 0                      ; 1                      ;
-+------------------------+---------------------+------------------------+------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action[3]                                     ;
-+------------------------+---------------------+------------------------+------------------------+
-; Name                   ; ghost_action[3].run ; ghost_action[3].follow ; ghost_action[3].random ;
-+------------------------+---------------------+------------------------+------------------------+
-; ghost_action[3].random ; 0                   ; 0                      ; 0                      ;
-; ghost_action[3].follow ; 0                   ; 1                      ; 1                      ;
-; ghost_action[3].run    ; 1                   ; 0                      ; 1                      ;
-+------------------------+---------------------+------------------------+------------------------+
-
-
-Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[0]                                                                                                                      ;
 +-------------------------------------+----------------------------------+----------------------------------+-------------------------------------+-------------------------------------+
@@ -726,58 +662,6 @@ Encoding Type:  One-Hot
 ; ghost_ai_selection[3].run_pacman    ; 0                                ; 1                                ; 0                                   ; 1                                   ;
 ; ghost_ai_selection[3].follow_pen    ; 1                                ; 0                                ; 0                                   ; 1                                   ;
 +-------------------------------------+----------------------------------+----------------------------------+-------------------------------------+-------------------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[0]                                                                               ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; Name                        ; ghost_ai_direction[0].right ; ghost_ai_direction[0].up ; ghost_ai_direction[0].down ; ghost_ai_direction[0].left ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; ghost_ai_direction[0].left  ; 0                           ; 0                        ; 0                          ; 0                          ;
-; ghost_ai_direction[0].down  ; 0                           ; 0                        ; 1                          ; 1                          ;
-; ghost_ai_direction[0].up    ; 0                           ; 1                        ; 0                          ; 1                          ;
-; ghost_ai_direction[0].right ; 1                           ; 0                        ; 0                          ; 1                          ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[1]                                                                               ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; Name                        ; ghost_ai_direction[1].right ; ghost_ai_direction[1].up ; ghost_ai_direction[1].down ; ghost_ai_direction[1].left ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; ghost_ai_direction[1].left  ; 0                           ; 0                        ; 0                          ; 0                          ;
-; ghost_ai_direction[1].down  ; 0                           ; 0                        ; 1                          ; 1                          ;
-; ghost_ai_direction[1].up    ; 0                           ; 1                        ; 0                          ; 1                          ;
-; ghost_ai_direction[1].right ; 1                           ; 0                        ; 0                          ; 1                          ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[2]                                                                               ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; Name                        ; ghost_ai_direction[2].right ; ghost_ai_direction[2].up ; ghost_ai_direction[2].down ; ghost_ai_direction[2].left ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; ghost_ai_direction[2].left  ; 0                           ; 0                        ; 0                          ; 0                          ;
-; ghost_ai_direction[2].down  ; 0                           ; 0                        ; 1                          ; 1                          ;
-; ghost_ai_direction[2].up    ; 0                           ; 1                        ; 0                          ; 1                          ;
-; ghost_ai_direction[2].right ; 1                           ; 0                        ; 0                          ; 1                          ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[3]                                                                               ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; Name                        ; ghost_ai_direction[3].right ; ghost_ai_direction[3].up ; ghost_ai_direction[3].down ; ghost_ai_direction[3].left ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
-; ghost_ai_direction[3].left  ; 0                           ; 0                        ; 0                          ; 0                          ;
-; ghost_ai_direction[3].down  ; 0                           ; 0                        ; 1                          ; 1                          ;
-; ghost_ai_direction[3].up    ; 0                           ; 1                        ; 0                          ; 1                          ;
-; ghost_ai_direction[3].right ; 1                           ; 0                        ; 0                          ; 1                          ;
-+-----------------------------+-----------------------------+--------------------------+----------------------------+----------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1252,18 +1136,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action_signal[3]                                                          ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; Name                          ; ghost_action_signal[3].run ; ghost_action_signal[3].follow ; ghost_action_signal[3].random ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; ghost_action_signal[3].random ; 0                          ; 0                             ; 0                             ;
-; ghost_action_signal[3].follow ; 0                          ; 1                             ; 1                             ;
-; ghost_action_signal[3].run    ; 1                          ; 0                             ; 1                             ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[3]                                                                                                                                                  ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
@@ -1274,19 +1146,6 @@ Encoding Type:  One-Hot
 ; ghost_ai_selection_signal[3].run_pacman    ; 0                                       ; 1                                       ; 0                                          ; 1                                          ;
 ; ghost_ai_selection_signal[3].follow_pen    ; 1                                       ; 0                                       ; 0                                          ; 1                                          ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[3]                                                                                                           ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; Name                               ; ghost_ai_direction_signal[3].right ; ghost_ai_direction_signal[3].up ; ghost_ai_direction_signal[3].down ; ghost_ai_direction_signal[3].left ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; ghost_ai_direction_signal[3].left  ; 0                                  ; 0                               ; 0                                 ; 0                                 ;
-; ghost_ai_direction_signal[3].down  ; 0                                  ; 0                               ; 1                                 ; 1                                 ;
-; ghost_ai_direction_signal[3].up    ; 0                                  ; 1                               ; 0                                 ; 1                                 ;
-; ghost_ai_direction_signal[3].right ; 1                                  ; 0                               ; 0                                 ; 1                                 ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1368,19 +1227,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir                                                                                                                   ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; Name                                 ; \ghost:3:ghost_ai:ghost_ai_dir.right ; \ghost:3:ghost_ai:ghost_ai_dir.left ; \ghost:3:ghost_ai:ghost_ai_dir.down ; \ghost:3:ghost_ai:ghost_ai_dir.up ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; \ghost:3:ghost_ai:ghost_ai_dir.up    ; 0                                    ; 0                                   ; 0                                   ; 0                                 ;
-; \ghost:3:ghost_ai:ghost_ai_dir.down  ; 0                                    ; 0                                   ; 1                                   ; 1                                 ;
-; \ghost:3:ghost_ai:ghost_ai_dir.left  ; 0                                    ; 1                                   ; 0                                   ; 1                                 ;
-; \ghost:3:ghost_ai:ghost_ai_dir.right ; 1                                    ; 0                                   ; 0                                   ; 1                                 ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[2]                                                                                                                                                                                                                                                                              ;
 +------------------------------------------+---------------------------------+----------------------------------+------------------------------------------+------------------------------------+-----------------------------------+------------------------------------+------------------------------------+------------------------------------+
@@ -1398,18 +1244,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action_signal[2]                                                          ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; Name                          ; ghost_action_signal[2].run ; ghost_action_signal[2].follow ; ghost_action_signal[2].random ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; ghost_action_signal[2].random ; 0                          ; 0                             ; 0                             ;
-; ghost_action_signal[2].follow ; 0                          ; 1                             ; 1                             ;
-; ghost_action_signal[2].run    ; 1                          ; 0                             ; 1                             ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[2]                                                                                                                                                  ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
@@ -1420,19 +1254,6 @@ Encoding Type:  One-Hot
 ; ghost_ai_selection_signal[2].run_pacman    ; 0                                       ; 1                                       ; 0                                          ; 1                                          ;
 ; ghost_ai_selection_signal[2].follow_pen    ; 1                                       ; 0                                       ; 0                                          ; 1                                          ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[2]                                                                                                           ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; Name                               ; ghost_ai_direction_signal[2].right ; ghost_ai_direction_signal[2].up ; ghost_ai_direction_signal[2].down ; ghost_ai_direction_signal[2].left ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; ghost_ai_direction_signal[2].left  ; 0                                  ; 0                               ; 0                                 ; 0                                 ;
-; ghost_ai_direction_signal[2].down  ; 0                                  ; 0                               ; 1                                 ; 1                                 ;
-; ghost_ai_direction_signal[2].up    ; 0                                  ; 1                               ; 0                                 ; 1                                 ;
-; ghost_ai_direction_signal[2].right ; 1                                  ; 0                               ; 0                                 ; 1                                 ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1514,19 +1335,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir                                                                                                                   ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; Name                                 ; \ghost:2:ghost_ai:ghost_ai_dir.right ; \ghost:2:ghost_ai:ghost_ai_dir.left ; \ghost:2:ghost_ai:ghost_ai_dir.down ; \ghost:2:ghost_ai:ghost_ai_dir.up ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; \ghost:2:ghost_ai:ghost_ai_dir.up    ; 0                                    ; 0                                   ; 0                                   ; 0                                 ;
-; \ghost:2:ghost_ai:ghost_ai_dir.down  ; 0                                    ; 0                                   ; 1                                   ; 1                                 ;
-; \ghost:2:ghost_ai:ghost_ai_dir.left  ; 0                                    ; 1                                   ; 0                                   ; 1                                 ;
-; \ghost:2:ghost_ai:ghost_ai_dir.right ; 1                                    ; 0                                   ; 0                                   ; 1                                 ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[1]                                                                                                                                                                                                                                                                              ;
 +------------------------------------------+---------------------------------+----------------------------------+------------------------------------------+------------------------------------+-----------------------------------+------------------------------------+------------------------------------+------------------------------------+
@@ -1544,18 +1352,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action_signal[1]                                                          ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; Name                          ; ghost_action_signal[1].run ; ghost_action_signal[1].follow ; ghost_action_signal[1].random ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; ghost_action_signal[1].random ; 0                          ; 0                             ; 0                             ;
-; ghost_action_signal[1].follow ; 0                          ; 1                             ; 1                             ;
-; ghost_action_signal[1].run    ; 1                          ; 0                             ; 1                             ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[1]                                                                                                                                                  ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
@@ -1566,19 +1362,6 @@ Encoding Type:  One-Hot
 ; ghost_ai_selection_signal[1].run_pacman    ; 0                                       ; 1                                       ; 0                                          ; 1                                          ;
 ; ghost_ai_selection_signal[1].follow_pen    ; 1                                       ; 0                                       ; 0                                          ; 1                                          ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[1]                                                                                                           ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; Name                               ; ghost_ai_direction_signal[1].right ; ghost_ai_direction_signal[1].up ; ghost_ai_direction_signal[1].down ; ghost_ai_direction_signal[1].left ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; ghost_ai_direction_signal[1].left  ; 0                                  ; 0                               ; 0                                 ; 0                                 ;
-; ghost_ai_direction_signal[1].down  ; 0                                  ; 0                               ; 1                                 ; 1                                 ;
-; ghost_ai_direction_signal[1].up    ; 0                                  ; 1                               ; 0                                 ; 1                                 ;
-; ghost_ai_direction_signal[1].right ; 1                                  ; 0                               ; 0                                 ; 1                                 ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1660,19 +1443,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir                                                                                                                   ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; Name                                 ; \ghost:1:ghost_ai:ghost_ai_dir.right ; \ghost:1:ghost_ai:ghost_ai_dir.left ; \ghost:1:ghost_ai:ghost_ai_dir.down ; \ghost:1:ghost_ai:ghost_ai_dir.up ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; \ghost:1:ghost_ai:ghost_ai_dir.up    ; 0                                    ; 0                                   ; 0                                   ; 0                                 ;
-; \ghost:1:ghost_ai:ghost_ai_dir.down  ; 0                                    ; 0                                   ; 1                                   ; 1                                 ;
-; \ghost:1:ghost_ai:ghost_ai_dir.left  ; 0                                    ; 1                                   ; 0                                   ; 1                                 ;
-; \ghost:1:ghost_ai:ghost_ai_dir.right ; 1                                    ; 0                                   ; 0                                   ; 1                                 ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[0]                                                                                                                                                                                                                                                                              ;
 +------------------------------------------+---------------------------------+----------------------------------+------------------------------------------+------------------------------------+-----------------------------------+------------------------------------+------------------------------------+------------------------------------+
@@ -1690,18 +1460,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_action_signal[0]                                                          ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; Name                          ; ghost_action_signal[0].run ; ghost_action_signal[0].follow ; ghost_action_signal[0].random ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-; ghost_action_signal[0].random ; 0                          ; 0                             ; 0                             ;
-; ghost_action_signal[0].follow ; 0                          ; 1                             ; 1                             ;
-; ghost_action_signal[0].run    ; 1                          ; 0                             ; 1                             ;
-+-------------------------------+----------------------------+-------------------------------+-------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[0]                                                                                                                                                  ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
@@ -1712,19 +1470,6 @@ Encoding Type:  One-Hot
 ; ghost_ai_selection_signal[0].run_pacman    ; 0                                       ; 1                                       ; 0                                          ; 1                                          ;
 ; ghost_ai_selection_signal[0].follow_pen    ; 1                                       ; 0                                       ; 0                                          ; 1                                          ;
 +--------------------------------------------+-----------------------------------------+-----------------------------------------+--------------------------------------------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[0]                                                                                                           ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; Name                               ; ghost_ai_direction_signal[0].right ; ghost_ai_direction_signal[0].up ; ghost_ai_direction_signal[0].down ; ghost_ai_direction_signal[0].left ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
-; ghost_ai_direction_signal[0].left  ; 0                                  ; 0                               ; 0                                 ; 0                                 ;
-; ghost_ai_direction_signal[0].down  ; 0                                  ; 0                               ; 1                                 ; 1                                 ;
-; ghost_ai_direction_signal[0].up    ; 0                                  ; 1                               ; 0                                 ; 1                                 ;
-; ghost_ai_direction_signal[0].right ; 1                                  ; 0                               ; 0                                 ; 1                                 ;
-+------------------------------------+------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -1806,19 +1551,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir                                                                                                                   ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; Name                                 ; \ghost:0:ghost_ai:ghost_ai_dir.right ; \ghost:0:ghost_ai:ghost_ai_dir.left ; \ghost:0:ghost_ai:ghost_ai_dir.down ; \ghost:0:ghost_ai:ghost_ai_dir.up ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-; \ghost:0:ghost_ai:ghost_ai_dir.up    ; 0                                    ; 0                                   ; 0                                   ; 0                                 ;
-; \ghost:0:ghost_ai:ghost_ai_dir.down  ; 0                                    ; 0                                   ; 1                                   ; 1                                 ;
-; \ghost:0:ghost_ai:ghost_ai_dir.left  ; 0                                    ; 1                                   ; 0                                   ; 1                                 ;
-; \ghost:0:ghost_ai:ghost_ai_dir.right ; 1                                    ; 0                                   ; 0                                   ; 1                                 ;
-+--------------------------------------+--------------------------------------+-------------------------------------+-------------------------------------+-----------------------------------+
-
-
-Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |pacman|pacman_core:core_0|pacman_next_direction_signal                                                                                                           ;
 +------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+---------------------------------+
@@ -1857,114 +1589,91 @@ Encoding Type:  One-Hot
 +-------------------------------+-------------------------------+------------------------------+------------------------------+----------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+--------------------------------------------+----------------------------------------+
-; Register name                              ; Reason for Removal                     ;
-+--------------------------------------------+----------------------------------------+
-; core_0/vga_sync_0/pixel_row[9]             ; Stuck at GND due to stuck port data_in ;
-; core_0/bitmap_address[11]                  ; Stuck at GND due to stuck port data_in ;
-; core_0/ghost_ai_selection[0].follow_pacman ; Lost fanout                            ;
-; core_0/ghost_ai_selection[1].follow_pacman ; Lost fanout                            ;
-; core_0/ghost_ai_selection[2].follow_pacman ; Lost fanout                            ;
-; core_0/ghost_ai_selection[3].follow_pacman ; Lost fanout                            ;
-; core_0/ghost_ai_direction[0].left          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[0].down          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[0].up            ; Lost fanout                            ;
-; core_0/ghost_ai_direction[0].right         ; Lost fanout                            ;
-; core_0/ghost_ai_direction[1].left          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[1].down          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[1].up            ; Lost fanout                            ;
-; core_0/ghost_ai_direction[1].right         ; Lost fanout                            ;
-; core_0/ghost_ai_direction[2].left          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[2].down          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[2].up            ; Lost fanout                            ;
-; core_0/ghost_ai_direction[2].right         ; Lost fanout                            ;
-; core_0/ghost_ai_direction[3].left          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[3].down          ; Lost fanout                            ;
-; core_0/ghost_ai_direction[3].up            ; Lost fanout                            ;
-; core_0/ghost_ai_direction[3].right         ; Lost fanout                            ;
-; core_0/ghost_target_x[3][4]                ; Lost fanout                            ;
-; core_0/ghost_target_x[3][3]                ; Lost fanout                            ;
-; core_0/ghost_target_x[3][2]                ; Lost fanout                            ;
-; core_0/ghost_target_x[3][1]                ; Lost fanout                            ;
-; core_0/ghost_target_x[3][0]                ; Lost fanout                            ;
-; core_0/ghost_target_y[3][4]                ; Lost fanout                            ;
-; core_0/ghost_target_y[3][3]                ; Lost fanout                            ;
-; core_0/ghost_target_y[3][2]                ; Lost fanout                            ;
-; core_0/ghost_target_y[3][1]                ; Lost fanout                            ;
-; core_0/ghost_target_y[3][0]                ; Lost fanout                            ;
-; core_0/ghost_target_x[2][4]                ; Lost fanout                            ;
-; core_0/ghost_target_x[2][3]                ; Lost fanout                            ;
-; core_0/ghost_target_x[2][2]                ; Lost fanout                            ;
-; core_0/ghost_target_x[2][1]                ; Lost fanout                            ;
-; core_0/ghost_target_x[2][0]                ; Lost fanout                            ;
-; core_0/ghost_target_y[2][4]                ; Lost fanout                            ;
-; core_0/ghost_target_y[2][3]                ; Lost fanout                            ;
-; core_0/ghost_target_y[2][2]                ; Lost fanout                            ;
-; core_0/ghost_target_y[2][1]                ; Lost fanout                            ;
-; core_0/ghost_target_y[2][0]                ; Lost fanout                            ;
-; core_0/ghost_target_x[1][4]                ; Lost fanout                            ;
-; core_0/ghost_target_x[1][3]                ; Lost fanout                            ;
-; core_0/ghost_target_x[1][2]                ; Lost fanout                            ;
-; core_0/ghost_target_x[1][1]                ; Lost fanout                            ;
-; core_0/ghost_target_x[1][0]                ; Lost fanout                            ;
-; core_0/ghost_target_y[1][4]                ; Lost fanout                            ;
-; core_0/ghost_target_y[1][3]                ; Lost fanout                            ;
-; core_0/ghost_target_y[1][2]                ; Lost fanout                            ;
-; core_0/ghost_target_y[1][1]                ; Lost fanout                            ;
-; core_0/ghost_target_y[1][0]                ; Lost fanout                            ;
-; core_0/ghost_target_x[0][4]                ; Lost fanout                            ;
-; core_0/ghost_target_x[0][3]                ; Lost fanout                            ;
-; core_0/ghost_target_x[0][2]                ; Lost fanout                            ;
-; core_0/ghost_target_x[0][1]                ; Lost fanout                            ;
-; core_0/ghost_target_x[0][0]                ; Lost fanout                            ;
-; core_0/ghost_target_y[0][4]                ; Lost fanout                            ;
-; core_0/ghost_target_y[0][3]                ; Lost fanout                            ;
-; core_0/ghost_target_y[0][2]                ; Lost fanout                            ;
-; core_0/ghost_target_y[0][1]                ; Lost fanout                            ;
-; core_0/ghost_target_y[0][0]                ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[3][4]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[3][3]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[3][2]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[3][1]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[3][0]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[3][4]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[3][3]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[3][2]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[3][1]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[3][0]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[2][4]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[2][3]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[2][2]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[2][1]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[2][0]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[2][4]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[2][3]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[2][2]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[2][1]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[2][0]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[1][4]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[1][3]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[1][2]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[1][1]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[1][0]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[1][4]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[1][3]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[1][2]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[1][1]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[1][0]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[0][4]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[0][3]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[0][2]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[0][1]         ; Lost fanout                            ;
-; core_0/ghost_target_x_signal[0][0]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[0][4]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[0][3]         ; Lost fanout                            ;
-; core_0/ghost_target_y_signal[0][2]         ; Lost fanout                            ;
-; Total Number of Removed Registers = 230    ;                                        ;
-+--------------------------------------------+----------------------------------------+
-* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++---------------------------------------------------+-----------------------------------------------------+
+; Register name                                     ; Reason for Removal                                  ;
++---------------------------------------------------+-----------------------------------------------------+
+; core_0/vga_sync_0/pixel_row[9]                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/bitmap_address[11]                         ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_ai_selection[0].wander_around        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[0].follow_pacman        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[0].run_pacman           ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[1].wander_around        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[1].follow_pacman        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[1].run_pacman           ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[2].wander_around        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[2].follow_pacman        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[2].run_pacman           ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[3].wander_around        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[3].follow_pacman        ; Lost fanout                                         ;
+; core_0/ghost_ai_selection[3].run_pacman           ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[3].wander_around ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[3].follow_pacman ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[3].run_pacman    ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[2].wander_around ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[2].follow_pacman ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[2].run_pacman    ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[1].wander_around ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[1].follow_pacman ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[1].run_pacman    ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[0].wander_around ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[0].follow_pacman ; Lost fanout                                         ;
+; core_0/ghost_ai_selection_signal[0].run_pacman    ; Lost fanout                                         ;
+; core_0/\pacman:pacman_next_dir.up                 ; Lost fanout                                         ;
+; core_0/\pacman:pacman_next_dir.down               ; Lost fanout                                         ;
+; core_0/\pacman:pacman_next_dir.left               ; Lost fanout                                         ;
+; core_0/\pacman:pacman_next_dir.right              ; Lost fanout                                         ;
+; core_0/ghost_c_direction_signal[0].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[0].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[1].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[1].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[2].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[2].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[3].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[3].up             ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[0].down           ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[1].down           ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[2].down           ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction_signal[3].down           ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[3].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction_signal[3].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[2].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction_signal[2].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[1].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction_signal[1].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction_signal[0].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction_signal[0].right          ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[0].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[0].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[1].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[1].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[2].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[2].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[3].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[3].up                    ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[0].down                  ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[1].down                  ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[2].down                  ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_c_direction[3].down                  ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[3].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction[3].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[2].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction[2].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[1].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction[1].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_b_direction[0].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction[0].right                 ; Stuck at GND due to stuck port data_in              ;
+; core_0/ghost_a_direction_signal[0].down           ; Merged with core_0/ghost_rev_direction_signal[0].up ;
+; core_0/ghost_a_direction_signal[1].down           ; Merged with core_0/ghost_rev_direction_signal[1].up ;
+; core_0/ghost_a_direction_signal[2].down           ; Merged with core_0/ghost_rev_direction_signal[2].up ;
+; core_0/ghost_a_direction_signal[3].down           ; Merged with core_0/ghost_rev_direction_signal[3].up ;
+; core_0/ghost_a_direction[0].down                  ; Merged with core_0/ghost_rev_direction[0].up        ;
+; core_0/ghost_a_direction[1].down                  ; Merged with core_0/ghost_rev_direction[1].up        ;
+; core_0/ghost_a_direction[2].down                  ; Merged with core_0/ghost_rev_direction[2].up        ;
+; core_0/ghost_a_direction[3].down                  ; Merged with core_0/ghost_rev_direction[3].up        ;
+; Total Number of Removed Registers = 78            ;                                                     ;
++---------------------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1972,12 +1681,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1244  ;
+; Total registers                              ; 1263  ;
 ; Number of registers using Synchronous Clear  ; 52    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 995   ;
 ; Number of registers using Asynchronous Load  ; 3     ;
-; Number of registers using Clock Enable       ; 254   ;
+; Number of registers using Clock Enable       ; 263   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -2057,24 +1766,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: pacman_core:core_0|LPM_RAM_DQ:ram_0 ;
-+------------------------+--------------+------------------------------------------+
-; Parameter Name         ; Value        ; Type                                     ;
-+------------------------+--------------+------------------------------------------+
-; LPM_WIDTH              ; 3            ; Signed Integer                           ;
-; LPM_WIDTHAD            ; 10           ; Signed Integer                           ;
-; LPM_NUMWORDS           ; 900          ; Signed Integer                           ;
-; LPM_INDATA             ; UNREGISTERED ; Untyped                                  ;
-; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                                  ;
-; LPM_OUTDATA            ; UNREGISTERED ; Untyped                                  ;
-; LPM_FILE               ; UNUSED       ; Untyped                                  ;
-; USE_EAB                ; ON           ; Untyped                                  ;
-; DEVICE_FAMILY          ; FLEX10K      ; Untyped                                  ;
-; CBXI_PARAMETER         ; NOTHING      ; Untyped                                  ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                           ;
-+------------------------+--------------+------------------------------------------+
++------------------------+------------+--------------------------------------------+
+; Parameter Name         ; Value      ; Type                                       ;
++------------------------+------------+--------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                             ;
+; LPM_WIDTHAD            ; 10         ; Signed Integer                             ;
+; LPM_NUMWORDS           ; 900        ; Signed Integer                             ;
+; LPM_INDATA             ; REGISTERED ; Untyped                                    ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                    ;
+; LPM_OUTDATA            ; REGISTERED ; Untyped                                    ;
+; LPM_FILE               ; UNUSED     ; Untyped                                    ;
+; USE_EAB                ; ON         ; Untyped                                    ;
+; DEVICE_FAMILY          ; FLEX10K    ; Untyped                                    ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                             ;
++------------------------+------------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2086,8 +1795,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_WIDTH              ; 3                ; Signed Integer                    ;
 ; LPM_WIDTHAD            ; 10               ; Signed Integer                    ;
 ; LPM_NUMWORDS           ; 900              ; Signed Integer                    ;
-; LPM_ADDRESS_CONTROL    ; UNREGISTERED     ; Untyped                           ;
-; LPM_OUTDATA            ; UNREGISTERED     ; Untyped                           ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED       ; Untyped                           ;
+; LPM_OUTDATA            ; REGISTERED       ; Untyped                           ;
 ; LPM_FILE               ; maps\\map_01.hex ; Untyped                           ;
 ; DEVICE_FAMILY          ; FLEX10K          ; Untyped                           ;
 ; AUTO_CARRY_CHAINS      ; ON               ; AUTO_CARRY                        ;
@@ -2224,7 +1933,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
 ; log_factor     ; 10    ; Signed Integer                            ;
-; length         ; 8     ; Signed Integer                            ;
+; length         ; 4     ; Signed Integer                            ;
 ; fifo_length    ; 4     ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -2556,6 +2265,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add44 ;
++------------------------+-------------+------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                           ;
++------------------------+-------------+------------------------------------------------+
+; LPM_WIDTH              ; 10          ; Untyped                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                        ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                             ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                        ;
+; USE_WYS                ; OFF         ; Untyped                                        ;
+; STYLE                  ; FAST        ; Untyped                                        ;
+; CBXI_PARAMETER         ; add_sub_udh ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
++------------------------+-------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add34 ;
++------------------------+-------------+------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                           ;
++------------------------+-------------+------------------------------------------------+
+; LPM_WIDTH              ; 10          ; Untyped                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                        ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                             ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                        ;
+; USE_WYS                ; OFF         ; Untyped                                        ;
+; STYLE                  ; FAST        ; Untyped                                        ;
+; CBXI_PARAMETER         ; add_sub_ooh ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
++------------------------+-------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add7 ;
 +------------------------+-------------+-----------------------------------------------+
@@ -2660,62 +2425,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; USE_WYS                ; OFF         ; Untyped                                        ;
 ; STYLE                  ; FAST        ; Untyped                                        ;
 ; CBXI_PARAMETER         ; add_sub_29h ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
-+------------------------+-------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add44 ;
-+------------------------+-------------+------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                           ;
-+------------------------+-------------+------------------------------------------------+
-; LPM_WIDTH              ; 10          ; Untyped                                        ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                        ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                        ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                        ;
-; LPM_PIPELINE           ; 0           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                        ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                        ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                        ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                             ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                        ;
-; USE_WYS                ; OFF         ; Untyped                                        ;
-; STYLE                  ; FAST        ; Untyped                                        ;
-; CBXI_PARAMETER         ; add_sub_udh ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
-+------------------------+-------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pacman_core:core_0|lpm_add_sub:Add34 ;
-+------------------------+-------------+------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                           ;
-+------------------------+-------------+------------------------------------------------+
-; LPM_WIDTH              ; 10          ; Untyped                                        ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                        ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                        ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                        ;
-; LPM_PIPELINE           ; 0           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                        ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                        ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                        ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                             ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                        ;
-; USE_WYS                ; OFF         ; Untyped                                        ;
-; STYLE                  ; FAST        ; Untyped                                        ;
-; CBXI_PARAMETER         ; add_sub_ooh ; Untyped                                        ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
@@ -3122,11 +2831,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 6.1 Build 201 11/27/2006 SJ Full Version
-    Info: Processing started: Tue Aug 28 23:32:22 2007
+    Info: Processing started: Sat Sep 01 09:04:26 2007
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pacman -c pacman
 Info: Found 2 design units, including 1 entities, in source file vga_sync.vhdl
     Info: Found design unit 1: VGA_SYNC-a
     Info: Found entity 1: VGA_SYNC
+Info: Found 2 design units, including 1 entities, in source file clk_div.vhdl
+    Info: Found design unit 1: clk_div-rtl
+    Info: Found entity 1: clk_div
 Info: Found 2 design units, including 1 entities, in source file clk_div_n.vhdl
     Info: Found design unit 1: clk_div_n-rtl
     Info: Found entity 1: clk_div_n
@@ -3136,6 +2848,9 @@ Info: Found 2 design units, including 1 entities, in source file debouncer.vhdl
 Info: Found 2 design units, including 1 entities, in source file display7.vhdl
     Info: Found design unit 1: display7-rtl
     Info: Found entity 1: display7
+Info: Found 2 design units, including 1 entities, in source file keyboard.vhdl
+    Info: Found design unit 1: keyboard-a
+    Info: Found entity 1: keyboard
 Info: Found 2 design units, including 1 entities, in source file lfsr32.vhdl
     Info: Found design unit 1: LFSR32-rtl
     Info: Found entity 1: LFSR32
@@ -3147,12 +2862,10 @@ Info: Found 2 design units, including 1 entities, in source file pacman_core.vhd
     Info: Found entity 1: pacman_core
 Info: Found 1 design units, including 0 entities, in source file pacman_types.vhdl
     Info: Found design unit 1: pacman_types
-Info: Found 2 design units, including 1 entities, in source file clk_div.vhdl
-    Info: Found design unit 1: clk_div-rtl
-    Info: Found entity 1: clk_div
 Info: Elaborating entity "pacman" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at pacman.vhdl(51): object "reset" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at pacman.vhdl(53): object "gnd" assigned a value but never read
 Info: Elaborating entity "pacman_core" for hierarchy "pacman_core:core_0"
-Warning (10036): Verilog HDL or VHDL warning at pacman_core.vhdl(99): object "ghost_ai_direction" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at pacman_core.vhdl(287): object "gnd" assigned a value but never read
 Info: Elaborating entity "VGA_SYNC" for hierarchy "pacman_core:core_0|VGA_SYNC:vga_sync_0"
 Info: Elaborating entity "clk_div" for hierarchy "pacman_core:core_0|clk_div:clk_div_0"
@@ -3173,9 +2886,9 @@ Info: Instantiated megafunction "pacman_core:core_0|LPM_RAM_DQ:ram_0" with the f
     Info: Parameter "LPM_WIDTH" = "3"
     Info: Parameter "LPM_WIDTHAD" = "10"
     Info: Parameter "LPM_NUMWORDS" = "900"
-    Info: Parameter "LPM_INDATA" = "UNREGISTERED"
-    Info: Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
-    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_INDATA" = "REGISTERED"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "REGISTERED"
     Info: Parameter "LPM_FILE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_RAM_DQ"
     Info: Parameter "USE_EAB" = "ON"
@@ -3193,8 +2906,8 @@ Info: Instantiated megafunction "pacman_core:core_0|LPM_ROM:rom_0" with the foll
     Info: Parameter "LPM_WIDTH" = "3"
     Info: Parameter "LPM_WIDTHAD" = "10"
     Info: Parameter "LPM_NUMWORDS" = "900"
-    Info: Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
-    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "REGISTERED"
     Info: Parameter "LPM_FILE" = "maps\\map_01.hex"
     Info: Parameter "LPM_TYPE" = "LPM_ROM"
     Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
@@ -3298,6 +3011,7 @@ Info: Instantiated megafunction "pacman_core:core_0|LPM_ROM:bitmap_2" with the f
     Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
     Info: Parameter "LPM_HINT" = "UNUSED"
 Info: Elaborating entity "clk_div" for hierarchy "pacman_core:core_0|clk_div:clk_div_pacman"
+Info: Elaborating entity "keyboard" for hierarchy "keyboard:keyboard_0"
 Info: Elaborating entity "display7" for hierarchy "display7:display7_0"
 Info: Elaborating entity "debouncer" for hierarchy "debouncer:debouncer_0"
 Warning: Reduced register "pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[9]" with stuck data_in port to stuck value GND
@@ -3425,6 +3139,13 @@ Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add0" with the f
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44"
+Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44|addcore:adder", which is child of megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44"
+Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add44" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
 Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add7"
 Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add7|addcore:adder", which is child of megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add7"
 Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add7" with the following parameter:
@@ -3501,13 +3222,6 @@ Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add47" with the 
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44"
-Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44|addcore:adder", which is child of megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add44"
-Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add44" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "10"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
 Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add37"
 Info: Elaborated megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add37|addcore:adder", which is child of megafunction instantiation "pacman_core:core_0|lpm_add_sub:Add37"
 Info: Instantiated megafunction "pacman_core:core_0|lpm_add_sub:Add37" with the following parameter:
@@ -3551,18 +3265,10 @@ Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state[0]" contains 8 st
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state[1]" contains 8 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state[2]" contains 8 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state[3]" contains 8 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action[0]" contains 3 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action[1]" contains 3 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action[2]" contains 3 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action[3]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection[3]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction[0]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction[1]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction[2]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction[2]" contains 4 states
@@ -3598,49 +3304,37 @@ Info: State machine "|pacman|pacman_core:core_0|ghost_health_signal[2]" contains
 Info: State machine "|pacman|pacman_core:core_0|ghost_health_signal[3]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|pacman_change_direction_signal" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[3]" contains 8 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action_signal[3]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_c_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_b_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_a_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_next_direction_signal[3]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_direction_signal[3]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[2]" contains 8 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action_signal[2]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_c_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_b_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_a_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_next_direction_signal[2]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_direction_signal[2]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[1]" contains 8 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action_signal[1]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_c_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_b_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_a_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_next_direction_signal[1]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_direction_signal[1]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[0]" contains 8 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_action_signal[0]" contains 3 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_c_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_b_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_a_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_next_direction_signal[0]" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|ghost_direction_signal[0]" contains 4 states
-Info: State machine "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|pacman_next_direction_signal" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|pacman_direction_signal" contains 4 states
 Info: State machine "|pacman|pacman_core:core_0|\pacman:pacman_next_dir" contains 4 states
@@ -3810,42 +3504,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sta
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state[3].confirming_move" uses code string "00100001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state[3].waiting" uses code string "01000001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state[3].moving" uses code string "10000001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action[0]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action[0]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[0].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[0].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[0].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[0].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[0].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[0].run" uses code string "101"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action[1]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action[1]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[1].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[1].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[1].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[1].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[1].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[1].run" uses code string "101"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action[2]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action[2]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[2].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[2].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[2].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[2].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[2].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[2].run" uses code string "101"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action[3]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action[3]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[3].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[3].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action[3].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[3].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[3].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action[3].run" uses code string "101"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_selection[0]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_selection[0]"
     Info: Completed encoding using 4 state bits
@@ -3890,50 +3548,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sel
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection[3].follow_pacman" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection[3].run_pacman" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection[3].follow_pen" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[0]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[0]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[0].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[0].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[0].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[0].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[0].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[0].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[0].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[0].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[1]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[1]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[1].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[1].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[1].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[1].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[1].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[1].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[1].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[1].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[2]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[2]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[2].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[2].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[2].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[2].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[2].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[2].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[2].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[2].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[3]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction[3]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[3].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[3].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[3].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction[3].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[3].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[3].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[3].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction[3].right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_rev_direction[0]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_rev_direction[0]"
     Info: Completed encoding using 4 state bits
@@ -4351,15 +3965,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sta
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[3].confirming_move" uses code string "00100001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[3].waiting" uses code string "01000001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[3].moving" uses code string "10000001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action_signal[3]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action_signal[3]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[3].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[3].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[3].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[3].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[3].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[3].run" uses code string "101"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3]"
     Info: Completed encoding using 4 state bits
@@ -4371,17 +3976,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sel
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3].follow_pacman" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3].run_pacman" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[3].follow_pen" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[3].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[3].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[3].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[3].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[3].right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[3]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[3]"
     Info: Completed encoding using 4 state bits
@@ -4448,17 +4042,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_direct
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[3].down" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[3].up" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[3].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.right"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.left"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.down"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.up"
-    Info: State "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.up" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.left" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir.right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[2]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[2]"
     Info: Completed encoding using 8 state bits
@@ -4478,15 +4061,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sta
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[2].confirming_move" uses code string "00100001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[2].waiting" uses code string "01000001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[2].moving" uses code string "10000001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action_signal[2]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action_signal[2]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[2].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[2].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[2].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[2].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[2].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[2].run" uses code string "101"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2]"
     Info: Completed encoding using 4 state bits
@@ -4498,17 +4072,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sel
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2].follow_pacman" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2].run_pacman" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[2].follow_pen" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[2].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[2].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[2].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[2].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[2].right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[2]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[2]"
     Info: Completed encoding using 4 state bits
@@ -4575,17 +4138,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_direct
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[2].down" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[2].up" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[2].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.right"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.left"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.down"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.up"
-    Info: State "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.up" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.left" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir.right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[1]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[1]"
     Info: Completed encoding using 8 state bits
@@ -4605,15 +4157,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sta
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[1].confirming_move" uses code string "00100001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[1].waiting" uses code string "01000001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[1].moving" uses code string "10000001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action_signal[1]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action_signal[1]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[1].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[1].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[1].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[1].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[1].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[1].run" uses code string "101"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1]"
     Info: Completed encoding using 4 state bits
@@ -4625,17 +4168,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sel
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1].follow_pacman" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1].run_pacman" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[1].follow_pen" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[1].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[1].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[1].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[1].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[1].right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[1]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[1]"
     Info: Completed encoding using 4 state bits
@@ -4702,17 +4234,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_direct
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[1].down" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[1].up" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[1].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.right"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.left"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.down"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.up"
-    Info: State "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.up" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.left" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir.right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[0]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_state_signal[0]"
     Info: Completed encoding using 8 state bits
@@ -4732,15 +4253,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sta
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[0].confirming_move" uses code string "00100001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[0].waiting" uses code string "01000001"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_state_signal[0].moving" uses code string "10000001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_action_signal[0]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_action_signal[0]"
-    Info: Completed encoding using 3 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[0].run"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[0].follow"
-        Info: Encoded state bit "pacman_core:core_0|ghost_action_signal[0].random"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[0].random" uses code string "000"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[0].follow" uses code string "011"
-    Info: State "|pacman|pacman_core:core_0|ghost_action_signal[0].run" uses code string "101"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0]"
     Info: Completed encoding using 4 state bits
@@ -4752,17 +4264,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_sel
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0].follow_pacman" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0].run_pacman" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_ai_selection_signal[0].follow_pen" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0]"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0]"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[0].right"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[0].up"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[0].down"
-        Info: Encoded state bit "pacman_core:core_0|ghost_ai_direction_signal[0].left"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0].left" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0].down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0].up" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|ghost_ai_direction_signal[0].right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[0]"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_rev_direction_signal[0]"
     Info: Completed encoding using 4 state bits
@@ -4829,17 +4330,6 @@ Info: Encoding result for state machine "|pacman|pacman_core:core_0|ghost_direct
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[0].down" uses code string "0011"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[0].up" uses code string "0101"
     Info: State "|pacman|pacman_core:core_0|ghost_direction_signal[0].right" uses code string "1001"
-Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir"
-Info: Encoding result for state machine "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir"
-    Info: Completed encoding using 4 state bits
-        Info: Encoded state bit "pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.right"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.left"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.down"
-        Info: Encoded state bit "pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.up"
-    Info: State "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.up" uses code string "0000"
-    Info: State "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.down" uses code string "0011"
-    Info: State "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.left" uses code string "0101"
-    Info: State "|pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir.right" uses code string "1001"
 Info: Selected Auto state machine encoding method for state machine "|pacman|pacman_core:core_0|pacman_next_direction_signal"
 Info: Encoding result for state machine "|pacman|pacman_core:core_0|pacman_next_direction_signal"
     Info: Completed encoding using 4 state bits
@@ -4880,8 +4370,8 @@ Warning: Converting TRI node "pacman_core:core_0|lpm_rom:bitmap_2|otri[0]" that 
 Warning: Converting TRI node "pacman_core:core_0|lpm_rom:bitmap_0|otri[1]" that feeds logic to an OR gate
 Warning: Removed always-enabled tri-state buffer pacman_core:core_0|lpm_rom:bitmap_0|otri[0] feeding logic, open-drain buffer, or output pin
 Warning: Converting TRI node "pacman_core:core_0|lpm_rom:rom_0|otri[2]" that feeds logic to an OR gate
-Warning: Converting TRI node "pacman_core:core_0|lpm_rom:rom_0|otri[1]" that feeds logic to an OR gate
 Warning: Converting TRI node "pacman_core:core_0|lpm_rom:rom_0|otri[0]" that feeds logic to an OR gate
+Warning: Converting TRI node "pacman_core:core_0|lpm_rom:rom_0|otri[1]" that feeds logic to an OR gate
 Warning: Reduced register "pacman_core:core_0|ghost_c_direction_signal[0].up" with stuck data_in port to stuck value GND
 Warning: Reduced register "pacman_core:core_0|ghost_b_direction_signal[0].up" with stuck data_in port to stuck value GND
 Warning: Reduced register "pacman_core:core_0|ghost_c_direction_signal[1].up" with stuck data_in port to stuck value GND
@@ -4931,21 +4421,6 @@ Info: Duplicate registers merged to single register
     Info: Duplicate register "pacman_core:core_0|ghost_a_direction[1].down" merged to single register "pacman_core:core_0|ghost_rev_direction[1].up"
     Info: Duplicate register "pacman_core:core_0|ghost_a_direction[2].down" merged to single register "pacman_core:core_0|ghost_rev_direction[2].up"
     Info: Duplicate register "pacman_core:core_0|ghost_a_direction[3].down" merged to single register "pacman_core:core_0|ghost_rev_direction[3].up"
-Warning: Output pins are stuck at VCC or GND
-    Warning: Pin "display[0]" stuck at VCC
-    Warning: Pin "display[1]" stuck at GND
-    Warning: Pin "display[2]" stuck at GND
-    Warning: Pin "display[3]" stuck at GND
-    Warning: Pin "display[4]" stuck at GND
-    Warning: Pin "display[5]" stuck at GND
-    Warning: Pin "display[6]" stuck at GND
-    Warning: Pin "display[7]" stuck at VCC
-    Warning: Pin "display[8]" stuck at GND
-    Warning: Pin "display[9]" stuck at GND
-    Warning: Pin "display[10]" stuck at GND
-    Warning: Pin "display[11]" stuck at GND
-    Warning: Pin "display[12]" stuck at GND
-    Warning: Pin "display[13]" stuck at GND
 Info: Registers with preset signals will power-up high
 Warning: Ignored 20 CARRY_SUM primitives
     Warning: Ignored 3 CARRY_SUM primitives -- cannot place fan-in logic in single logic cell
@@ -5010,122 +4485,49 @@ Warning: Ignored 20 CARRY_SUM primitives
         Warning: Can't place logic fed by CARRY_SUM primitive "pacman_core:core_0|lpm_add_sub:Add45|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]" into a single logic cell
             Warning: Node "pacman_core:core_0|lpm_add_sub:Add45|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~81" of type LUT
             Warning: Node "pacman_core:core_0|lpm_add_sub:Add45|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~84" of type LUT
-Info: 180 registers lost all their fanouts during netlist optimizations. The first 100 are displayed below.
+Info: 28 registers lost all their fanouts during netlist optimizations. The first 28 are displayed below.
+    Info: Register "core_0/ghost_ai_selection[0].wander_around" lost all its fanouts during netlist optimizations.
     Info: Register "core_0/ghost_ai_selection[0].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[0].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[1].wander_around" lost all its fanouts during netlist optimizations.
     Info: Register "core_0/ghost_ai_selection[1].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[1].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[2].wander_around" lost all its fanouts during netlist optimizations.
     Info: Register "core_0/ghost_ai_selection[2].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[2].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection[3].wander_around" lost all its fanouts during netlist optimizations.
     Info: Register "core_0/ghost_ai_selection[3].follow_pacman" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[0].left" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[0].down" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[0].up" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[0].right" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[1].left" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[1].down" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[1].up" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[1].right" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[2].left" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[2].down" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[2].up" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[2].right" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[3].left" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[3].down" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[3].up" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_ai_direction[3].right" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[3][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[3][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[3][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[3][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[3][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[3][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[3][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[3][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[3][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[3][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[2][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[2][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[2][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[2][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[2][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[2][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[2][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[2][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[2][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[2][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[1][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[1][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[1][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[1][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[1][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[1][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[1][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[1][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[1][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[1][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[0][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[0][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[0][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[0][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x[0][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[0][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[0][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[0][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[0][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y[0][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[3][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[3][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[3][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[3][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[3][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[3][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[3][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[3][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[3][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[3][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[2][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[2][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[2][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[2][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[2][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[2][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[2][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[2][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[2][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[2][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[1][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[1][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[1][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[1][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[1][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[1][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[1][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[1][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[1][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[1][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[0][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[0][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[0][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[0][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_x_signal[0][0]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[0][4]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[0][3]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[0][2]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[0][1]" lost all its fanouts during netlist optimizations.
-    Info: Register "core_0/ghost_target_y_signal[0][0]" lost all its fanouts during netlist optimizations.
-    Info: List truncated at 100 items
+    Info: Register "core_0/ghost_ai_selection[3].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[3].wander_around" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[3].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[3].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[2].wander_around" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[2].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[2].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[1].wander_around" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[1].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[1].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[0].wander_around" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[0].follow_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/ghost_ai_selection_signal[0].run_pacman" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/\pacman:pacman_next_dir.up" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/\pacman:pacman_next_dir.down" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/\pacman:pacman_next_dir.left" lost all its fanouts during netlist optimizations.
+    Info: Register "core_0/\pacman:pacman_next_dir.right" lost all its fanouts during netlist optimizations.
 Info: Found the following redundant logic cells in design
     Info: Logic cell "pacman_core:core_0|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~83"
     Info: Logic cell "pacman_core:core_0|lpm_add_sub:Add45|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~78"
     Info: Logic cell "pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[4]~49"
     Info: Logic cell "pacman_core:core_0|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~103"
     Info: Logic cell "pacman_core:core_0|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~105"
-Info: Implemented 2987 device resources after synthesis - the final resource count might be different
-    Info: Implemented 9 input pins
+Info: Implemented 3049 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
     Info: Implemented 19 output pins
-    Info: Implemented 2947 logic cells
+    Info: Implemented 3011 logic cells
     Info: Implemented 12 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 134 warnings
-    Info: Allocated 153 megabytes of memory during processing
-    Info: Processing ended: Tue Aug 28 23:34:19 2007
-    Info: Elapsed time: 00:01:57
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 120 warnings
+    Info: Allocated 149 megabytes of memory during processing
+    Info: Processing ended: Sat Sep 01 09:06:07 2007
+    Info: Elapsed time: 00:01:41
 
 

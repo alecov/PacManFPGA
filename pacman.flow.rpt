@@ -1,5 +1,5 @@
 Flow report for pacman
-Tue Aug 28 23:40:19 2007
+Sat Sep 01 09:14:06 2007
 Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Tue Aug 28 23:40:19 2007    ;
+; Flow Status             ; Successful - Sat Sep 01 09:14:06 2007    ;
 ; Quartus II Version      ; 6.1 Build 201 11/27/2006 SJ Full Version ;
 ; Revision Name           ; pacman                                   ;
 ; Top-level Entity Name   ; pacman                                   ;
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; No                                       ;
-; Total logic elements    ; 2,947 / 3,744 ( 79 % )                   ;
-; Total pins              ; 28 / 189 ( 15 % )                        ;
+; Total logic elements    ; 3,011 / 3,744 ( 80 % )                   ;
+; Total pins              ; 26 / 189 ( 14 % )                        ;
 ; Total memory bits       ; 12,568 / 18,432 ( 68 % )                 ;
 +-------------------------+------------------------------------------+
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/28/2007 23:33:18 ;
+; Start date & time ; 09/01/2007 09:05:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pacman              ;
 +-------------------+---------------------+
@@ -70,8 +70,8 @@ applicable agreement for further details.
 ; FITTER_EFFORT                    ; Standard Fit ; Auto Fit                       ; --          ; --         ;
 ; FLEX10K_OPTIMIZATION_TECHNIQUE   ; Speed        ; Area                           ; --          ; --         ;
 ; OPTIMIZE_HOLD_TIMING             ; Off          ; IO Paths and Minimum TPD Paths ; --          ; --         ;
-; PLACEMENT_EFFORT_MULTIPLIER      ; 4.0          ; 1.0                            ; --          ; --         ;
-; ROUTER_EFFORT_MULTIPLIER         ; 4.0          ; 1.0                            ; --          ; --         ;
+; PLACEMENT_EFFORT_MULTIPLIER      ; 8.0          ; 1.0                            ; --          ; --         ;
+; ROUTER_EFFORT_MULTIPLIER         ; 8.0          ; 1.0                            ; --          ; --         ;
 ; ROUTER_TIMING_OPTIMIZATION_LEVEL ; MAXIMUM      ; Normal                         ; --          ; --         ;
 +----------------------------------+--------------+--------------------------------+-------------+------------+
 
@@ -81,11 +81,11 @@ applicable agreement for further details.
 +-------------------------+--------------+
 ; Module Name             ; Elapsed Time ;
 +-------------------------+--------------+
-; Analysis & Synthesis    ; 00:01:57     ;
-; Fitter                  ; 00:03:57     ;
-; Assembler               ; 00:01:01     ;
+; Analysis & Synthesis    ; 00:01:41     ;
+; Fitter                  ; 00:05:54     ;
+; Assembler               ; 00:01:02     ;
 ; Classic Timing Analyzer ; 00:00:58     ;
-; Total                   ; 00:07:53     ;
+; Total                   ; 00:09:35     ;
 +-------------------------+--------------+
 
 

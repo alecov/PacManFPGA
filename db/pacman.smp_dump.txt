@@ -97,30 +97,6 @@ ghost_ai_state[3].confirming_move 0 0 1 0 0 0 0 1
 ghost_ai_state[3].waiting 0 1 0 0 0 0 0 1 
 ghost_ai_state[3].moving 1 0 0 0 0 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|ghost_action[0]
-Name ghost_action[0].run ghost_action[0].follow ghost_action[0].random 
-ghost_action[0].random 0 0 0 
-ghost_action[0].follow 0 1 1 
-ghost_action[0].run 1 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_action[1]
-Name ghost_action[1].run ghost_action[1].follow ghost_action[1].random 
-ghost_action[1].random 0 0 0 
-ghost_action[1].follow 0 1 1 
-ghost_action[1].run 1 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_action[2]
-Name ghost_action[2].run ghost_action[2].follow ghost_action[2].random 
-ghost_action[2].random 0 0 0 
-ghost_action[2].follow 0 1 1 
-ghost_action[2].run 1 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_action[3]
-Name ghost_action[3].run ghost_action[3].follow ghost_action[3].random 
-ghost_action[3].random 0 0 0 
-ghost_action[3].follow 0 1 1 
-ghost_action[3].run 1 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[0]
 Name ghost_ai_selection[0].follow_pen ghost_ai_selection[0].run_pacman ghost_ai_selection[0].follow_pacman ghost_ai_selection[0].wander_around 
 ghost_ai_selection[0].wander_around 0 0 0 0 
@@ -148,34 +124,6 @@ ghost_ai_selection[3].wander_around 0 0 0 0
 ghost_ai_selection[3].follow_pacman 0 0 1 1 
 ghost_ai_selection[3].run_pacman 0 1 0 1 
 ghost_ai_selection[3].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[0]
-Name ghost_ai_direction[0].right ghost_ai_direction[0].up ghost_ai_direction[0].down ghost_ai_direction[0].left 
-ghost_ai_direction[0].left 0 0 0 0 
-ghost_ai_direction[0].down 0 0 1 1 
-ghost_ai_direction[0].up 0 1 0 1 
-ghost_ai_direction[0].right 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[1]
-Name ghost_ai_direction[1].right ghost_ai_direction[1].up ghost_ai_direction[1].down ghost_ai_direction[1].left 
-ghost_ai_direction[1].left 0 0 0 0 
-ghost_ai_direction[1].down 0 0 1 1 
-ghost_ai_direction[1].up 0 1 0 1 
-ghost_ai_direction[1].right 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[2]
-Name ghost_ai_direction[2].right ghost_ai_direction[2].up ghost_ai_direction[2].down ghost_ai_direction[2].left 
-ghost_ai_direction[2].left 0 0 0 0 
-ghost_ai_direction[2].down 0 0 1 1 
-ghost_ai_direction[2].up 0 1 0 1 
-ghost_ai_direction[2].right 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[3]
-Name ghost_ai_direction[3].right ghost_ai_direction[3].up ghost_ai_direction[3].down ghost_ai_direction[3].left 
-ghost_ai_direction[3].left 0 0 0 0 
-ghost_ai_direction[3].down 0 0 1 1 
-ghost_ai_direction[3].up 0 1 0 1 
-ghost_ai_direction[3].right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[0]
 Name ghost_rev_direction[0].right ghost_rev_direction[0].up ghost_rev_direction[0].down ghost_rev_direction[0].left 
@@ -438,25 +386,12 @@ ghost_ai_state_signal[3].confirming_move 0 0 1 0 0 0 0 1
 ghost_ai_state_signal[3].waiting 0 1 0 0 0 0 0 1 
 ghost_ai_state_signal[3].moving 1 0 0 0 0 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|ghost_action_signal[3]
-Name ghost_action_signal[3].run ghost_action_signal[3].follow ghost_action_signal[3].random 
-ghost_action_signal[3].random 0 0 0 
-ghost_action_signal[3].follow 0 1 1 
-ghost_action_signal[3].run 1 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[3]
 Name ghost_ai_selection_signal[3].follow_pen ghost_ai_selection_signal[3].run_pacman ghost_ai_selection_signal[3].follow_pacman ghost_ai_selection_signal[3].wander_around 
 ghost_ai_selection_signal[3].wander_around 0 0 0 0 
 ghost_ai_selection_signal[3].follow_pacman 0 0 1 1 
 ghost_ai_selection_signal[3].run_pacman 0 1 0 1 
 ghost_ai_selection_signal[3].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[3]
-Name ghost_ai_direction_signal[3].right ghost_ai_direction_signal[3].up ghost_ai_direction_signal[3].down ghost_ai_direction_signal[3].left 
-ghost_ai_direction_signal[3].left 0 0 0 0 
-ghost_ai_direction_signal[3].down 0 0 1 1 
-ghost_ai_direction_signal[3].up 0 1 0 1 
-ghost_ai_direction_signal[3].right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[3]
 Name ghost_rev_direction_signal[3].right ghost_rev_direction_signal[3].up ghost_rev_direction_signal[3].down ghost_rev_direction_signal[3].left 
@@ -500,13 +435,6 @@ ghost_direction_signal[3].down 0 0 1 1
 ghost_direction_signal[3].up 0 1 0 1 
 ghost_direction_signal[3].right 1 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir
-Name \ghost:3:ghost_ai:ghost_ai_dir.right \ghost:3:ghost_ai:ghost_ai_dir.left \ghost:3:ghost_ai:ghost_ai_dir.down \ghost:3:ghost_ai:ghost_ai_dir.up 
-\ghost:3:ghost_ai:ghost_ai_dir.up 0 0 0 0 
-\ghost:3:ghost_ai:ghost_ai_dir.down 0 0 1 1 
-\ghost:3:ghost_ai:ghost_ai_dir.left 0 1 0 1 
-\ghost:3:ghost_ai:ghost_ai_dir.right 1 0 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[2]
 Name ghost_ai_state_signal[2].moving ghost_ai_state_signal[2].waiting ghost_ai_state_signal[2].confirming_move ghost_ai_state_signal[2].asserting ghost_ai_state_signal[2].deciding ghost_ai_state_signal[2].acquiring ghost_ai_state_signal[2].analysing ghost_ai_state_signal[2].selecting 
 ghost_ai_state_signal[2].selecting 0 0 0 0 0 0 0 0 
@@ -518,25 +446,12 @@ ghost_ai_state_signal[2].confirming_move 0 0 1 0 0 0 0 1
 ghost_ai_state_signal[2].waiting 0 1 0 0 0 0 0 1 
 ghost_ai_state_signal[2].moving 1 0 0 0 0 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|ghost_action_signal[2]
-Name ghost_action_signal[2].run ghost_action_signal[2].follow ghost_action_signal[2].random 
-ghost_action_signal[2].random 0 0 0 
-ghost_action_signal[2].follow 0 1 1 
-ghost_action_signal[2].run 1 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[2]
 Name ghost_ai_selection_signal[2].follow_pen ghost_ai_selection_signal[2].run_pacman ghost_ai_selection_signal[2].follow_pacman ghost_ai_selection_signal[2].wander_around 
 ghost_ai_selection_signal[2].wander_around 0 0 0 0 
 ghost_ai_selection_signal[2].follow_pacman 0 0 1 1 
 ghost_ai_selection_signal[2].run_pacman 0 1 0 1 
 ghost_ai_selection_signal[2].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[2]
-Name ghost_ai_direction_signal[2].right ghost_ai_direction_signal[2].up ghost_ai_direction_signal[2].down ghost_ai_direction_signal[2].left 
-ghost_ai_direction_signal[2].left 0 0 0 0 
-ghost_ai_direction_signal[2].down 0 0 1 1 
-ghost_ai_direction_signal[2].up 0 1 0 1 
-ghost_ai_direction_signal[2].right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[2]
 Name ghost_rev_direction_signal[2].right ghost_rev_direction_signal[2].up ghost_rev_direction_signal[2].down ghost_rev_direction_signal[2].left 
@@ -580,13 +495,6 @@ ghost_direction_signal[2].down 0 0 1 1
 ghost_direction_signal[2].up 0 1 0 1 
 ghost_direction_signal[2].right 1 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir
-Name \ghost:2:ghost_ai:ghost_ai_dir.right \ghost:2:ghost_ai:ghost_ai_dir.left \ghost:2:ghost_ai:ghost_ai_dir.down \ghost:2:ghost_ai:ghost_ai_dir.up 
-\ghost:2:ghost_ai:ghost_ai_dir.up 0 0 0 0 
-\ghost:2:ghost_ai:ghost_ai_dir.down 0 0 1 1 
-\ghost:2:ghost_ai:ghost_ai_dir.left 0 1 0 1 
-\ghost:2:ghost_ai:ghost_ai_dir.right 1 0 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[1]
 Name ghost_ai_state_signal[1].moving ghost_ai_state_signal[1].waiting ghost_ai_state_signal[1].confirming_move ghost_ai_state_signal[1].asserting ghost_ai_state_signal[1].deciding ghost_ai_state_signal[1].acquiring ghost_ai_state_signal[1].analysing ghost_ai_state_signal[1].selecting 
 ghost_ai_state_signal[1].selecting 0 0 0 0 0 0 0 0 
@@ -598,25 +506,12 @@ ghost_ai_state_signal[1].confirming_move 0 0 1 0 0 0 0 1
 ghost_ai_state_signal[1].waiting 0 1 0 0 0 0 0 1 
 ghost_ai_state_signal[1].moving 1 0 0 0 0 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|ghost_action_signal[1]
-Name ghost_action_signal[1].run ghost_action_signal[1].follow ghost_action_signal[1].random 
-ghost_action_signal[1].random 0 0 0 
-ghost_action_signal[1].follow 0 1 1 
-ghost_action_signal[1].run 1 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[1]
 Name ghost_ai_selection_signal[1].follow_pen ghost_ai_selection_signal[1].run_pacman ghost_ai_selection_signal[1].follow_pacman ghost_ai_selection_signal[1].wander_around 
 ghost_ai_selection_signal[1].wander_around 0 0 0 0 
 ghost_ai_selection_signal[1].follow_pacman 0 0 1 1 
 ghost_ai_selection_signal[1].run_pacman 0 1 0 1 
 ghost_ai_selection_signal[1].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[1]
-Name ghost_ai_direction_signal[1].right ghost_ai_direction_signal[1].up ghost_ai_direction_signal[1].down ghost_ai_direction_signal[1].left 
-ghost_ai_direction_signal[1].left 0 0 0 0 
-ghost_ai_direction_signal[1].down 0 0 1 1 
-ghost_ai_direction_signal[1].up 0 1 0 1 
-ghost_ai_direction_signal[1].right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[1]
 Name ghost_rev_direction_signal[1].right ghost_rev_direction_signal[1].up ghost_rev_direction_signal[1].down ghost_rev_direction_signal[1].left 
@@ -660,13 +555,6 @@ ghost_direction_signal[1].down 0 0 1 1
 ghost_direction_signal[1].up 0 1 0 1 
 ghost_direction_signal[1].right 1 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir
-Name \ghost:1:ghost_ai:ghost_ai_dir.right \ghost:1:ghost_ai:ghost_ai_dir.left \ghost:1:ghost_ai:ghost_ai_dir.down \ghost:1:ghost_ai:ghost_ai_dir.up 
-\ghost:1:ghost_ai:ghost_ai_dir.up 0 0 0 0 
-\ghost:1:ghost_ai:ghost_ai_dir.down 0 0 1 1 
-\ghost:1:ghost_ai:ghost_ai_dir.left 0 1 0 1 
-\ghost:1:ghost_ai:ghost_ai_dir.right 1 0 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[0]
 Name ghost_ai_state_signal[0].moving ghost_ai_state_signal[0].waiting ghost_ai_state_signal[0].confirming_move ghost_ai_state_signal[0].asserting ghost_ai_state_signal[0].deciding ghost_ai_state_signal[0].acquiring ghost_ai_state_signal[0].analysing ghost_ai_state_signal[0].selecting 
 ghost_ai_state_signal[0].selecting 0 0 0 0 0 0 0 0 
@@ -678,25 +566,12 @@ ghost_ai_state_signal[0].confirming_move 0 0 1 0 0 0 0 1
 ghost_ai_state_signal[0].waiting 0 1 0 0 0 0 0 1 
 ghost_ai_state_signal[0].moving 1 0 0 0 0 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|ghost_action_signal[0]
-Name ghost_action_signal[0].run ghost_action_signal[0].follow ghost_action_signal[0].random 
-ghost_action_signal[0].random 0 0 0 
-ghost_action_signal[0].follow 0 1 1 
-ghost_action_signal[0].run 1 0 1 
-
 State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[0]
 Name ghost_ai_selection_signal[0].follow_pen ghost_ai_selection_signal[0].run_pacman ghost_ai_selection_signal[0].follow_pacman ghost_ai_selection_signal[0].wander_around 
 ghost_ai_selection_signal[0].wander_around 0 0 0 0 
 ghost_ai_selection_signal[0].follow_pacman 0 0 1 1 
 ghost_ai_selection_signal[0].run_pacman 0 1 0 1 
 ghost_ai_selection_signal[0].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[0]
-Name ghost_ai_direction_signal[0].right ghost_ai_direction_signal[0].up ghost_ai_direction_signal[0].down ghost_ai_direction_signal[0].left 
-ghost_ai_direction_signal[0].left 0 0 0 0 
-ghost_ai_direction_signal[0].down 0 0 1 1 
-ghost_ai_direction_signal[0].up 0 1 0 1 
-ghost_ai_direction_signal[0].right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[0]
 Name ghost_rev_direction_signal[0].right ghost_rev_direction_signal[0].up ghost_rev_direction_signal[0].down ghost_rev_direction_signal[0].left 
@@ -739,13 +614,6 @@ ghost_direction_signal[0].left 0 0 0 0
 ghost_direction_signal[0].down 0 0 1 1 
 ghost_direction_signal[0].up 0 1 0 1 
 ghost_direction_signal[0].right 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir
-Name \ghost:0:ghost_ai:ghost_ai_dir.right \ghost:0:ghost_ai:ghost_ai_dir.left \ghost:0:ghost_ai:ghost_ai_dir.down \ghost:0:ghost_ai:ghost_ai_dir.up 
-\ghost:0:ghost_ai:ghost_ai_dir.up 0 0 0 0 
-\ghost:0:ghost_ai:ghost_ai_dir.down 0 0 1 1 
-\ghost:0:ghost_ai:ghost_ai_dir.left 0 1 0 1 
-\ghost:0:ghost_ai:ghost_ai_dir.right 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|pacman_next_direction_signal
 Name pacman_next_direction_signal.right pacman_next_direction_signal.left pacman_next_direction_signal.down pacman_next_direction_signal.up 

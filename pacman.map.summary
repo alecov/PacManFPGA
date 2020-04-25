@@ -1,8 +1,8 @@
-Analysis & Synthesis Status : Successful - Tue Aug 28 23:34:19 2007
+Analysis & Synthesis Status : Successful - Sat Sep 01 09:06:07 2007
 Quartus II Version : 6.1 Build 201 11/27/2006 SJ Full Version
 Revision Name : pacman
 Top-level Entity Name : pacman
 Family : FLEX10K
-Total logic elements : 2,947
-Total pins : 28
+Total logic elements : 3,011
+Total pins : 26
 Total memory bits : 12,568
