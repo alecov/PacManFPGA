@@ -1,0 +1,10 @@
+Fitter Status : Successful - Mon Aug 27 19:59:31 2007
+Quartus II Version : 6.1 Build 201 11/27/2006 SJ Full Version
+Revision Name : pacman
+Top-level Entity Name : pacman
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 3,377 / 3,744 ( 90 % )
+Total pins : 28 / 189 ( 15 % )
+Total memory bits : 12,568 / 18,432 ( 68 % )

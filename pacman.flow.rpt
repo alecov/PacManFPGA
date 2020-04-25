@@ -1,0 +1,99 @@
+Flow report for pacman
+Mon Aug 27 20:01:35 2007
+Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Mon Aug 27 20:01:34 2007    ;
+; Quartus II Version      ; 6.1 Build 201 11/27/2006 SJ Full Version ;
+; Revision Name           ; pacman                                   ;
+; Top-level Entity Name   ; pacman                                   ;
+; Family                  ; FLEX10K                                  ;
+; Device                  ; EPF10K70RC240-4                          ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; No                                       ;
+; Total logic elements    ; 3,377 / 3,744 ( 90 % )                   ;
+; Total pins              ; 28 / 189 ( 15 % )                        ;
+; Total memory bits       ; 12,568 / 18,432 ( 68 % )                 ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/27/2007 19:54:37 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; pacman              ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                            ;
++----------------------------------+--------------+--------------------------------+-------------+------------+
+; Assignment Name                  ; Value        ; Default Value                  ; Entity Name ; Section Id ;
++----------------------------------+--------------+--------------------------------+-------------+------------+
+; FITTER_EFFORT                    ; Standard Fit ; Auto Fit                       ; --          ; --         ;
+; OPTIMIZE_HOLD_TIMING             ; Off          ; IO Paths and Minimum TPD Paths ; --          ; --         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS     ; On           ; Off                            ; --          ; --         ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL ; MAXIMUM      ; Normal                         ; --          ; --         ;
++----------------------------------+--------------+--------------------------------+-------------+------------+
+
+
++----------------------------------------+
+; Flow Elapsed Time                      ;
++-------------------------+--------------+
+; Module Name             ; Elapsed Time ;
++-------------------------+--------------+
+; Analysis & Synthesis    ; 00:01:54     ;
+; Fitter                  ; 00:03:55     ;
+; Assembler               ; 00:01:01     ;
+; Classic Timing Analyzer ; 00:00:59     ;
+; Total                   ; 00:07:49     ;
++-------------------------+--------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off pacman -c pacman
+quartus_fit --read_settings_files=off --write_settings_files=off pacman -c pacman
+quartus_asm --read_settings_files=off --write_settings_files=off pacman -c pacman
+quartus_tan --read_settings_files=off --write_settings_files=off pacman -c pacman
+
+
+

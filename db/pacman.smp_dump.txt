@@ -1,0 +1,825 @@
+
+State Machine - |pacman|pacman_core:core_0|game_process_state
+Name game_process_state.process_collision game_process_state.assert_collision game_process_state.process_pellet game_process_state.process_movement 
+game_process_state.process_movement 0 0 0 0 
+game_process_state.process_pellet 0 0 1 1 
+game_process_state.assert_collision 0 1 0 1 
+game_process_state.process_collision 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|game_state
+Name game_state.game_win_map game_state.game_pacman_dead game_state.game_eat_pellet_end game_state.game_eat_pellet_step_2 game_state.game_eat_pellet_step_1 game_state.game_eat_pellet_start game_state.game_playing game_state.game_start_wait game_state.game_start game_state.game_load_map_end game_state.game_load_map_step_3 game_state.game_load_map_step_2 game_state.game_load_map_step_1 game_state.game_load_map_start game_state.game_initialize game_state.game_splash game_state.game_start_splash_wait game_state.game_start_splash game_state.game_load_splash game_state.game_reset 
+game_state.game_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+game_state.game_load_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+game_state.game_start_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+game_state.game_start_splash_wait 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+game_state.game_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+game_state.game_initialize 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+game_state.game_load_map_start 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+game_state.game_load_map_step_1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+game_state.game_load_map_step_2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+game_state.game_load_map_step_3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+game_state.game_load_map_end 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+game_state.game_start 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_start_wait 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_playing 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_eat_pellet_start 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_eat_pellet_step_1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_eat_pellet_step_2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_eat_pellet_end 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_pacman_dead 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state.game_win_map 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health[0]
+Name ghost_health[0].dead ghost_health[0].weak ghost_health[0].alive 
+ghost_health[0].alive 0 0 0 
+ghost_health[0].weak 0 1 1 
+ghost_health[0].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health[1]
+Name ghost_health[1].dead ghost_health[1].weak ghost_health[1].alive 
+ghost_health[1].alive 0 0 0 
+ghost_health[1].weak 0 1 1 
+ghost_health[1].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health[2]
+Name ghost_health[2].dead ghost_health[2].weak ghost_health[2].alive 
+ghost_health[2].alive 0 0 0 
+ghost_health[2].weak 0 1 1 
+ghost_health[2].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health[3]
+Name ghost_health[3].dead ghost_health[3].weak ghost_health[3].alive 
+ghost_health[3].alive 0 0 0 
+ghost_health[3].weak 0 1 1 
+ghost_health[3].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state[0]
+Name ghost_ai_state[0].moving ghost_ai_state[0].waiting ghost_ai_state[0].confirming_move ghost_ai_state[0].asserting ghost_ai_state[0].deciding ghost_ai_state[0].acquiring ghost_ai_state[0].analysing ghost_ai_state[0].selecting 
+ghost_ai_state[0].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state[0].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state[0].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state[0].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state[0].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state[0].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state[0].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state[0].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state[1]
+Name ghost_ai_state[1].moving ghost_ai_state[1].waiting ghost_ai_state[1].confirming_move ghost_ai_state[1].asserting ghost_ai_state[1].deciding ghost_ai_state[1].acquiring ghost_ai_state[1].analysing ghost_ai_state[1].selecting 
+ghost_ai_state[1].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state[1].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state[1].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state[1].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state[1].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state[1].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state[1].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state[1].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state[2]
+Name ghost_ai_state[2].moving ghost_ai_state[2].waiting ghost_ai_state[2].confirming_move ghost_ai_state[2].asserting ghost_ai_state[2].deciding ghost_ai_state[2].acquiring ghost_ai_state[2].analysing ghost_ai_state[2].selecting 
+ghost_ai_state[2].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state[2].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state[2].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state[2].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state[2].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state[2].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state[2].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state[2].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state[3]
+Name ghost_ai_state[3].moving ghost_ai_state[3].waiting ghost_ai_state[3].confirming_move ghost_ai_state[3].asserting ghost_ai_state[3].deciding ghost_ai_state[3].acquiring ghost_ai_state[3].analysing ghost_ai_state[3].selecting 
+ghost_ai_state[3].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state[3].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state[3].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state[3].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state[3].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state[3].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state[3].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state[3].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action[0]
+Name ghost_action[0].run ghost_action[0].follow ghost_action[0].random 
+ghost_action[0].random 0 0 0 
+ghost_action[0].follow 0 1 1 
+ghost_action[0].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action[1]
+Name ghost_action[1].run ghost_action[1].follow ghost_action[1].random 
+ghost_action[1].random 0 0 0 
+ghost_action[1].follow 0 1 1 
+ghost_action[1].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action[2]
+Name ghost_action[2].run ghost_action[2].follow ghost_action[2].random 
+ghost_action[2].random 0 0 0 
+ghost_action[2].follow 0 1 1 
+ghost_action[2].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action[3]
+Name ghost_action[3].run ghost_action[3].follow ghost_action[3].random 
+ghost_action[3].random 0 0 0 
+ghost_action[3].follow 0 1 1 
+ghost_action[3].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[0]
+Name ghost_ai_selection[0].follow_pen ghost_ai_selection[0].run_pacman ghost_ai_selection[0].follow_pacman ghost_ai_selection[0].wander_around 
+ghost_ai_selection[0].wander_around 0 0 0 0 
+ghost_ai_selection[0].follow_pacman 0 0 1 1 
+ghost_ai_selection[0].run_pacman 0 1 0 1 
+ghost_ai_selection[0].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[1]
+Name ghost_ai_selection[1].follow_pen ghost_ai_selection[1].run_pacman ghost_ai_selection[1].follow_pacman ghost_ai_selection[1].wander_around 
+ghost_ai_selection[1].wander_around 0 0 0 0 
+ghost_ai_selection[1].follow_pacman 0 0 1 1 
+ghost_ai_selection[1].run_pacman 0 1 0 1 
+ghost_ai_selection[1].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[2]
+Name ghost_ai_selection[2].follow_pen ghost_ai_selection[2].run_pacman ghost_ai_selection[2].follow_pacman ghost_ai_selection[2].wander_around 
+ghost_ai_selection[2].wander_around 0 0 0 0 
+ghost_ai_selection[2].follow_pacman 0 0 1 1 
+ghost_ai_selection[2].run_pacman 0 1 0 1 
+ghost_ai_selection[2].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection[3]
+Name ghost_ai_selection[3].follow_pen ghost_ai_selection[3].run_pacman ghost_ai_selection[3].follow_pacman ghost_ai_selection[3].wander_around 
+ghost_ai_selection[3].wander_around 0 0 0 0 
+ghost_ai_selection[3].follow_pacman 0 0 1 1 
+ghost_ai_selection[3].run_pacman 0 1 0 1 
+ghost_ai_selection[3].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[0]
+Name ghost_ai_direction[0].right ghost_ai_direction[0].up ghost_ai_direction[0].down ghost_ai_direction[0].left 
+ghost_ai_direction[0].left 0 0 0 0 
+ghost_ai_direction[0].down 0 0 1 1 
+ghost_ai_direction[0].up 0 1 0 1 
+ghost_ai_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[1]
+Name ghost_ai_direction[1].right ghost_ai_direction[1].up ghost_ai_direction[1].down ghost_ai_direction[1].left 
+ghost_ai_direction[1].left 0 0 0 0 
+ghost_ai_direction[1].down 0 0 1 1 
+ghost_ai_direction[1].up 0 1 0 1 
+ghost_ai_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[2]
+Name ghost_ai_direction[2].right ghost_ai_direction[2].up ghost_ai_direction[2].down ghost_ai_direction[2].left 
+ghost_ai_direction[2].left 0 0 0 0 
+ghost_ai_direction[2].down 0 0 1 1 
+ghost_ai_direction[2].up 0 1 0 1 
+ghost_ai_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction[3]
+Name ghost_ai_direction[3].right ghost_ai_direction[3].up ghost_ai_direction[3].down ghost_ai_direction[3].left 
+ghost_ai_direction[3].left 0 0 0 0 
+ghost_ai_direction[3].down 0 0 1 1 
+ghost_ai_direction[3].up 0 1 0 1 
+ghost_ai_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[0]
+Name ghost_rev_direction[0].right ghost_rev_direction[0].up ghost_rev_direction[0].down ghost_rev_direction[0].left 
+ghost_rev_direction[0].left 0 0 0 0 
+ghost_rev_direction[0].down 0 0 1 1 
+ghost_rev_direction[0].up 0 1 0 1 
+ghost_rev_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[1]
+Name ghost_rev_direction[1].right ghost_rev_direction[1].up ghost_rev_direction[1].down ghost_rev_direction[1].left 
+ghost_rev_direction[1].left 0 0 0 0 
+ghost_rev_direction[1].down 0 0 1 1 
+ghost_rev_direction[1].up 0 1 0 1 
+ghost_rev_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[2]
+Name ghost_rev_direction[2].right ghost_rev_direction[2].up ghost_rev_direction[2].down ghost_rev_direction[2].left 
+ghost_rev_direction[2].left 0 0 0 0 
+ghost_rev_direction[2].down 0 0 1 1 
+ghost_rev_direction[2].up 0 1 0 1 
+ghost_rev_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction[3]
+Name ghost_rev_direction[3].right ghost_rev_direction[3].up ghost_rev_direction[3].down ghost_rev_direction[3].left 
+ghost_rev_direction[3].left 0 0 0 0 
+ghost_rev_direction[3].down 0 0 1 1 
+ghost_rev_direction[3].up 0 1 0 1 
+ghost_rev_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction[0]
+Name ghost_c_direction[0].right ghost_c_direction[0].up ghost_c_direction[0].down ghost_c_direction[0].left 
+ghost_c_direction[0].left 0 0 0 0 
+ghost_c_direction[0].down 0 0 1 1 
+ghost_c_direction[0].up 0 1 0 1 
+ghost_c_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction[1]
+Name ghost_c_direction[1].right ghost_c_direction[1].up ghost_c_direction[1].down ghost_c_direction[1].left 
+ghost_c_direction[1].left 0 0 0 0 
+ghost_c_direction[1].down 0 0 1 1 
+ghost_c_direction[1].up 0 1 0 1 
+ghost_c_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction[2]
+Name ghost_c_direction[2].right ghost_c_direction[2].up ghost_c_direction[2].down ghost_c_direction[2].left 
+ghost_c_direction[2].left 0 0 0 0 
+ghost_c_direction[2].down 0 0 1 1 
+ghost_c_direction[2].up 0 1 0 1 
+ghost_c_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction[3]
+Name ghost_c_direction[3].right ghost_c_direction[3].up ghost_c_direction[3].down ghost_c_direction[3].left 
+ghost_c_direction[3].left 0 0 0 0 
+ghost_c_direction[3].down 0 0 1 1 
+ghost_c_direction[3].up 0 1 0 1 
+ghost_c_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction[0]
+Name ghost_b_direction[0].right ghost_b_direction[0].up ghost_b_direction[0].down ghost_b_direction[0].left 
+ghost_b_direction[0].left 0 0 0 0 
+ghost_b_direction[0].down 0 0 1 1 
+ghost_b_direction[0].up 0 1 0 1 
+ghost_b_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction[1]
+Name ghost_b_direction[1].right ghost_b_direction[1].up ghost_b_direction[1].down ghost_b_direction[1].left 
+ghost_b_direction[1].left 0 0 0 0 
+ghost_b_direction[1].down 0 0 1 1 
+ghost_b_direction[1].up 0 1 0 1 
+ghost_b_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction[2]
+Name ghost_b_direction[2].right ghost_b_direction[2].up ghost_b_direction[2].down ghost_b_direction[2].left 
+ghost_b_direction[2].left 0 0 0 0 
+ghost_b_direction[2].down 0 0 1 1 
+ghost_b_direction[2].up 0 1 0 1 
+ghost_b_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction[3]
+Name ghost_b_direction[3].right ghost_b_direction[3].up ghost_b_direction[3].down ghost_b_direction[3].left 
+ghost_b_direction[3].left 0 0 0 0 
+ghost_b_direction[3].down 0 0 1 1 
+ghost_b_direction[3].up 0 1 0 1 
+ghost_b_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction[0]
+Name ghost_a_direction[0].right ghost_a_direction[0].up ghost_a_direction[0].down ghost_a_direction[0].left 
+ghost_a_direction[0].left 0 0 0 0 
+ghost_a_direction[0].down 0 0 1 1 
+ghost_a_direction[0].up 0 1 0 1 
+ghost_a_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction[1]
+Name ghost_a_direction[1].right ghost_a_direction[1].up ghost_a_direction[1].down ghost_a_direction[1].left 
+ghost_a_direction[1].left 0 0 0 0 
+ghost_a_direction[1].down 0 0 1 1 
+ghost_a_direction[1].up 0 1 0 1 
+ghost_a_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction[2]
+Name ghost_a_direction[2].right ghost_a_direction[2].up ghost_a_direction[2].down ghost_a_direction[2].left 
+ghost_a_direction[2].left 0 0 0 0 
+ghost_a_direction[2].down 0 0 1 1 
+ghost_a_direction[2].up 0 1 0 1 
+ghost_a_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction[3]
+Name ghost_a_direction[3].right ghost_a_direction[3].up ghost_a_direction[3].down ghost_a_direction[3].left 
+ghost_a_direction[3].left 0 0 0 0 
+ghost_a_direction[3].down 0 0 1 1 
+ghost_a_direction[3].up 0 1 0 1 
+ghost_a_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction[0]
+Name ghost_next_direction[0].right ghost_next_direction[0].up ghost_next_direction[0].down ghost_next_direction[0].left 
+ghost_next_direction[0].left 0 0 0 0 
+ghost_next_direction[0].down 0 0 1 1 
+ghost_next_direction[0].up 0 1 0 1 
+ghost_next_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction[1]
+Name ghost_next_direction[1].right ghost_next_direction[1].up ghost_next_direction[1].down ghost_next_direction[1].left 
+ghost_next_direction[1].left 0 0 0 0 
+ghost_next_direction[1].down 0 0 1 1 
+ghost_next_direction[1].up 0 1 0 1 
+ghost_next_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction[2]
+Name ghost_next_direction[2].right ghost_next_direction[2].up ghost_next_direction[2].down ghost_next_direction[2].left 
+ghost_next_direction[2].left 0 0 0 0 
+ghost_next_direction[2].down 0 0 1 1 
+ghost_next_direction[2].up 0 1 0 1 
+ghost_next_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction[3]
+Name ghost_next_direction[3].right ghost_next_direction[3].up ghost_next_direction[3].down ghost_next_direction[3].left 
+ghost_next_direction[3].left 0 0 0 0 
+ghost_next_direction[3].down 0 0 1 1 
+ghost_next_direction[3].up 0 1 0 1 
+ghost_next_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction[0]
+Name ghost_direction[0].right ghost_direction[0].up ghost_direction[0].down ghost_direction[0].left 
+ghost_direction[0].left 0 0 0 0 
+ghost_direction[0].down 0 0 1 1 
+ghost_direction[0].up 0 1 0 1 
+ghost_direction[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction[1]
+Name ghost_direction[1].right ghost_direction[1].up ghost_direction[1].down ghost_direction[1].left 
+ghost_direction[1].left 0 0 0 0 
+ghost_direction[1].down 0 0 1 1 
+ghost_direction[1].up 0 1 0 1 
+ghost_direction[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction[2]
+Name ghost_direction[2].right ghost_direction[2].up ghost_direction[2].down ghost_direction[2].left 
+ghost_direction[2].left 0 0 0 0 
+ghost_direction[2].down 0 0 1 1 
+ghost_direction[2].up 0 1 0 1 
+ghost_direction[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction[3]
+Name ghost_direction[3].right ghost_direction[3].up ghost_direction[3].down ghost_direction[3].left 
+ghost_direction[3].left 0 0 0 0 
+ghost_direction[3].down 0 0 1 1 
+ghost_direction[3].up 0 1 0 1 
+ghost_direction[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_next_direction
+Name pacman_next_direction.right pacman_next_direction.up pacman_next_direction.down pacman_next_direction.left 
+pacman_next_direction.left 0 0 0 0 
+pacman_next_direction.down 0 0 1 1 
+pacman_next_direction.up 0 1 0 1 
+pacman_next_direction.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_change_direction
+Name pacman_change_direction.right pacman_change_direction.up pacman_change_direction.down pacman_change_direction.left 
+pacman_change_direction.left 0 0 0 0 
+pacman_change_direction.down 0 0 1 1 
+pacman_change_direction.up 0 1 0 1 
+pacman_change_direction.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_direction
+Name pacman_direction.right pacman_direction.up pacman_direction.down pacman_direction.left 
+pacman_direction.left 0 0 0 0 
+pacman_direction.down 0 0 1 1 
+pacman_direction.up 0 1 0 1 
+pacman_direction.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai[0]
+Name level_ai[0].follow_pen level_ai[0].run_pacman level_ai[0].follow_pacman level_ai[0].wander_around 
+level_ai[0].wander_around 0 0 0 0 
+level_ai[0].follow_pacman 0 0 1 1 
+level_ai[0].run_pacman 0 1 0 1 
+level_ai[0].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai[1]
+Name level_ai[1].follow_pen level_ai[1].run_pacman level_ai[1].follow_pacman level_ai[1].wander_around 
+level_ai[1].wander_around 0 0 0 0 
+level_ai[1].follow_pacman 0 0 1 1 
+level_ai[1].run_pacman 0 1 0 1 
+level_ai[1].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai[2]
+Name level_ai[2].follow_pen level_ai[2].run_pacman level_ai[2].follow_pacman level_ai[2].wander_around 
+level_ai[2].wander_around 0 0 0 0 
+level_ai[2].follow_pacman 0 0 1 1 
+level_ai[2].run_pacman 0 1 0 1 
+level_ai[2].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai[3]
+Name level_ai[3].follow_pen level_ai[3].run_pacman level_ai[3].follow_pacman level_ai[3].wander_around 
+level_ai[3].wander_around 0 0 0 0 
+level_ai[3].follow_pacman 0 0 1 1 
+level_ai[3].run_pacman 0 1 0 1 
+level_ai[3].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|game_process_state_signal
+Name game_process_state_signal.process_collision game_process_state_signal.assert_collision game_process_state_signal.process_pellet game_process_state_signal.process_movement 
+game_process_state_signal.process_movement 0 0 0 0 
+game_process_state_signal.process_pellet 0 0 1 1 
+game_process_state_signal.assert_collision 0 1 0 1 
+game_process_state_signal.process_collision 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|game_state_signal
+Name game_state_signal.game_win_map game_state_signal.game_pacman_dead game_state_signal.game_eat_pellet_end game_state_signal.game_eat_pellet_step_2 game_state_signal.game_eat_pellet_step_1 game_state_signal.game_eat_pellet_start game_state_signal.game_playing game_state_signal.game_start_wait game_state_signal.game_start game_state_signal.game_load_map_end game_state_signal.game_load_map_step_3 game_state_signal.game_load_map_step_2 game_state_signal.game_load_map_step_1 game_state_signal.game_load_map_start game_state_signal.game_initialize game_state_signal.game_splash game_state_signal.game_start_splash_wait game_state_signal.game_start_splash game_state_signal.game_load_splash game_state_signal.game_reset 
+game_state_signal.game_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+game_state_signal.game_load_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+game_state_signal.game_start_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+game_state_signal.game_start_splash_wait 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+game_state_signal.game_splash 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+game_state_signal.game_initialize 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+game_state_signal.game_load_map_start 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+game_state_signal.game_load_map_step_1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+game_state_signal.game_load_map_step_2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+game_state_signal.game_load_map_step_3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_load_map_end 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_start 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_start_wait 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_playing 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_eat_pellet_start 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_eat_pellet_step_1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_eat_pellet_step_2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_eat_pellet_end 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_pacman_dead 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+game_state_signal.game_win_map 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health_signal[0]
+Name ghost_health_signal[0].dead ghost_health_signal[0].weak ghost_health_signal[0].alive 
+ghost_health_signal[0].alive 0 0 0 
+ghost_health_signal[0].weak 0 1 1 
+ghost_health_signal[0].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health_signal[1]
+Name ghost_health_signal[1].dead ghost_health_signal[1].weak ghost_health_signal[1].alive 
+ghost_health_signal[1].alive 0 0 0 
+ghost_health_signal[1].weak 0 1 1 
+ghost_health_signal[1].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health_signal[2]
+Name ghost_health_signal[2].dead ghost_health_signal[2].weak ghost_health_signal[2].alive 
+ghost_health_signal[2].alive 0 0 0 
+ghost_health_signal[2].weak 0 1 1 
+ghost_health_signal[2].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_health_signal[3]
+Name ghost_health_signal[3].dead ghost_health_signal[3].weak ghost_health_signal[3].alive 
+ghost_health_signal[3].alive 0 0 0 
+ghost_health_signal[3].weak 0 1 1 
+ghost_health_signal[3].dead 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_change_direction_signal
+Name pacman_change_direction_signal.right pacman_change_direction_signal.up pacman_change_direction_signal.down pacman_change_direction_signal.left 
+pacman_change_direction_signal.left 0 0 0 0 
+pacman_change_direction_signal.down 0 0 1 1 
+pacman_change_direction_signal.up 0 1 0 1 
+pacman_change_direction_signal.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai_signal[0]
+Name level_ai_signal[0].follow_pen level_ai_signal[0].run_pacman level_ai_signal[0].follow_pacman level_ai_signal[0].wander_around 
+level_ai_signal[0].wander_around 0 0 0 0 
+level_ai_signal[0].follow_pacman 0 0 1 1 
+level_ai_signal[0].run_pacman 0 1 0 1 
+level_ai_signal[0].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai_signal[1]
+Name level_ai_signal[1].follow_pen level_ai_signal[1].run_pacman level_ai_signal[1].follow_pacman level_ai_signal[1].wander_around 
+level_ai_signal[1].wander_around 0 0 0 0 
+level_ai_signal[1].follow_pacman 0 0 1 1 
+level_ai_signal[1].run_pacman 0 1 0 1 
+level_ai_signal[1].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai_signal[2]
+Name level_ai_signal[2].follow_pen level_ai_signal[2].run_pacman level_ai_signal[2].follow_pacman level_ai_signal[2].wander_around 
+level_ai_signal[2].wander_around 0 0 0 0 
+level_ai_signal[2].follow_pacman 0 0 1 1 
+level_ai_signal[2].run_pacman 0 1 0 1 
+level_ai_signal[2].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|level_ai_signal[3]
+Name level_ai_signal[3].follow_pen level_ai_signal[3].run_pacman level_ai_signal[3].follow_pacman level_ai_signal[3].wander_around 
+level_ai_signal[3].wander_around 0 0 0 0 
+level_ai_signal[3].follow_pacman 0 0 1 1 
+level_ai_signal[3].run_pacman 0 1 0 1 
+level_ai_signal[3].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[3]
+Name ghost_ai_state_signal[3].moving ghost_ai_state_signal[3].waiting ghost_ai_state_signal[3].confirming_move ghost_ai_state_signal[3].asserting ghost_ai_state_signal[3].deciding ghost_ai_state_signal[3].acquiring ghost_ai_state_signal[3].analysing ghost_ai_state_signal[3].selecting 
+ghost_ai_state_signal[3].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state_signal[3].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state_signal[3].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state_signal[3].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state_signal[3].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state_signal[3].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state_signal[3].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state_signal[3].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action_signal[3]
+Name ghost_action_signal[3].run ghost_action_signal[3].follow ghost_action_signal[3].random 
+ghost_action_signal[3].random 0 0 0 
+ghost_action_signal[3].follow 0 1 1 
+ghost_action_signal[3].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[3]
+Name ghost_ai_selection_signal[3].follow_pen ghost_ai_selection_signal[3].run_pacman ghost_ai_selection_signal[3].follow_pacman ghost_ai_selection_signal[3].wander_around 
+ghost_ai_selection_signal[3].wander_around 0 0 0 0 
+ghost_ai_selection_signal[3].follow_pacman 0 0 1 1 
+ghost_ai_selection_signal[3].run_pacman 0 1 0 1 
+ghost_ai_selection_signal[3].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[3]
+Name ghost_ai_direction_signal[3].right ghost_ai_direction_signal[3].up ghost_ai_direction_signal[3].down ghost_ai_direction_signal[3].left 
+ghost_ai_direction_signal[3].left 0 0 0 0 
+ghost_ai_direction_signal[3].down 0 0 1 1 
+ghost_ai_direction_signal[3].up 0 1 0 1 
+ghost_ai_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[3]
+Name ghost_rev_direction_signal[3].right ghost_rev_direction_signal[3].up ghost_rev_direction_signal[3].down ghost_rev_direction_signal[3].left 
+ghost_rev_direction_signal[3].left 0 0 0 0 
+ghost_rev_direction_signal[3].down 0 0 1 1 
+ghost_rev_direction_signal[3].up 0 1 0 1 
+ghost_rev_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[3]
+Name ghost_c_direction_signal[3].right ghost_c_direction_signal[3].up ghost_c_direction_signal[3].down ghost_c_direction_signal[3].left 
+ghost_c_direction_signal[3].left 0 0 0 0 
+ghost_c_direction_signal[3].down 0 0 1 1 
+ghost_c_direction_signal[3].up 0 1 0 1 
+ghost_c_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[3]
+Name ghost_b_direction_signal[3].right ghost_b_direction_signal[3].up ghost_b_direction_signal[3].down ghost_b_direction_signal[3].left 
+ghost_b_direction_signal[3].left 0 0 0 0 
+ghost_b_direction_signal[3].down 0 0 1 1 
+ghost_b_direction_signal[3].up 0 1 0 1 
+ghost_b_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[3]
+Name ghost_a_direction_signal[3].right ghost_a_direction_signal[3].up ghost_a_direction_signal[3].down ghost_a_direction_signal[3].left 
+ghost_a_direction_signal[3].left 0 0 0 0 
+ghost_a_direction_signal[3].down 0 0 1 1 
+ghost_a_direction_signal[3].up 0 1 0 1 
+ghost_a_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[3]
+Name ghost_next_direction_signal[3].right ghost_next_direction_signal[3].up ghost_next_direction_signal[3].down ghost_next_direction_signal[3].left 
+ghost_next_direction_signal[3].left 0 0 0 0 
+ghost_next_direction_signal[3].down 0 0 1 1 
+ghost_next_direction_signal[3].up 0 1 0 1 
+ghost_next_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[3]
+Name ghost_direction_signal[3].right ghost_direction_signal[3].up ghost_direction_signal[3].down ghost_direction_signal[3].left 
+ghost_direction_signal[3].left 0 0 0 0 
+ghost_direction_signal[3].down 0 0 1 1 
+ghost_direction_signal[3].up 0 1 0 1 
+ghost_direction_signal[3].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|\ghost:3:ghost_ai:ghost_ai_dir
+Name \ghost:3:ghost_ai:ghost_ai_dir.right \ghost:3:ghost_ai:ghost_ai_dir.left \ghost:3:ghost_ai:ghost_ai_dir.down \ghost:3:ghost_ai:ghost_ai_dir.up 
+\ghost:3:ghost_ai:ghost_ai_dir.up 0 0 0 0 
+\ghost:3:ghost_ai:ghost_ai_dir.down 0 0 1 1 
+\ghost:3:ghost_ai:ghost_ai_dir.left 0 1 0 1 
+\ghost:3:ghost_ai:ghost_ai_dir.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[2]
+Name ghost_ai_state_signal[2].moving ghost_ai_state_signal[2].waiting ghost_ai_state_signal[2].confirming_move ghost_ai_state_signal[2].asserting ghost_ai_state_signal[2].deciding ghost_ai_state_signal[2].acquiring ghost_ai_state_signal[2].analysing ghost_ai_state_signal[2].selecting 
+ghost_ai_state_signal[2].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state_signal[2].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state_signal[2].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state_signal[2].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state_signal[2].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state_signal[2].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state_signal[2].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state_signal[2].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action_signal[2]
+Name ghost_action_signal[2].run ghost_action_signal[2].follow ghost_action_signal[2].random 
+ghost_action_signal[2].random 0 0 0 
+ghost_action_signal[2].follow 0 1 1 
+ghost_action_signal[2].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[2]
+Name ghost_ai_selection_signal[2].follow_pen ghost_ai_selection_signal[2].run_pacman ghost_ai_selection_signal[2].follow_pacman ghost_ai_selection_signal[2].wander_around 
+ghost_ai_selection_signal[2].wander_around 0 0 0 0 
+ghost_ai_selection_signal[2].follow_pacman 0 0 1 1 
+ghost_ai_selection_signal[2].run_pacman 0 1 0 1 
+ghost_ai_selection_signal[2].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[2]
+Name ghost_ai_direction_signal[2].right ghost_ai_direction_signal[2].up ghost_ai_direction_signal[2].down ghost_ai_direction_signal[2].left 
+ghost_ai_direction_signal[2].left 0 0 0 0 
+ghost_ai_direction_signal[2].down 0 0 1 1 
+ghost_ai_direction_signal[2].up 0 1 0 1 
+ghost_ai_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[2]
+Name ghost_rev_direction_signal[2].right ghost_rev_direction_signal[2].up ghost_rev_direction_signal[2].down ghost_rev_direction_signal[2].left 
+ghost_rev_direction_signal[2].left 0 0 0 0 
+ghost_rev_direction_signal[2].down 0 0 1 1 
+ghost_rev_direction_signal[2].up 0 1 0 1 
+ghost_rev_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[2]
+Name ghost_c_direction_signal[2].right ghost_c_direction_signal[2].up ghost_c_direction_signal[2].down ghost_c_direction_signal[2].left 
+ghost_c_direction_signal[2].left 0 0 0 0 
+ghost_c_direction_signal[2].down 0 0 1 1 
+ghost_c_direction_signal[2].up 0 1 0 1 
+ghost_c_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[2]
+Name ghost_b_direction_signal[2].right ghost_b_direction_signal[2].up ghost_b_direction_signal[2].down ghost_b_direction_signal[2].left 
+ghost_b_direction_signal[2].left 0 0 0 0 
+ghost_b_direction_signal[2].down 0 0 1 1 
+ghost_b_direction_signal[2].up 0 1 0 1 
+ghost_b_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[2]
+Name ghost_a_direction_signal[2].right ghost_a_direction_signal[2].up ghost_a_direction_signal[2].down ghost_a_direction_signal[2].left 
+ghost_a_direction_signal[2].left 0 0 0 0 
+ghost_a_direction_signal[2].down 0 0 1 1 
+ghost_a_direction_signal[2].up 0 1 0 1 
+ghost_a_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[2]
+Name ghost_next_direction_signal[2].right ghost_next_direction_signal[2].up ghost_next_direction_signal[2].down ghost_next_direction_signal[2].left 
+ghost_next_direction_signal[2].left 0 0 0 0 
+ghost_next_direction_signal[2].down 0 0 1 1 
+ghost_next_direction_signal[2].up 0 1 0 1 
+ghost_next_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[2]
+Name ghost_direction_signal[2].right ghost_direction_signal[2].up ghost_direction_signal[2].down ghost_direction_signal[2].left 
+ghost_direction_signal[2].left 0 0 0 0 
+ghost_direction_signal[2].down 0 0 1 1 
+ghost_direction_signal[2].up 0 1 0 1 
+ghost_direction_signal[2].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|\ghost:2:ghost_ai:ghost_ai_dir
+Name \ghost:2:ghost_ai:ghost_ai_dir.right \ghost:2:ghost_ai:ghost_ai_dir.left \ghost:2:ghost_ai:ghost_ai_dir.down \ghost:2:ghost_ai:ghost_ai_dir.up 
+\ghost:2:ghost_ai:ghost_ai_dir.up 0 0 0 0 
+\ghost:2:ghost_ai:ghost_ai_dir.down 0 0 1 1 
+\ghost:2:ghost_ai:ghost_ai_dir.left 0 1 0 1 
+\ghost:2:ghost_ai:ghost_ai_dir.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[1]
+Name ghost_ai_state_signal[1].moving ghost_ai_state_signal[1].waiting ghost_ai_state_signal[1].confirming_move ghost_ai_state_signal[1].asserting ghost_ai_state_signal[1].deciding ghost_ai_state_signal[1].acquiring ghost_ai_state_signal[1].analysing ghost_ai_state_signal[1].selecting 
+ghost_ai_state_signal[1].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state_signal[1].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state_signal[1].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state_signal[1].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state_signal[1].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state_signal[1].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state_signal[1].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state_signal[1].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action_signal[1]
+Name ghost_action_signal[1].run ghost_action_signal[1].follow ghost_action_signal[1].random 
+ghost_action_signal[1].random 0 0 0 
+ghost_action_signal[1].follow 0 1 1 
+ghost_action_signal[1].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[1]
+Name ghost_ai_selection_signal[1].follow_pen ghost_ai_selection_signal[1].run_pacman ghost_ai_selection_signal[1].follow_pacman ghost_ai_selection_signal[1].wander_around 
+ghost_ai_selection_signal[1].wander_around 0 0 0 0 
+ghost_ai_selection_signal[1].follow_pacman 0 0 1 1 
+ghost_ai_selection_signal[1].run_pacman 0 1 0 1 
+ghost_ai_selection_signal[1].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[1]
+Name ghost_ai_direction_signal[1].right ghost_ai_direction_signal[1].up ghost_ai_direction_signal[1].down ghost_ai_direction_signal[1].left 
+ghost_ai_direction_signal[1].left 0 0 0 0 
+ghost_ai_direction_signal[1].down 0 0 1 1 
+ghost_ai_direction_signal[1].up 0 1 0 1 
+ghost_ai_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[1]
+Name ghost_rev_direction_signal[1].right ghost_rev_direction_signal[1].up ghost_rev_direction_signal[1].down ghost_rev_direction_signal[1].left 
+ghost_rev_direction_signal[1].left 0 0 0 0 
+ghost_rev_direction_signal[1].down 0 0 1 1 
+ghost_rev_direction_signal[1].up 0 1 0 1 
+ghost_rev_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[1]
+Name ghost_c_direction_signal[1].right ghost_c_direction_signal[1].up ghost_c_direction_signal[1].down ghost_c_direction_signal[1].left 
+ghost_c_direction_signal[1].left 0 0 0 0 
+ghost_c_direction_signal[1].down 0 0 1 1 
+ghost_c_direction_signal[1].up 0 1 0 1 
+ghost_c_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[1]
+Name ghost_b_direction_signal[1].right ghost_b_direction_signal[1].up ghost_b_direction_signal[1].down ghost_b_direction_signal[1].left 
+ghost_b_direction_signal[1].left 0 0 0 0 
+ghost_b_direction_signal[1].down 0 0 1 1 
+ghost_b_direction_signal[1].up 0 1 0 1 
+ghost_b_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[1]
+Name ghost_a_direction_signal[1].right ghost_a_direction_signal[1].up ghost_a_direction_signal[1].down ghost_a_direction_signal[1].left 
+ghost_a_direction_signal[1].left 0 0 0 0 
+ghost_a_direction_signal[1].down 0 0 1 1 
+ghost_a_direction_signal[1].up 0 1 0 1 
+ghost_a_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[1]
+Name ghost_next_direction_signal[1].right ghost_next_direction_signal[1].up ghost_next_direction_signal[1].down ghost_next_direction_signal[1].left 
+ghost_next_direction_signal[1].left 0 0 0 0 
+ghost_next_direction_signal[1].down 0 0 1 1 
+ghost_next_direction_signal[1].up 0 1 0 1 
+ghost_next_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[1]
+Name ghost_direction_signal[1].right ghost_direction_signal[1].up ghost_direction_signal[1].down ghost_direction_signal[1].left 
+ghost_direction_signal[1].left 0 0 0 0 
+ghost_direction_signal[1].down 0 0 1 1 
+ghost_direction_signal[1].up 0 1 0 1 
+ghost_direction_signal[1].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|\ghost:1:ghost_ai:ghost_ai_dir
+Name \ghost:1:ghost_ai:ghost_ai_dir.right \ghost:1:ghost_ai:ghost_ai_dir.left \ghost:1:ghost_ai:ghost_ai_dir.down \ghost:1:ghost_ai:ghost_ai_dir.up 
+\ghost:1:ghost_ai:ghost_ai_dir.up 0 0 0 0 
+\ghost:1:ghost_ai:ghost_ai_dir.down 0 0 1 1 
+\ghost:1:ghost_ai:ghost_ai_dir.left 0 1 0 1 
+\ghost:1:ghost_ai:ghost_ai_dir.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[0]
+Name ghost_ai_state_signal[0].moving ghost_ai_state_signal[0].waiting ghost_ai_state_signal[0].confirming_move ghost_ai_state_signal[0].asserting ghost_ai_state_signal[0].deciding ghost_ai_state_signal[0].acquiring ghost_ai_state_signal[0].analysing ghost_ai_state_signal[0].selecting 
+ghost_ai_state_signal[0].selecting 0 0 0 0 0 0 0 0 
+ghost_ai_state_signal[0].analysing 0 0 0 0 0 0 1 1 
+ghost_ai_state_signal[0].acquiring 0 0 0 0 0 1 0 1 
+ghost_ai_state_signal[0].deciding 0 0 0 0 1 0 0 1 
+ghost_ai_state_signal[0].asserting 0 0 0 1 0 0 0 1 
+ghost_ai_state_signal[0].confirming_move 0 0 1 0 0 0 0 1 
+ghost_ai_state_signal[0].waiting 0 1 0 0 0 0 0 1 
+ghost_ai_state_signal[0].moving 1 0 0 0 0 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_action_signal[0]
+Name ghost_action_signal[0].run ghost_action_signal[0].follow ghost_action_signal[0].random 
+ghost_action_signal[0].random 0 0 0 
+ghost_action_signal[0].follow 0 1 1 
+ghost_action_signal[0].run 1 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_selection_signal[0]
+Name ghost_ai_selection_signal[0].follow_pen ghost_ai_selection_signal[0].run_pacman ghost_ai_selection_signal[0].follow_pacman ghost_ai_selection_signal[0].wander_around 
+ghost_ai_selection_signal[0].wander_around 0 0 0 0 
+ghost_ai_selection_signal[0].follow_pacman 0 0 1 1 
+ghost_ai_selection_signal[0].run_pacman 0 1 0 1 
+ghost_ai_selection_signal[0].follow_pen 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_ai_direction_signal[0]
+Name ghost_ai_direction_signal[0].right ghost_ai_direction_signal[0].up ghost_ai_direction_signal[0].down ghost_ai_direction_signal[0].left 
+ghost_ai_direction_signal[0].left 0 0 0 0 
+ghost_ai_direction_signal[0].down 0 0 1 1 
+ghost_ai_direction_signal[0].up 0 1 0 1 
+ghost_ai_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_rev_direction_signal[0]
+Name ghost_rev_direction_signal[0].right ghost_rev_direction_signal[0].up ghost_rev_direction_signal[0].down ghost_rev_direction_signal[0].left 
+ghost_rev_direction_signal[0].left 0 0 0 0 
+ghost_rev_direction_signal[0].down 0 0 1 1 
+ghost_rev_direction_signal[0].up 0 1 0 1 
+ghost_rev_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_c_direction_signal[0]
+Name ghost_c_direction_signal[0].right ghost_c_direction_signal[0].up ghost_c_direction_signal[0].down ghost_c_direction_signal[0].left 
+ghost_c_direction_signal[0].left 0 0 0 0 
+ghost_c_direction_signal[0].down 0 0 1 1 
+ghost_c_direction_signal[0].up 0 1 0 1 
+ghost_c_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_b_direction_signal[0]
+Name ghost_b_direction_signal[0].right ghost_b_direction_signal[0].up ghost_b_direction_signal[0].down ghost_b_direction_signal[0].left 
+ghost_b_direction_signal[0].left 0 0 0 0 
+ghost_b_direction_signal[0].down 0 0 1 1 
+ghost_b_direction_signal[0].up 0 1 0 1 
+ghost_b_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_a_direction_signal[0]
+Name ghost_a_direction_signal[0].right ghost_a_direction_signal[0].up ghost_a_direction_signal[0].down ghost_a_direction_signal[0].left 
+ghost_a_direction_signal[0].left 0 0 0 0 
+ghost_a_direction_signal[0].down 0 0 1 1 
+ghost_a_direction_signal[0].up 0 1 0 1 
+ghost_a_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_next_direction_signal[0]
+Name ghost_next_direction_signal[0].right ghost_next_direction_signal[0].up ghost_next_direction_signal[0].down ghost_next_direction_signal[0].left 
+ghost_next_direction_signal[0].left 0 0 0 0 
+ghost_next_direction_signal[0].down 0 0 1 1 
+ghost_next_direction_signal[0].up 0 1 0 1 
+ghost_next_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|ghost_direction_signal[0]
+Name ghost_direction_signal[0].right ghost_direction_signal[0].up ghost_direction_signal[0].down ghost_direction_signal[0].left 
+ghost_direction_signal[0].left 0 0 0 0 
+ghost_direction_signal[0].down 0 0 1 1 
+ghost_direction_signal[0].up 0 1 0 1 
+ghost_direction_signal[0].right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|\ghost:0:ghost_ai:ghost_ai_dir
+Name \ghost:0:ghost_ai:ghost_ai_dir.right \ghost:0:ghost_ai:ghost_ai_dir.left \ghost:0:ghost_ai:ghost_ai_dir.down \ghost:0:ghost_ai:ghost_ai_dir.up 
+\ghost:0:ghost_ai:ghost_ai_dir.up 0 0 0 0 
+\ghost:0:ghost_ai:ghost_ai_dir.down 0 0 1 1 
+\ghost:0:ghost_ai:ghost_ai_dir.left 0 1 0 1 
+\ghost:0:ghost_ai:ghost_ai_dir.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_next_direction_signal
+Name pacman_next_direction_signal.right pacman_next_direction_signal.left pacman_next_direction_signal.down pacman_next_direction_signal.up 
+pacman_next_direction_signal.up 0 0 0 0 
+pacman_next_direction_signal.down 0 0 1 1 
+pacman_next_direction_signal.left 0 1 0 1 
+pacman_next_direction_signal.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|pacman_direction_signal
+Name pacman_direction_signal.right pacman_direction_signal.up pacman_direction_signal.down pacman_direction_signal.left 
+pacman_direction_signal.left 0 0 0 0 
+pacman_direction_signal.down 0 0 1 1 
+pacman_direction_signal.up 0 1 0 1 
+pacman_direction_signal.right 1 0 0 1 
+
+State Machine - |pacman|pacman_core:core_0|\pacman:pacman_next_dir
+Name \pacman:pacman_next_dir.right \pacman:pacman_next_dir.left \pacman:pacman_next_dir.down \pacman:pacman_next_dir.up 
+\pacman:pacman_next_dir.up 0 0 0 0 
+\pacman:pacman_next_dir.down 0 0 1 1 
+\pacman:pacman_next_dir.left 0 1 0 1 
+\pacman:pacman_next_dir.right 1 0 0 1 

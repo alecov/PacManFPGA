@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.400 ns
+From           : game_speed[0]
+To             : debouncer:debouncer_0|debouncer_fifo[1][0]
+From Clock     : --
+To Clock       : clk_25Mhz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.800 ns
+From           : pacman_core:core_0|level_speed[0]
+To             : display[10]
+From Clock     : clk_25Mhz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.600 ns
+From           : game_controls[3]
+To             : debouncer:debouncer_0|debouncer_fifo[6][0]
+From Clock     : --
+To Clock       : clk_25Mhz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_25Mhz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.99 MHz ( period = 91.000 ns )
+From           : pacman_core:core_0|vga_sync:vga_sync_0|video_y[5]
+To             : pacman_core:core_0|video_bitmap[0]
+From Clock     : clk_25Mhz
+To Clock       : clk_25Mhz
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk_25Mhz'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : pacman_core:core_0|ghost_west[1][2]
+To             : pacman_core:core_0|ghost_next_b_signal[1][2]
+From Clock     : clk_25Mhz
+To Clock       : clk_25Mhz
+Failed Paths   : 5305
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 5305
+
+--------------------------------------------------------------------------------------
+
