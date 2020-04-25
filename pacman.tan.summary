@@ -5,52 +5,52 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.400 ns
-From           : game_speed[0]
-To             : debouncer:debouncer_0|debouncer_fifo[1][0]
+Actual Time    : 16.300 ns
+From           : game_controls[1]
+To             : debouncer:debouncer_0|debouncer_fifo[4][0]
 From Clock     : --
-To Clock       : clk_25Mhz
+To Clock       : clk_25MHz
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 25.800 ns
-From           : pacman_core:core_0|level_speed[0]
-To             : display[10]
-From Clock     : clk_25Mhz
+Actual Time    : 16.500 ns
+From           : pacman_core:core_0|VGA_SYNC:vga_sync_0|vert_sync_out
+To             : vert_sync
+From Clock     : clk_25MHz
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.600 ns
-From           : game_controls[3]
-To             : debouncer:debouncer_0|debouncer_fifo[6][0]
+Actual Time    : -4.600 ns
+From           : reset_n
+To             : debouncer:debouncer_0|debouncer_fifo[0][0]
 From Clock     : --
-To Clock       : clk_25Mhz
+To Clock       : clk_25MHz
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clk_25Mhz'
+Type           : Clock Setup: 'clk_25MHz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.99 MHz ( period = 91.000 ns )
-From           : pacman_core:core_0|vga_sync:vga_sync_0|video_y[5]
-To             : pacman_core:core_0|video_bitmap[0]
-From Clock     : clk_25Mhz
-To Clock       : clk_25Mhz
+Actual Time    : 10.87 MHz ( period = 92.000 ns )
+From           : pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[4]
+To             : pacman_core:core_0|bitmap_address[8]
+From Clock     : clk_25MHz
+To Clock       : clk_25MHz
 Failed Paths   : 0
 
-Type           : Clock Hold: 'clk_25Mhz'
+Type           : Clock Hold: 'clk_25MHz'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : pacman_core:core_0|ghost_west[1][2]
-To             : pacman_core:core_0|ghost_next_b_signal[1][2]
-From Clock     : clk_25Mhz
-To Clock       : clk_25Mhz
-Failed Paths   : 5305
+From           : pacman_core:core_0|ghost_direction[0].left
+To             : pacman_core:core_0|ghost_next_c_signal[0][0]
+From Clock     : clk_25MHz
+To Clock       : clk_25MHz
+Failed Paths   : 2754
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 5305
+Failed Paths   : 2754
 
 --------------------------------------------------------------------------------------
 

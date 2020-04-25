@@ -1,5 +1,5 @@
 Assembler report for pacman
-Mon Aug 27 20:00:34 2007
+Tue Aug 28 23:39:20 2007
 Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Aug 27 20:00:34 2007 ;
+; Assembler Status      ; Successful - Tue Aug 28 23:39:20 2007 ;
 ; Revision Name         ; pacman                                ;
 ; Top-level Entity Name ; pacman                                ;
 ; Family                ; FLEX10K                               ;
@@ -92,7 +92,7 @@ applicable agreement for further details.
 +----------------+-----------------------------------------------------------------------+
 ; Device         ; EPF10K70RC240-4                                                       ;
 ; JTAG usercode  ; 0x0000007F                                                            ;
-; Checksum       ; 0x00213998                                                            ;
+; Checksum       ; 0x001CC925                                                            ;
 +----------------+-----------------------------------------------------------------------+
 
 
@@ -103,7 +103,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 ; Device             ; EPC2                                                              ;
 ; JTAG usercode      ; 0x00000000                                                        ;
-; Checksum           ; 0x01ACE4F2                                                        ;
+; Checksum           ; 0x01A84E55                                                        ;
 ; Compression Ratio  ; 1                                                                 ;
 +--------------------+-------------------------------------------------------------------+
 
@@ -114,12 +114,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 6.1 Build 201 11/27/2006 SJ Full Version
-    Info: Processing started: Mon Aug 27 19:59:33 2007
+    Info: Processing started: Tue Aug 28 23:38:19 2007
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off pacman -c pacman
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Allocated 130 megabytes of memory during processing
-    Info: Processing ended: Mon Aug 27 20:00:34 2007
+    Info: Allocated 129 megabytes of memory during processing
+    Info: Processing ended: Tue Aug 28 23:39:20 2007
     Info: Elapsed time: 00:01:01
 
 

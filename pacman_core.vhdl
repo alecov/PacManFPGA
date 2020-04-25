@@ -12,7 +12,7 @@ use work.pacman_types.all;
 entity pacman_core is
 	port(
 		-- Default system signals
-		clk_25Mhz     : in  std_logic;
+		clk_25MHz     : in  std_logic;
 		reset_n       : in  std_logic;
 
 		-- Game switches & controls
@@ -30,6 +30,9 @@ entity pacman_core is
 end pacman_core;
 
 architecture rtl of pacman_core is
+	-- System signals
+	signal system_clk                     : std_logic;
+
 	-- Game signals
 	type game_state_t is (game_reset, game_load_splash, game_start_splash, game_start_splash_wait, game_splash, game_initialize, game_load_map_start, game_load_map_step_1, game_load_map_step_2, game_load_map_step_3, game_load_map_end, game_start, game_start_wait, game_playing, game_eat_pellet_start, game_eat_pellet_step_1, game_eat_pellet_step_2, game_eat_pellet_end, game_pacman_dead, game_win_map);
 	signal game_state                     : game_state_t;
@@ -46,8 +49,8 @@ architecture rtl of pacman_core is
 	alias  game_control_left              : std_logic is game_controls(1);
 	alias  game_control_right             : std_logic is game_controls(0);
 
-	signal level_speed                    : speed_t;
-	signal level_ai                       : ghost_ai_t;
+	--signal level_speed                    : speed_t;
+	--signal level_ai                       : ghost_ai_t;
 
 	signal pacman_clk                     : std_logic;
 	signal ghost_clk                      : std_logic_vector(MAX_GHOSTS-1 downto 0);
@@ -73,8 +76,8 @@ architecture rtl of pacman_core is
 	signal pacman_state                   : pacman_state_t;
 	signal pacman_lives                   : std_logic_vector(3 downto 0);
 	signal pacman_pellets                 : std_logic_vector(9 downto 0);
-	signal pacman_score                   : std_logic_vector(15 downto 0);
-	signal pacman_level                   : std_logic_vector(3 downto 0);
+	--signal pacman_score                   : std_logic_vector(15 downto 0);
+	--signal pacman_level                   : std_logic_vector(3 downto 0);
 	signal pacman_super_time              : std_logic_vector(7 downto 0);
 	signal pacman_start_time              : std_logic_vector(7 downto 0);
 
@@ -211,8 +214,9 @@ architecture rtl of pacman_core is
 	signal random_output                  : std_logic_vector(MAX_GHOSTS-1 downto 0);
 
 	-- Registered signals
-	signal level_speed_signal             : speed_t;
-	signal level_ai_signal                : ghost_ai_t;
+	signal register_clk                   : std_logic;
+	--signal level_speed_signal             : speed_t;
+	--signal level_ai_signal                : ghost_ai_t;
 	signal pacman_x_signal                : position_t;
 	signal pacman_y_signal                : position_t;
 	signal pacman_sp_x_signal             : position_t;
@@ -231,8 +235,8 @@ architecture rtl of pacman_core is
 	signal pacman_state_signal            : pacman_state_t;
 	signal pacman_lives_signal            : std_logic_vector(3 downto 0);
 	signal pacman_pellets_signal          : std_logic_vector(9 downto 0);
-	signal pacman_score_signal            : std_logic_vector(15 downto 0);
-	signal pacman_level_signal            : std_logic_vector(3 downto 0);
+	--signal pacman_score_signal            : std_logic_vector(15 downto 0);
+	--signal pacman_level_signal            : std_logic_vector(3 downto 0);
 	signal pacman_super_time_signal       : std_logic_vector(7 downto 0);
 	signal pacman_start_time_signal       : std_logic_vector(7 downto 0);
 	signal ghost_x_signal                 : ghost_position_t;
@@ -284,17 +288,17 @@ architecture rtl of pacman_core is
 
 	component vga_sync
 		port(
-			clk_25Mhz    : in  std_logic;
-			red_in       : in  std_logic;
-			green_in     : in  std_logic;
-			blue_in      : in  std_logic;
-			red_out      : out std_logic;
-			green_out    : out std_logic;
-			blue_out     : out std_logic;
-			horz_sync    : out std_logic;
-			vert_sync    : out std_logic;
-			video_x      : out std_logic_vector(9 downto 0);
-			video_y      : out std_logic_vector(9 downto 0)
+			clock_25Mhz    : in  std_logic;
+			red            : in  std_logic;
+			green          : in  std_logic;
+			blue           : in  std_logic;
+			red_out        : out std_logic;
+			green_out      : out std_logic;
+			blue_out       : out std_logic;
+			horiz_sync_out : out std_logic;
+			vert_sync_out  : out std_logic;
+			pixel_row      : out std_logic_vector(9 downto 0);
+			pixel_column   : out std_logic_vector(9 downto 0)
 		);
 	end component;
 	component clk_div
@@ -333,19 +337,25 @@ architecture rtl of pacman_core is
 	end component;
 begin
 	-- General components section
-	vga_sync_0:  vga_sync  port map(clk_25Mhz => clk_25Mhz, red_in => video_color_in(2), green_in => video_color_in(1), blue_in => video_color_in(0), red_out => red, green_out => green, blue_out => blue, horz_sync => horz_sync, vert_sync => vert_sync, video_x => video_x, video_y => video_y);
-	clk_div_0:   clk_div   generic map(log_factor => 11)            port map(clk_in => clk_25Mhz, edge_in => vcc, clk_out => game_clk_base);
-	clk_div_1:   clk_div   generic map(log_factor => 22)            port map(clk_in => clk_25Mhz, edge_in => vcc, clk_out => animation_clk);
+	vga_sync_0:  vga_sync  port map(clock_25Mhz => clk_25MHz, red => video_color_in(2), green => video_color_in(1), blue => video_color_in(0), red_out => red, green_out => green, blue_out => blue, horiz_sync_out => horz_sync, vert_sync_out => vert_sync, pixel_column => video_x, pixel_row => video_y);
+	clk_div_0:   clk_div   generic map(log_factor => 4)             port map(clk_in => clk_25MHz,     edge_in => vcc,                                 clk_out => system_clk);
+	clk_div_1:   clk_div   generic map(log_factor => 8)             port map(clk_in => clk_25MHz,     edge_in => vcc,                                 clk_out => register_clk);
+	clk_div_2:   clk_div   generic map(log_factor => 11)            port map(clk_in => clk_25MHz,     edge_in => vcc,                                 clk_out => game_clk_base);
+	clk_div_3:   clk_div   generic map(log_factor => 22)            port map(clk_in => clk_25MHz,     edge_in => vcc,                                 clk_out => animation_clk);
 	clk_div_n_0: clk_div_n generic map(factor_length => 8)          port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base, clk_out => game_clk);
-	LFSR32_0:    LFSR32    generic map(output_length => MAX_GHOSTS) port map(clk => clk_25Mhz, seed_enable_n => random_seed_write_n, seed_input => random_seed, output => random_output);
+	LFSR32_0:    LFSR32    generic map(output_length => MAX_GHOSTS) port map(clk => clk_25MHz, seed_enable_n => random_seed_write_n, seed_input => random_seed, output => random_output);
 
 	-- Game switches & controls section
-	game_speed_base <= not game_speed & not level_speed & "11";
+	--game_speed_base <= not game_speed & not level_speed & "11";
+	game_speed_base <= not game_speed & "000011";
 	game_data(3 downto 0)   <= pacman_lives;
 	game_data(13 downto 4)  <= pacman_pellets;
-	game_data(29 downto 14) <= pacman_score;
-	game_data(33 downto 30) <= pacman_level;
-	game_data(37 downto 34) <= level_speed;
+	--game_data(29 downto 14) <= pacman_score;
+	game_data(29 downto 14) <= (others => '0');
+	--game_data(33 downto 30) <= pacman_level;
+	game_data(33 downto 30) <= (others => '0');
+	--game_data(37 downto 34) <= level_speed;
+	game_data(37 downto 34) <= (others => '0');
 
 	with conv_integer(video_bitmap) select video_color_in <= bitmap_0_data when 0, bitmap_1_data when 1, bitmap_2_data when 2, bitmap_3_data when 3, bitmap_4_data when 4, bitmap_5_data when 5, bitmap_6_data when 6, bitmap_7_data when 7, bitmap_8_data when 8, bitmap_font_data when 14, video_color when others;
 
@@ -381,22 +391,22 @@ begin
 	vcc <= '1';
 	gnd <= '0';
 
-	video: process(clk_25Mhz, reset_n, video_x, video_y)
+	video: process(clk_25MHz, reset_n, video_x_cell, video_y_cell)
 		variable video_test : std_logic_vector(1 downto 0);
 	begin
 		if reset_n = '0' then
 			-- Video test
-			video_test := video_y(5 downto 4) xor video_x(5 downto 4);
+			video_test := video_y_cell(1 downto 0) xor video_x_cell(1 downto 0);
 			video_color(0) <= not video_test(0) and not video_test(1);
 			video_color(1) <= not video_test(0) and     video_test(1);
 			video_color(2) <=     video_test(0) and not video_test(1);
 			video_bitmap <= (others => '1');
 			bitmap_address <= (others => '0');
-		elsif rising_edge(clk_25Mhz) then
+		elsif rising_edge(clk_25MHz) then
+			video_color <= "000";
+			video_bitmap <= (others => '1');
 			case game_state is
 				when game_splash | game_start | game_start_wait | game_playing | game_eat_pellet_start | game_eat_pellet_step_1 | game_eat_pellet_step_2 | game_eat_pellet_end | game_pacman_dead | game_win_map =>
-					video_color <= "000";
-					video_bitmap <= (others => '1');
 					if video_x_cell < MAP_WIDTH and video_y_cell < MAP_HEIGHT then
 						bitmap_address(7 downto 0) <= video_y(3 downto 0) & video_x(3 downto 0);
 
@@ -560,7 +570,7 @@ begin
 	ram_x_cell <= video_x_cell;
 	ram_y_cell <= video_y_cell;
 	ram_address_aux <= conv_std_logic_vector(MAP_WIDTH*conv_integer(ram_y_cell)+conv_integer(ram_x_cell), ROM_ADDR_LENGTH);
-	ram_aux: process(clk_25Mhz, reset_n)
+	ram_aux: process(clk_25MHz, reset_n)
 	begin
 		if reset_n = '0' then
 			pacman_north_signal <= FREE_CELL;
@@ -572,38 +582,42 @@ begin
 			ghost_south_signal <= (others => FREE_CELL);
 			ghost_west_signal <= (others => FREE_CELL);
 			ghost_east_signal <= (others => FREE_CELL);
-		elsif rising_edge(clk_25Mhz) then
-			-- Update auxiliary pacman data
-			if ram_x_cell = pacman_x and ram_y_cell = pacman_y-1 then
-				pacman_north_signal <= ram_0_data_out;
-			elsif ram_x_cell = pacman_x and ram_y_cell = pacman_y+1 then
-				pacman_south_signal <= ram_0_data_out;
-			elsif ram_x_cell = pacman_x-1 and ram_y_cell = pacman_y then
-				pacman_west_signal <= ram_0_data_out;
-			elsif ram_x_cell = pacman_x+1 and ram_y_cell = pacman_y then
-				pacman_east_signal <= ram_0_data_out;
-			elsif ram_x_cell = pacman_x and ram_y_cell = pacman_y then
-				pacman_current_signal <= ram_0_data_out;
-			end if;
+		elsif rising_edge(clk_25MHz) then
+			case game_state is
+				when game_splash | game_playing =>
+					-- Update auxiliary pacman data
+					if ram_x_cell = pacman_x and ram_y_cell = pacman_y-1 then
+						pacman_north_signal <= ram_0_data_out;
+					elsif ram_x_cell = pacman_x and ram_y_cell = pacman_y+1 then
+						pacman_south_signal <= ram_0_data_out;
+					elsif ram_x_cell = pacman_x-1 and ram_y_cell = pacman_y then
+						pacman_west_signal <= ram_0_data_out;
+					elsif ram_x_cell = pacman_x+1 and ram_y_cell = pacman_y then
+						pacman_east_signal <= ram_0_data_out;
+					elsif ram_x_cell = pacman_x and ram_y_cell = pacman_y then
+						pacman_current_signal <= ram_0_data_out;
+					end if;
 
-			-- Update auxiliary ghost data
-			for i in 0 to MAX_GHOSTS-1 loop
-				if ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i)-1 then
-					ghost_north_signal(i) <= ram_0_data_out;
-				elsif ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i)+1 then
-					ghost_south_signal(i) <= ram_0_data_out;
-				elsif ram_x_cell = ghost_x(i)-1 and ram_y_cell = ghost_y(i) then
-					ghost_west_signal(i) <= ram_0_data_out;
-				elsif ram_x_cell = ghost_x(i)+1 and ram_y_cell = ghost_y(i) then
-					ghost_east_signal(i) <= ram_0_data_out;
-				elsif ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i) then
-					ghost_current_signal(i) <= ram_0_data_out;
-				end if;
-			end loop;
+					-- Update auxiliary ghost data
+					for i in 0 to MAX_GHOSTS-1 loop
+						if ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i)-1 then
+							ghost_north_signal(i) <= ram_0_data_out;
+						elsif ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i)+1 then
+							ghost_south_signal(i) <= ram_0_data_out;
+						elsif ram_x_cell = ghost_x(i)-1 and ram_y_cell = ghost_y(i) then
+							ghost_west_signal(i) <= ram_0_data_out;
+						elsif ram_x_cell = ghost_x(i)+1 and ram_y_cell = ghost_y(i) then
+							ghost_east_signal(i) <= ram_0_data_out;
+						elsif ram_x_cell = ghost_x(i) and ram_y_cell = ghost_y(i) then
+							ghost_current_signal(i) <= ram_0_data_out;
+						end if;
+					end loop;
+				when others => null;
+			end case;
 		end if;
 	end process;
 
-	clk_div_pacman: clk_div generic map(log_factor => 3) port map(clk_in => game_clk, edge_in => vcc, clk_out => pacman_clk);
+	clk_div_pacman: clk_div generic map(log_factor => 2) port map(clk_in => game_clk, edge_in => vcc, clk_out => pacman_clk);
 	pacman: process(pacman_clk, reset_n)
 		variable pacman_next_dir : direction_t;
 	begin
@@ -699,9 +713,9 @@ begin
 		end if;
 	end process;
 
-	clk_div_n_ghost_fast:   clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base-GHOST_FAST, clk_out => ghost_fast_clk);
-	clk_div_n_ghost_normal: clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base,            clk_out => ghost_normal_clk);
-	clk_div_n_ghost_slow:   clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base+GHOST_SLOW, clk_out => ghost_slow_clk);
+	clk_div_n_ghost_fast:   clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base+GHOST_FAST,   clk_out => ghost_fast_clk);
+	clk_div_n_ghost_normal: clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base+GHOST_NORMAL, clk_out => ghost_normal_clk);
+	clk_div_n_ghost_slow:   clk_div_n generic map(factor_length => 8) port map(clk_in => game_clk_base, edge_in => vcc, half_factor => game_speed_base+GHOST_SLOW,   clk_out => ghost_slow_clk);
 	ghost: for i in 0 to MAX_GHOSTS-1 generate
 	begin
 		with ghost_health(i) select ghost_clk(i) <= ghost_normal_clk when alive, ghost_slow_clk when weak, ghost_fast_clk when dead;
@@ -748,11 +762,13 @@ begin
 								-- Select AI behaviour
 								case ghost_health(i) is
 									when alive =>
-										ghost_ai_selection_signal(i) <= level_ai(i);
-										if game_state = game_splash then
-											ghost_ai_selection_signal(i) <= wander_around;
-										end if;
-									when weak => ghost_ai_selection_signal(i) <= run_pacman;
+										--ghost_ai_selection_signal(i) <= level_ai(i);
+										ghost_ai_selection_signal(i) <= wander_around;
+										--if game_state = game_splash then
+										--	ghost_ai_selection_signal(i) <= wander_around;
+										--end if;
+									--when weak => ghost_ai_selection_signal(i) <= run_pacman;
+									when weak => ghost_ai_selection_signal(i) <= wander_around;
 									when dead => ghost_ai_selection_signal(i) <= follow_pen;
 								end case;
 								ghost_ai_state_signal(i) <= analysing;
@@ -864,42 +880,42 @@ begin
 									ghost_next_direction_signal(i) <= ghost_a_direction(i);
 
 								-- Two ways to go (b or c)
-								elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_b_direction(i);
-								elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_c_direction(i);
+								--elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_b_direction(i);
+								--elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_c_direction(i);
 								elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and random_output(i) = '0' then
 									ghost_next_direction_signal(i) <= ghost_b_direction(i);
 								elsif ghost_next_a(i) = WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and random_output(i) = '1' then
 									ghost_next_direction_signal(i) <= ghost_c_direction(i);
 
 								-- Two ways to go (a or b)
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_a_direction(i);
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_b_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_a_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_b_direction(i);
 								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and random_output(i) = '0' then
 									ghost_next_direction_signal(i) <= ghost_a_direction(i);
 								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) = WALL and random_output(i) = '1' then
 									ghost_next_direction_signal(i) <= ghost_b_direction(i);
 
 								-- Two ways to go (a or c)
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_a_direction(i);
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_c_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_a_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_c_direction(i);
 								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and random_output(i) = '0' then
 									ghost_next_direction_signal(i) <= ghost_a_direction(i);
 								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) = WALL and ghost_next_c(i) /= WALL and random_output(i) = '1' then
 									ghost_next_direction_signal(i) <= ghost_c_direction(i);
 
 								-- Three ways to go (a, b or c)
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_a_direction(i);
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_b_direction(i);
-								elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
-									ghost_next_direction_signal(i) <= ghost_c_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_a_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_a_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_b_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_b_direction(i);
+								--elsif ghost_next_a(i) /= WALL and ghost_next_b(i) /= WALL and ghost_next_c(i) /= WALL and ghost_c_direction(i) = ghost_ai_direction(i) and ghost_action(i) /= random then
+								--	ghost_next_direction_signal(i) <= ghost_c_direction(i);
 								end if;
 								ghost_ai_state_signal(i) <= confirming_move;
 							when confirming_move =>
@@ -922,6 +938,12 @@ begin
 										ghost_next_y_signal(i) <= ghost_y(i);
 										ghost_next_signal(i) <= ghost_east(i);
 								end case;
+								-- Overriding normal ghost pen behaviour
+								if ghost_ai_selection(i) = follow_pen then
+									ghost_next_x_signal(i) <= ghost_pen_x;
+									ghost_next_y_signal(i) <= ghost_pen_y;
+									ghost_next_signal(i) <= GHOST_PEN;
+								end if;
 								ghost_ai_state_signal(i) <= waiting;
 							when waiting =>
 								-- Dummy state to fill in 8 states
@@ -937,7 +959,8 @@ begin
 											ghost_x_signal(i) <= gap_a_x;
 											ghost_y_signal(i) <= gap_a_y;
 										end if;
-									elsif ghost_next(i) /= WALL then -- Should not occur
+									--elsif ghost_next(i) /= WALL then -- Should not occur
+									else
 										ghost_x_signal(i) <= ghost_next_x(i);
 										ghost_y_signal(i) <= ghost_next_y(i);
 										ghost_direction_signal(i) <= ghost_next_direction(i);
@@ -951,18 +974,18 @@ begin
 		end process;
 	end generate;
 
-	main: process(clk_25Mhz, reset_n)
+	main: process(system_clk, reset_n)
 	begin
 		if reset_n = '0' then
-			level_speed_signal <= (others => '0');
-			level_ai_signal <= (others => wander_around);
+			--level_speed_signal <= (others => '0');
+			--level_ai_signal <= (others => wander_around);
 			pacman_sp_x_signal <= (others => '0');
 			pacman_sp_y_signal <= (others => '0');
 			pacman_change_direction_signal <= left;
 			pacman_lives_signal <= (others => '0');
 			pacman_pellets_signal <= (others => '0');
-			pacman_score_signal <= (others => '0');
-			pacman_level_signal <= (others => '0');
+			--pacman_score_signal <= (others => '0');
+			--pacman_level_signal <= (others => '0');
 			ghost_pen_x_signal <= (others => '0');
 			ghost_pen_y_signal <= (others => '0');
 			ghost_health_signal <= (others => alive);
@@ -980,7 +1003,7 @@ begin
 			rom_address_signal <= (others => '0');
 			game_state_signal <= game_reset;
 			game_process_state_signal <= process_movement;
-		elsif rising_edge(clk_25Mhz) then
+		elsif rising_edge(system_clk) then
 			case game_state is
 				when game_reset =>
 					game_state_signal <= game_load_splash;
@@ -1001,11 +1024,11 @@ begin
 						game_state_signal <= game_initialize;
 					end if;
 				when game_initialize =>
-					level_speed_signal <= LEVEL_SPEED_0;
-					level_ai_signal <= LEVEL_AI_0;
+					--level_speed_signal <= LEVEL_SPEED_0;
+					--level_ai_signal <= LEVEL_AI_0;
 					pacman_lives_signal <= conv_std_logic_vector(3, 4);
-					pacman_score_signal <= (others => '0');
-					pacman_level_signal <= (others => '0');
+					--pacman_score_signal <= (others => '0');
+					--pacman_level_signal <= (others => '0');
 					ghost_health_signal <= (others => alive);
 					game_state_signal <= game_load_map_start;
 				when game_load_map_start =>
@@ -1129,12 +1152,12 @@ begin
 								elsif ghost_health(i) = dead and ghost_x(i) = ghost_pen_x and ghost_y(i) = ghost_pen_y then
 									ghost_health_signal(i) <= alive;
 								end if;
-								case pacman_change_direction is
-									when up    => ghost_collision_signal(i) <= ghost_direction(i) = down and ghost_x(i) = pacman_x and ghost_y(i) = pacman_y-1;
-									when down  => ghost_collision_signal(i) <= ghost_direction(i) = up and ghost_x(i) = pacman_x and ghost_y(i) = pacman_y+1;
-									when left  => ghost_collision_signal(i) <= ghost_direction(i) = right and ghost_x(i) = pacman_x-1 and ghost_y(i) = pacman_y;
-									when right => ghost_collision_signal(i) <= ghost_direction(i) = left and ghost_x(i) = pacman_x+1 and ghost_y(i) = pacman_y;
-								end case;
+								--case pacman_change_direction is
+								--	when up    => ghost_collision_signal(i) <= ghost_direction(i) = down and ghost_x(i) = pacman_x and ghost_y(i) = pacman_y-1;
+								--	when down  => ghost_collision_signal(i) <= ghost_direction(i) = up and ghost_x(i) = pacman_x and ghost_y(i) = pacman_y+1;
+								--	when left  => ghost_collision_signal(i) <= ghost_direction(i) = right and ghost_x(i) = pacman_x-1 and ghost_y(i) = pacman_y;
+								--	when right => ghost_collision_signal(i) <= ghost_direction(i) = left and ghost_x(i) = pacman_x+1 and ghost_y(i) = pacman_y;
+								--end case;
 								if pacman_x = ghost_x(i) and pacman_y = ghost_y(i) then
 									ghost_collision_signal(i) <= true;
 								end if;
@@ -1149,7 +1172,7 @@ begin
 											pacman_lives_signal <= pacman_lives-1;
 											game_state_signal <= game_pacman_dead;
 										when weak =>
-											pacman_score_signal <= pacman_score+POINTS_GHOST;
+											--pacman_score_signal <= pacman_score+POINTS_GHOST;
 											ghost_health_signal(i) <= dead;
 										when dead => null;
 									end case;
@@ -1159,11 +1182,11 @@ begin
 					end case;
 				when game_eat_pellet_start =>
 					pacman_pellets_signal <= pacman_pellets-1;
-					if pacman_current = PELLET then
-						pacman_score_signal <= pacman_score+POINTS_PELLET;
-					else
-						pacman_score_signal <= pacman_score+POINTS_P_PELLET;
-					end if;
+					--if pacman_current = PELLET then
+					--	pacman_score_signal <= pacman_score+POINTS_PELLET;
+					--else
+					--	pacman_score_signal <= pacman_score+POINTS_P_PELLET;
+					--end if;
 					ram_address_main_signal <= conv_std_logic_vector(MAP_WIDTH*conv_integer(pacman_y)+conv_integer(pacman_x), ROM_ADDR_LENGTH);
 					ram_address_sel_signal <= '0';
 					ram_0_data_in_signal <= FREE_CELL;
@@ -1179,13 +1202,13 @@ begin
 					if pacman_current = FREE_CELL then
 						game_state_signal <= game_playing;
 						if pacman_pellets = 0 then
-							if pacman_lives < 15 then
-								pacman_lives_signal <= pacman_lives+1;
-							end if;
-							pacman_score_signal <= pacman_score+POINTS_MAP;
-							if pacman_level < 15 then
-								pacman_level_signal <= pacman_level+1;
-							end if;
+							--if pacman_lives < 15 then
+							--	pacman_lives_signal <= pacman_lives+1;
+							--end if;
+							--pacman_score_signal <= pacman_score+POINTS_MAP;
+							--if pacman_level < 15 then
+							--	pacman_level_signal <= pacman_level+1;
+							--end if;
 							game_state_signal <= game_win_map;
 						end if;
 					end if;
@@ -1197,57 +1220,57 @@ begin
 						end if;
 					end if;
 				when game_win_map =>
-					case conv_integer(pacman_level) is
-						when 0 =>
-							level_speed_signal <= LEVEL_SPEED_0;
-							level_ai_signal <= LEVEL_AI_0;
-						when 1 =>
-							level_speed_signal <= LEVEL_SPEED_1;
-							level_ai_signal <= LEVEL_AI_1;
-						when 2 =>
-							level_speed_signal <= LEVEL_SPEED_2;
-							level_ai_signal <= LEVEL_AI_2;
-						when 3 =>
-							level_speed_signal <= LEVEL_SPEED_3;
-							level_ai_signal <= LEVEL_AI_3;
-						when 4 =>
-							level_speed_signal <= LEVEL_SPEED_4;
-							level_ai_signal <= LEVEL_AI_4;
-						when 5 =>
-							level_speed_signal <= LEVEL_SPEED_5;
-							level_ai_signal <= LEVEL_AI_5;
-						when 6 =>
-							level_speed_signal <= LEVEL_SPEED_6;
-							level_ai_signal <= LEVEL_AI_6;
-						when 7 =>
-							level_speed_signal <= LEVEL_SPEED_7;
-							level_ai_signal <= LEVEL_AI_7;
-						when 8 =>
-							level_speed_signal <= LEVEL_SPEED_8;
-							level_ai_signal <= LEVEL_AI_8;
-						when 9 =>
-							level_speed_signal <= LEVEL_SPEED_9;
-							level_ai_signal <= LEVEL_AI_9;
-						when 10 =>
-							level_speed_signal <= LEVEL_SPEED_10;
-							level_ai_signal <= LEVEL_AI_10;
-						when 11 =>
-							level_speed_signal <= LEVEL_SPEED_11;
-							level_ai_signal <= LEVEL_AI_11;
-						when 12 =>
-							level_speed_signal <= LEVEL_SPEED_12;
-							level_ai_signal <= LEVEL_AI_12;
-						when 13 =>
-							level_speed_signal <= LEVEL_SPEED_13;
-							level_ai_signal <= LEVEL_AI_13;
-						when 14 =>
-							level_speed_signal <= LEVEL_SPEED_14;
-							level_ai_signal <= LEVEL_AI_14;
-						when 15 =>
-							level_speed_signal <= LEVEL_SPEED_15;
-							level_ai_signal <= LEVEL_AI_15;
-						when others => null;
-					end case;
+					--case conv_integer(pacman_level) is
+					--	when 0 =>
+					--		level_speed_signal <= LEVEL_SPEED_0;
+					--		level_ai_signal <= LEVEL_AI_0;
+					--	when 1 =>
+					--		level_speed_signal <= LEVEL_SPEED_1;
+					--		level_ai_signal <= LEVEL_AI_1;
+					--	when 2 =>
+					--		level_speed_signal <= LEVEL_SPEED_2;
+					--		level_ai_signal <= LEVEL_AI_2;
+					--	when 3 =>
+					--		level_speed_signal <= LEVEL_SPEED_3;
+					--		level_ai_signal <= LEVEL_AI_3;
+					--	when 4 =>
+					--		level_speed_signal <= LEVEL_SPEED_4;
+					--		level_ai_signal <= LEVEL_AI_4;
+					--	when 5 =>
+					--		level_speed_signal <= LEVEL_SPEED_5;
+					--		level_ai_signal <= LEVEL_AI_5;
+					--	when 6 =>
+					--		level_speed_signal <= LEVEL_SPEED_6;
+					--		level_ai_signal <= LEVEL_AI_6;
+					--	when 7 =>
+					--		level_speed_signal <= LEVEL_SPEED_7;
+					--		level_ai_signal <= LEVEL_AI_7;
+					--	when 8 =>
+					--		level_speed_signal <= LEVEL_SPEED_8;
+					--		level_ai_signal <= LEVEL_AI_8;
+					--	when 9 =>
+					--		level_speed_signal <= LEVEL_SPEED_9;
+					--		level_ai_signal <= LEVEL_AI_9;
+					--	when 10 =>
+					--		level_speed_signal <= LEVEL_SPEED_10;
+					--		level_ai_signal <= LEVEL_AI_10;
+					--	when 11 =>
+					--		level_speed_signal <= LEVEL_SPEED_11;
+					--		level_ai_signal <= LEVEL_AI_11;
+					--	when 12 =>
+					--		level_speed_signal <= LEVEL_SPEED_12;
+					--		level_ai_signal <= LEVEL_AI_12;
+					--	when 13 =>
+					--		level_speed_signal <= LEVEL_SPEED_13;
+					--		level_ai_signal <= LEVEL_AI_13;
+					--	when 14 =>
+					--		level_speed_signal <= LEVEL_SPEED_14;
+					--		level_ai_signal <= LEVEL_AI_14;
+					--	when 15 =>
+					--		level_speed_signal <= LEVEL_SPEED_15;
+					--		level_ai_signal <= LEVEL_AI_15;
+					--	when others => null;
+					--end case;
 					if animation_2_frame = ANIMATION_2_END then
 						game_state_signal <= game_load_map_start;
 					end if;
@@ -1255,11 +1278,11 @@ begin
 		end if;
 	end process;
 
-	register_out: process(clk_25Mhz, reset_n)
+	register_out: process(register_clk, reset_n)
 	begin
 		if reset_n = '0' then
-			level_speed <= (others => '0');
-			level_ai <= (others => wander_around);
+			--level_speed <= (others => '0');
+			--level_ai <= (others => wander_around);
 			pacman_x <= (others => '0');
 			pacman_y <= (others => '0');
 			pacman_sp_x <= (others => '0');
@@ -1278,8 +1301,8 @@ begin
 			pacman_state <= selecting;
 			pacman_lives <= (others => '0');
 			pacman_pellets <= (others => '0');
-			pacman_score <= (others => '0');
-			pacman_level <= (others => '0');
+			--pacman_score <= (others => '0');
+			--pacman_level <= (others => '0');
 			pacman_super_time <= (others => '0');
 			pacman_start_time <= (others => '0');
 			ghost_x <= (others => (others => '0'));
@@ -1326,9 +1349,9 @@ begin
 			rom_address <= (others => '0');
 			game_state <= game_reset;
 			game_process_state <= process_movement;
-		elsif rising_edge(clk_25Mhz) then
-			level_speed <= level_speed_signal;
-			level_ai <= level_ai_signal;
+		elsif rising_edge(register_clk) then
+			--level_speed <= level_speed_signal;
+			--level_ai <= level_ai_signal;
 			pacman_x <= pacman_x_signal;
 			pacman_y <= pacman_y_signal;
 			pacman_sp_x <= pacman_sp_x_signal;
@@ -1347,8 +1370,8 @@ begin
 			pacman_state <= pacman_state_signal;
 			pacman_lives <= pacman_lives_signal;
 			pacman_pellets <= pacman_pellets_signal;
-			pacman_score <= pacman_score_signal;
-			pacman_level <= pacman_level_signal;
+			--pacman_score <= pacman_score_signal;
+			--pacman_level <= pacman_level_signal;
 			pacman_super_time <= pacman_super_time_signal;
 			pacman_start_time <= pacman_start_time_signal;
 			ghost_x <= ghost_x_signal;

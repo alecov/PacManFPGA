@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity pacman is
 	port(
 		-- Default system signals
-		clk_25Mhz     : in  std_logic;
+		clk_25MHz     : in  std_logic;
 		reset_n       : in  std_logic;
 
 		-- Game switches & controls
@@ -40,7 +40,7 @@ architecture rtl of pacman is
 	component pacman_core
 		port(
 			-- Default system signals
-			clk_25Mhz     : in  std_logic;
+			clk_25MHz     : in  std_logic;
 			reset_n       : in  std_logic;
 
 			-- Game switches & controls
@@ -76,10 +76,10 @@ architecture rtl of pacman is
 	end component;
 begin
 	-- General components section
-	core_0:      pacman_core port map(clk_25Mhz => clk_25Mhz, reset_n => reset_n_signal, game_speed => game_speed_signal, game_controls => game_controls_signal, game_data => game_data_signal, horz_sync => horz_sync, vert_sync => vert_sync, red => red, green => green, blue => blue);
+	core_0:      pacman_core port map(clk_25MHz => clk_25MHz, reset_n => reset_n_signal, game_speed => game_speed_signal, game_controls => game_controls_signal, game_data => game_data_signal, horz_sync => horz_sync, vert_sync => vert_sync, red => red, green => green, blue => blue);
 	display7_0:  display7    port map(data => display_data(3 downto 0), segments => display(6 downto 0));
 	display7_1:  display7    port map(data => display_data(7 downto 4), segments => display(13 downto 7));
-	debouncer_0: debouncer   generic map(log_factor => 10, length => 8, fifo_length => 4) port map(clk => clk_25Mhz, input => debouncer_input, output => debouncer_output);
+	debouncer_0: debouncer   generic map(log_factor => 10, length => 8, fifo_length => 4) port map(clk => clk_25MHz, input => debouncer_input, output => debouncer_output);
 
 	-- Debouncer section
 	debouncer_input(0)          <= reset_n;

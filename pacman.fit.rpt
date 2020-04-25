@@ -1,5 +1,5 @@
 Fitter report for pacman
-Mon Aug 27 19:59:31 2007
+Tue Aug 28 23:38:18 2007
 Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
 
 
@@ -57,14 +57,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Mon Aug 27 19:59:31 2007    ;
+; Fitter Status         ; Successful - Tue Aug 28 23:38:18 2007    ;
 ; Quartus II Version    ; 6.1 Build 201 11/27/2006 SJ Full Version ;
 ; Revision Name         ; pacman                                   ;
 ; Top-level Entity Name ; pacman                                   ;
 ; Family                ; FLEX10K                                  ;
 ; Device                ; EPF10K70RC240-4                          ;
 ; Timing Models         ; Final                                    ;
-; Total logic elements  ; 3,377 / 3,744 ( 90 % )                   ;
+; Total logic elements  ; 2,947 / 3,744 ( 79 % )                   ;
 ; Total pins            ; 28 / 189 ( 15 % )                        ;
 ; Total memory bits     ; 12,568 / 18,432 ( 68 % )                 ;
 +-----------------------+------------------------------------------+
@@ -77,9 +77,9 @@ applicable agreement for further details.
 +------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                     ; EPF10K70RC240-4    ;                    ;
 ; Router Timing Optimization Level                           ; MAXIMUM            ; Normal             ;
+; Placement Effort Multiplier                                ; 4.0                ; 1.0                ;
+; Router Effort Multiplier                                   ; 4.0                ; 1.0                ;
 ; Fitter Effort                                              ; Standard Fit       ; Auto Fit           ;
-; Placement Effort Multiplier                                ; 1.0                ; 1.0                ;
-; Router Effort Multiplier                                   ; 1.0                ; 1.0                ;
 ; Optimize Timing                                            ; Normal compilation ; Normal compilation ;
 ; Optimize IOC Register Placement for Timing                 ; On                 ; On                 ;
 ; Limit to One Fitting Attempt                               ; Off                ; Off                ;
@@ -117,15 +117,15 @@ applicable agreement for further details.
 +------------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; Name             ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +------------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
-; clk_25Mhz        ; 91    ; --  ; --   ; 996     ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; clk_25MHz        ; 91    ; --  ; --   ; 272     ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
 ; reset_n          ; 28    ;  D  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; game_controls[4] ; 29    ;  D  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; game_controls[4] ; 45    ;  G  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; game_speed[1]    ; 41    ;  F  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; game_speed[0]    ; 40    ;  F  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; game_controls[1] ; 210   ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; game_controls[0] ; 90    ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; game_controls[3] ; 92    ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; game_controls[2] ; 211   ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; game_controls[0] ; 50    ;  H  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; game_controls[1] ; 49    ;  H  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; game_controls[3] ; 46    ;  H  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; game_controls[2] ; 48    ;  H  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 +------------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
 
@@ -134,24 +134,24 @@ applicable agreement for further details.
 +-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 ; Name        ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
-; horz_sync   ; 13    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; vert_sync   ; 14    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; horz_sync   ; 240   ; --  ; 52   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; vert_sync   ; 239   ; --  ; 51   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; red         ; 236   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; green       ; 237   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; blue        ; 238   ; --  ; 49   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[0]  ; 83    ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[1]  ; 218   ; --  ; 32   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[2]  ; 158   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[3]  ; 26    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[4]  ; 217   ; --  ; 31   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[5]  ; 156   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[6]  ; 157   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[7]  ; 141   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[8]  ; 129   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[9]  ; 126   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[10] ; 44    ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[11] ; 142   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; display[12] ; 128   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[0]  ; 76    ; --  ; 37   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[1]  ; 74    ; --  ; 39   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[2]  ; 95    ; --  ; 25   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[3]  ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[4]  ; 146   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[5]  ; 136   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[6]  ; 138   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[7]  ; 164   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[8]  ; 88    ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[9]  ; 190   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[10] ; 162   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[11] ; 213   ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; display[12] ; 172   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; display[13] ; 143   ;  G  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 +-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 
@@ -167,14 +167,14 @@ applicable agreement for further details.
 ; 4     ; #TDO             ;              ;
 ; 5     ; VCC_INT          ;              ;
 ; 6     ; GND*             ;              ;
-; 7     ; GND*             ;              ;
+; 7     ; display[3]       ; TTL          ;
 ; 8     ; GND*             ;              ;
 ; 9     ; GND*             ;              ;
 ; 10    ; GND_INT          ;              ;
 ; 11    ; GND*             ;              ;
 ; 12    ; GND*             ;              ;
-; 13    ; horz_sync        ; TTL          ;
-; 14    ; vert_sync        ; TTL          ;
+; 13    ; GND*             ;              ;
+; 14    ; GND*             ;              ;
 ; 15    ; GND*             ;              ;
 ; 16    ; VCC_INT          ;              ;
 ; 17    ; GND*             ;              ;
@@ -186,10 +186,10 @@ applicable agreement for further details.
 ; 23    ; GND*             ;              ;
 ; 24    ; GND*             ;              ;
 ; 25    ; GND*             ;              ;
-; 26    ; display[3]       ; TTL          ;
+; 26    ; GND*             ;              ;
 ; 27    ; VCC_INT          ;              ;
 ; 28    ; reset_n          ; TTL          ;
-; 29    ; game_controls[4] ; TTL          ;
+; 29    ; GND*             ;              ;
 ; 30    ; GND*             ;              ;
 ; 31    ; GND*             ;              ;
 ; 32    ; GND_INT          ;              ;
@@ -204,13 +204,13 @@ applicable agreement for further details.
 ; 41    ; game_speed[1]    ; TTL          ;
 ; 42    ; GND_INT          ;              ;
 ; 43    ; GND*             ;              ;
-; 44    ; display[10]      ; TTL          ;
-; 45    ; GND*             ;              ;
-; 46    ; GND*             ;              ;
+; 44    ; GND*             ;              ;
+; 45    ; game_controls[4] ; TTL          ;
+; 46    ; game_controls[3] ; TTL          ;
 ; 47    ; VCC_INT          ;              ;
-; 48    ; GND*             ;              ;
-; 49    ; GND*             ;              ;
-; 50    ; GND*             ;              ;
+; 48    ; game_controls[2] ; TTL          ;
+; 49    ; game_controls[1] ; TTL          ;
+; 50    ; game_controls[0] ; TTL          ;
 ; 51    ; GND*             ;              ;
 ; 52    ; GND_INT          ;              ;
 ; 53    ; GND*             ;              ;
@@ -234,28 +234,28 @@ applicable agreement for further details.
 ; 71    ; GND*             ;              ;
 ; 72    ; GND*             ;              ;
 ; 73    ; GND*             ;              ;
-; 74    ; GND*             ;              ;
+; 74    ; display[1]       ; TTL          ;
 ; 75    ; GND*             ;              ;
-; 76    ; GND*             ;              ;
+; 76    ; display[0]       ; TTL          ;
 ; 77    ; VCC_INT          ;              ;
 ; 78    ; GND*             ;              ;
 ; 79    ; GND*             ;              ;
 ; 80    ; GND*             ;              ;
 ; 81    ; GND*             ;              ;
 ; 82    ; GND*             ;              ;
-; 83    ; display[0]       ; TTL          ;
+; 83    ; GND*             ;              ;
 ; 84    ; GND*             ;              ;
 ; 85    ; GND_INT          ;              ;
 ; 86    ; GND*             ;              ;
 ; 87    ; GND*             ;              ;
-; 88    ; GND*             ;              ;
+; 88    ; display[8]       ; TTL          ;
 ; 89    ; VCC_INT          ;              ;
-; 90    ; game_controls[0] ; TTL          ;
-; 91    ; clk_25Mhz        ; TTL          ;
-; 92    ; game_controls[3] ; TTL          ;
+; 90    ; GND+             ;              ;
+; 91    ; clk_25MHz        ; TTL          ;
+; 92    ; GND+             ;              ;
 ; 93    ; GND_INT          ;              ;
 ; 94    ; GND*             ;              ;
-; 95    ; GND*             ;              ;
+; 95    ; display[2]       ; TTL          ;
 ; 96    ; VCC_INT          ;              ;
 ; 97    ; GND*             ;              ;
 ; 98    ; GND*             ;              ;
@@ -286,27 +286,27 @@ applicable agreement for further details.
 ; 123   ; ^MSEL1           ;              ;
 ; 124   ; ^MSEL0           ;              ;
 ; 125   ; GND_INT          ;              ;
-; 126   ; display[9]       ; TTL          ;
+; 126   ; GND*             ;              ;
 ; 127   ; GND*             ;              ;
-; 128   ; display[12]      ; TTL          ;
-; 129   ; display[8]       ; TTL          ;
+; 128   ; GND*             ;              ;
+; 129   ; GND*             ;              ;
 ; 130   ; VCC_INT          ;              ;
 ; 131   ; GND*             ;              ;
 ; 132   ; GND*             ;              ;
 ; 133   ; GND*             ;              ;
 ; 134   ; GND*             ;              ;
 ; 135   ; GND_INT          ;              ;
-; 136   ; GND*             ;              ;
+; 136   ; display[5]       ; TTL          ;
 ; 137   ; GND*             ;              ;
-; 138   ; GND*             ;              ;
+; 138   ; display[6]       ; TTL          ;
 ; 139   ; GND*             ;              ;
 ; 140   ; VCC_INT          ;              ;
-; 141   ; display[7]       ; TTL          ;
-; 142   ; display[11]      ; TTL          ;
+; 141   ; GND*             ;              ;
+; 142   ; GND*             ;              ;
 ; 143   ; display[13]      ; TTL          ;
 ; 144   ; GND*             ;              ;
 ; 145   ; GND_INT          ;              ;
-; 146   ; GND*             ;              ;
+; 146   ; display[4]       ; TTL          ;
 ; 147   ; GND*             ;              ;
 ; 148   ; GND*             ;              ;
 ; 149   ; GND*             ;              ;
@@ -316,15 +316,15 @@ applicable agreement for further details.
 ; 153   ; GND*             ;              ;
 ; 154   ; GND*             ;              ;
 ; 155   ; GND_INT          ;              ;
-; 156   ; display[5]       ; TTL          ;
-; 157   ; display[6]       ; TTL          ;
-; 158   ; display[2]       ; TTL          ;
+; 156   ; GND*             ;              ;
+; 157   ; GND*             ;              ;
+; 158   ; GND*             ;              ;
 ; 159   ; GND*             ;              ;
 ; 160   ; VCC_INT          ;              ;
 ; 161   ; GND*             ;              ;
-; 162   ; GND*             ;              ;
+; 162   ; display[10]      ; TTL          ;
 ; 163   ; GND*             ;              ;
-; 164   ; GND*             ;              ;
+; 164   ; display[7]       ; TTL          ;
 ; 165   ; GND_INT          ;              ;
 ; 166   ; GND*             ;              ;
 ; 167   ; GND*             ;              ;
@@ -332,7 +332,7 @@ applicable agreement for further details.
 ; 169   ; GND*             ;              ;
 ; 170   ; VCC_INT          ;              ;
 ; 171   ; GND*             ;              ;
-; 172   ; GND*             ;              ;
+; 172   ; display[12]      ; TTL          ;
 ; 173   ; GND*             ;              ;
 ; 174   ; GND*             ;              ;
 ; 175   ; GND*             ;              ;
@@ -350,7 +350,7 @@ applicable agreement for further details.
 ; 187   ; GND*             ;              ;
 ; 188   ; GND*             ;              ;
 ; 189   ; VCC_INT          ;              ;
-; 190   ; GND*             ;              ;
+; 190   ; display[9]       ; TTL          ;
 ; 191   ; GND*             ;              ;
 ; 192   ; GND*             ;              ;
 ; 193   ; GND*             ;              ;
@@ -370,15 +370,15 @@ applicable agreement for further details.
 ; 207   ; GND*             ;              ;
 ; 208   ; GND*             ;              ;
 ; 209   ; GND*             ;              ;
-; 210   ; game_controls[1] ; TTL          ;
-; 211   ; game_controls[2] ; TTL          ;
+; 210   ; GND+             ;              ;
+; 211   ; GND+             ;              ;
 ; 212   ; GND+             ;              ;
-; 213   ; GND*             ;              ;
+; 213   ; display[11]      ; TTL          ;
 ; 214   ; GND*             ;              ;
 ; 215   ; GND*             ;              ;
 ; 216   ; GND_INT          ;              ;
-; 217   ; display[4]       ; TTL          ;
-; 218   ; display[1]       ; TTL          ;
+; 217   ; GND*             ;              ;
+; 218   ; GND*             ;              ;
 ; 219   ; GND*             ;              ;
 ; 220   ; GND*             ;              ;
 ; 221   ; GND*             ;              ;
@@ -399,75 +399,75 @@ applicable agreement for further details.
 ; 236   ; red              ; TTL          ;
 ; 237   ; green            ; TTL          ;
 ; 238   ; blue             ; TTL          ;
-; 239   ; GND*             ;              ;
-; 240   ; GND*             ;              ;
+; 239   ; vert_sync        ; TTL          ;
+; 240   ; horz_sync        ; TTL          ;
 +-------+------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                      ;
-+------------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
-; Name                                                                                                 ; Pin #   ; Fan-Out ; Usage                      ; Global Usage ;
-+------------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
-; clk_25Mhz                                                                                            ; 91      ; 996     ; Clock                      ; Pin          ;
-; debouncer:debouncer_0|output[0]                                                                      ; LC1_D37 ; 1192    ; Async. clear / Async. load ; Internal     ;
-; pacman_core:core_0|vga_sync:vga_sync_0|lpm_counter:h_count_rtl_6|alt_counter_f10ke:wysi_counter|q[4] ; LC8_E16 ; 4       ; Sync. load                 ; Non-global   ;
-; pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_1|alt_counter_f10ke:wysi_counter|q[21]    ; LC7_G22 ; 9       ; Clock                      ; Non-global   ;
-; pacman_core:core_0|ram_0_write                                                                       ; LC5_C17 ; 3       ; Write enable               ; Non-global   ;
-; pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter|q[10]    ; LC6_I4  ; 36      ; Clock                      ; Non-global   ;
-; pacman_core:core_0|vga_sync:vga_sync_0|LessThan8~59                                                  ; LC1_E50 ; 9       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_current_signal[2][2]~256                                                    ; LC5_F1  ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_current_signal[3][2]~259                                                    ; LC3_F5  ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_current_signal[0][2]~250                                                    ; LC6_F48 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_current_signal[1][2]~253                                                    ; LC6_F44 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|comb~982                                                                          ; LC3_D41 ; 17      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector159~78                                                                    ; LC2_B51 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector156~78                                                                    ; LC7_B6  ; 20      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector257~78                                                                    ; LC3_B14 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector208~78                                                                    ; LC7_B14 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector205~78                                                                    ; LC8_C21 ; 20      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector204~79                                                                    ; LC4_C14 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector254~78                                                                    ; LC5_D24 ; 20      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector253~79                                                                    ; LC2_D24 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector451~25                                                                    ; LC2_G40 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector155~79                                                                    ; LC4_G38 ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector106~79                                                                    ; LC8_G5  ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector107~78                                                                    ; LC3_I40 ; 20      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector110~78                                                                    ; LC4_I8  ; 14      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|clk_div_n:clk_div_n_0|clk                                                         ; LC5_G4  ; 4       ; Clock                      ; Non-global   ;
-; pacman_core:core_0|vga_sync:vga_sync_0|LessThan3~253                                                 ; LC6_E18 ; 11      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|vga_sync:vga_sync_0|LessThan7~56                                                  ; LC4_E13 ; 10      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|WideNor0~46                                                                       ; LC8_C4  ; 18      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|bitmap_address[11]~14309                                                          ; LC6_E33 ; 1       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_south_signal[3][2]~203                                                      ; LC4_H30 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ram_aux~780                                                                       ; LC6_H27 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_west_signal[3][2]~76                                                        ; LC6_F5  ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_east_signal[3][2]~136                                                       ; LC4_F5  ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector162~84                                                                    ; LC6_G8  ; 83      ; Clock                      ; Non-global   ;
-; pacman_core:core_0|ram_aux~764                                                                       ; LC3_A29 ; 4       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|pacman_south_signal[0]~50                                                         ; LC1_A29 ; 4       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_south_signal[1][2]~199                                                      ; LC1_C45 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ram_aux~774                                                                       ; LC5_C40 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ram_aux~777                                                                       ; LC2_G26 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_south_signal[2][2]~201                                                      ; LC6_F1  ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_south_signal[0][2]~197                                                      ; LC8_F47 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ram_aux~771                                                                       ; LC1_F28 ; 5       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|pacman_west_signal[0]~54                                                          ; LC2_F14 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector211~84                                                                    ; LC4_G8  ; 83      ; Clock                      ; Non-global   ;
-; pacman_core:core_0|ghost_west_signal[1][2]~78                                                        ; LC3_F44 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_east_signal[1][2]~138                                                       ; LC2_F44 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector113~84                                                                    ; LC1_G8  ; 83      ; Clock                      ; Non-global   ;
-; pacman_core:core_0|ghost_west_signal[0][2]~79                                                        ; LC3_F48 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_east_signal[0][2]~139                                                       ; LC7_F48 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_west_signal[2][2]~77                                                        ; LC3_F1  ; 3       ; Clock enable               ; Non-global   ;
-; debouncer:debouncer_0|Equal14~81                                                                     ; LC7_B31 ; 40      ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|ghost_east_signal[2][2]~137                                                       ; LC4_F1  ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|pacman_current_signal[0]~141                                                      ; LC8_A29 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|pacman_east_signal[0]~34                                                          ; LC6_A29 ; 3       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|clk_div:clk_div_pacman|count[2]                                                   ; LC5_D10 ; 58      ; Clock                      ; Non-global   ;
-; pacman_core:core_0|game_start_flags_signal[3]~1295                                                   ; LC6_D11 ; 4       ; Clock enable               ; Non-global   ;
-; pacman_core:core_0|Selector64~84                                                                     ; LC3_G8  ; 83      ; Clock                      ; Non-global   ;
-+------------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
+; Name                                                                                              ; Pin #   ; Fan-Out ; Usage                      ; Global Usage ;
++---------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
+; clk_25MHz                                                                                         ; 91      ; 272     ; Clock                      ; Pin          ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|h_count[4]                                                 ; LC1_C42 ; 6       ; Sync. load                 ; Non-global   ;
+; debouncer:debouncer_0|output[0]                                                                   ; LC1_D48 ; 1004    ; Async. clear / Async. load ; Internal     ;
+; pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter|q[7]  ; LC8_E6  ; 500     ; Clock                      ; Non-global   ;
+; pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter|q[21] ; LC7_C35 ; 9       ; Clock                      ; Non-global   ;
+; pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1|alt_counter_f10ke:wysi_counter|q[3]  ; LC4_H1  ; 128     ; Clock                      ; Non-global   ;
+; pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5|alt_counter_f10ke:wysi_counter|q[10] ; LC6_H17 ; 36      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|LessThan6~56                                               ; LC2_C51 ; 10      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|bitmap_address[11]~14387                                                       ; LC3_F52 ; 1       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|LessThan7~61                                               ; LC5_H51 ; 9       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ram_0_write                                                                    ; LC5_D12 ; 3       ; Write enable               ; Non-global   ;
+; pacman_core:core_0|comb~383                                                                       ; LC2_I2  ; 17      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector111~84                                                                 ; LC8_G5  ; 60      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|Selector64~84                                                                  ; LC7_G5  ; 60      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|Selector158~84                                                                 ; LC3_G5  ; 60      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|ghost_north_signal[0][2]~65                                                    ; LC1_A26 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_north_signal[1][2]~62                                                    ; LC1_E25 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector205~84                                                                 ; LC2_G44 ; 60      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|ghost_north_signal[3][2]~68                                                    ; LC4_I27 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|WideNor0~75                                                                    ; LC1_D22 ; 13      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_south_signal[1][2]~121                                                   ; LC7_E25 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_west_signal[1][2]~100                                                    ; LC2_E2  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_east_signal[1][2]~199                                                    ; LC6_E2  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_current_signal[1][0]~339                                                 ; LC7_E2  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector155~78                                                                 ; LC7_E15 ; 14      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|game_start_flags_signal[3]~911                                                 ; LC2_D14 ; 4       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|pacman_south_signal[0]~31                                                      ; LC4_I29 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|pacman_north_signal[0]~17                                                      ; LC4_I32 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_south_signal[3][2]~125                                                   ; LC2_I42 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_north_signal[2][2]~71                                                    ; LC2_H22 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_south_signal[2][2]~127                                                   ; LC7_H22 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_south_signal[0][2]~123                                                   ; LC7_A26 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector105~78                                                                 ; LC8_A37 ; 20      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector202~78                                                                 ; LC8_F15 ; 14      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector199~78                                                                 ; LC8_F18 ; 20      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector108~78                                                                 ; LC1_E43 ; 14      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector152~78                                                                 ; LC5_E43 ; 20      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector249~78                                                                 ; LC8_D49 ; 14      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|Selector246~78                                                                 ; LC3_D42 ; 20      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|pacman_current_signal[0]~67                                                    ; LC3_I32 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_west_signal[3][2]~102                                                    ; LC3_I42 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_east_signal[3][2]~207                                                    ; LC4_I42 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_current_signal[3][0]~337                                                 ; LC1_I42 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_west_signal[2][2]~103                                                    ; LC6_H6  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_east_signal[2][2]~211                                                    ; LC7_H6  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_current_signal[2][0]~341                                                 ; LC2_H6  ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_west_signal[0][2]~101                                                    ; LC3_A33 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_east_signal[0][2]~203                                                    ; LC4_A33 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_current_signal[0][0]~343                                                 ; LC7_A33 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|clk_div:clk_div_pacman|count[1]                                                ; LC4_E23 ; 58      ; Clock                      ; Non-global   ;
+; pacman_core:core_0|pacman_west_signal[0]~28                                                       ; LC5_I32 ; 3       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|pacman_east_signal[0]~55                                                       ; LC1_I32 ; 3       ; Clock enable               ; Non-global   ;
+; debouncer:debouncer_0|Equal14~92                                                                  ; LC6_G36 ; 40      ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_collision_signal[3]~331                                                  ; LC5_C1  ; 1       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|clk_div_n:clk_div_n_0|clk                                                      ; LC1_E37 ; 3       ; Clock                      ; Non-global   ;
+; pacman_core:core_0|ghost_collision_signal[1]~319                                                  ; LC3_C20 ; 1       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_collision_signal[0]~323                                                  ; LC5_A5  ; 1       ; Clock enable               ; Non-global   ;
+; pacman_core:core_0|ghost_collision_signal[2]~327                                                  ; LC8_H13 ; 1       ; Clock enable               ; Non-global   ;
++---------------------------------------------------------------------------------------------------+---------+---------+----------------------------+--------------+
 
 
 +--------------------------------------------------------------+
@@ -475,12 +475,8 @@ applicable agreement for further details.
 +---------------------------------+---------+---------+--------+
 ; Name                            ; Pin #   ; Fan-Out ; Global ;
 +---------------------------------+---------+---------+--------+
-; clk_25Mhz                       ; 91      ; 996     ; yes    ;
-; debouncer:debouncer_0|output[0] ; LC1_D37 ; 1192    ; yes    ;
-; game_controls[1]                ; 210     ; 1       ; no     ;
-; game_controls[0]                ; 90      ; 1       ; no     ;
-; game_controls[3]                ; 92      ; 1       ; no     ;
-; game_controls[2]                ; 211     ; 1       ; no     ;
+; clk_25MHz                       ; 91      ; 272     ; yes    ;
+; debouncer:debouncer_0|output[0] ; LC1_D48 ; 1004    ; yes    ;
 +---------------------------------+---------+---------+--------+
 
 
@@ -491,9 +487,9 @@ applicable agreement for further details.
 +--------------------+------------------------+
 ; 0 - 1              ; 0                      ;
 ; 2 - 3              ; 0                      ;
-; 4 - 5              ; 10                     ;
+; 4 - 5              ; 9                      ;
 ; 6 - 7              ; 1                      ;
-; 8 - 9              ; 9                      ;
+; 8 - 9              ; 10                     ;
 ; 10 - 11            ; 7                      ;
 ; 12 - 13            ; 0                      ;
 ; 14 - 15            ; 0                      ;
@@ -509,8 +505,8 @@ applicable agreement for further details.
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 143   ;
-; 3      ; 5     ;
+; 3      ; 10    ;
+; 2      ; 118   ;
 +--------+-------+
 
 
@@ -519,18 +515,18 @@ applicable agreement for further details.
 +--------+------------------------------------------------------------------+------+-------+
 ; Cell # ; Name                                                             ; Mode ; Turbo ;
 +--------+------------------------------------------------------------------+------+-------+
-; EC2_D  ; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|q[1]             ; RAM  ; Off   ;
-; EC1_C  ; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|q[0]             ; RAM  ; Off   ;
-; EC1_B  ; pacman_core:core_0|lpm_rom:bitmap_font|altrom:srom|segment[0][0] ; RAM  ; Off   ;
-; EC1_I  ; pacman_core:core_0|lpm_rom:bitmap_1|altrom:srom|q[0]             ; RAM  ; Off   ;
-; EC2_I  ; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|q[1]             ; RAM  ; Off   ;
-; EC1_F  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[2]             ; RAM  ; Off   ;
-; EC1_D  ; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|q[0]             ; RAM  ; Off   ;
-; EC2_F  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[0]             ; RAM  ; Off   ;
-; EC1_E  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[1]             ; RAM  ; Off   ;
-; EC2_H  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[2]                ; RAM  ; Off   ;
-; EC1_H  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[0]                ; RAM  ; Off   ;
-; EC1_G  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[1]                ; RAM  ; Off   ;
+; EC1_B  ; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|q[1]             ; RAM  ; Off   ;
+; EC2_A  ; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|q[0]             ; RAM  ; Off   ;
+; EC2_B  ; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|q[0]             ; RAM  ; Off   ;
+; EC1_F  ; pacman_core:core_0|lpm_rom:bitmap_font|altrom:srom|segment[0][0] ; RAM  ; Off   ;
+; EC1_D  ; pacman_core:core_0|lpm_rom:bitmap_1|altrom:srom|q[0]             ; RAM  ; Off   ;
+; EC1_A  ; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|q[1]             ; RAM  ; Off   ;
+; EC1_I  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[2]             ; RAM  ; Off   ;
+; EC1_H  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[1]             ; RAM  ; Off   ;
+; EC2_I  ; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[0]             ; RAM  ; Off   ;
+; EC1_G  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[2]                ; RAM  ; Off   ;
+; EC1_E  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[1]                ; RAM  ; Off   ;
+; EC2_G  ; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|q[0]                ; RAM  ; Off   ;
 +--------+------------------------------------------------------------------+------+-------+
 
 
@@ -539,56 +535,56 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                ; Fan-Out ;
 +-----------------------------------------------------------------------------------------------------+---------+
-; pacman_core:core_0|game_state.game_playing~172                                                      ; 127     ;
-; pacman_core:core_0|Selector162~86                                                                   ; 83      ;
-; pacman_core:core_0|Selector211~86                                                                   ; 83      ;
-; pacman_core:core_0|Selector113~86                                                                   ; 83      ;
-; pacman_core:core_0|Selector64~86                                                                    ; 83      ;
-; pacman_core:core_0|game_state.game_load_map_step_1~97                                               ; 60      ;
-; pacman_core:core_0|clk_div:clk_div_pacman|count[2]~1                                                ; 58      ;
+; pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter|q[7]~0  ; 500     ;
+; pacman_core:core_0|game_state.game_playing~168                                                      ; 141     ;
+; pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1|alt_counter_f10ke:wysi_counter|q[3]~0  ; 128     ;
+; pacman_core:core_0|game_state.game_load_map_step_1~97                                               ; 71      ;
+; pacman_core:core_0|game_state.game_splash~61                                                        ; 65      ;
+; pacman_core:core_0|Selector111~86                                                                   ; 60      ;
+; pacman_core:core_0|Selector205~86                                                                   ; 60      ;
+; pacman_core:core_0|Selector64~86                                                                    ; 60      ;
+; pacman_core:core_0|Selector158~86                                                                   ; 60      ;
+; pacman_core:core_0|clk_div:clk_div_pacman|count[1]~1                                                ; 58      ;
 ; pacman_core:core_0|game_state.game_start~111                                                        ; 56      ;
-; pacman_core:core_0|game_state.game_start_splash~112                                                 ; 52      ;
-; pacman_core:core_0|game_state.game_splash~81                                                        ; 50      ;
-; pacman_core:core_0|game_state.game_start_splash~111                                                 ; 49      ;
-; pacman_core:core_0|WideOr11~88                                                                      ; 48      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_x[9]~259                                               ; 45      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_x[5]~254                                               ; 42      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_x[7]~257                                               ; 41      ;
-; pacman_core:core_0|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cout[0]                   ; 41      ;
-; debouncer:debouncer_0|Equal14~84                                                                    ; 40      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_x[6]~258                                               ; 39      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_column[7]~249                                          ; 51      ;
+; pacman_core:core_0|game_state.game_start_splash~114                                                 ; 50      ;
+; pacman_core:core_0|game_state.game_start_splash~112                                                 ; 50      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_column[9]~247                                          ; 49      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[5]~72                                              ; 49      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_column[5]~251                                          ; 49      ;
+; pacman_core:core_0|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cout[0]                   ; 46      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_column[6]~248                                          ; 41      ;
+; debouncer:debouncer_0|Equal14~96                                                                    ; 40      ;
+; pacman_core:core_0|Equal71~68                                                                       ; 39      ;
 ; pacman_core:core_0|game_state.game_eat_pellet_start~83                                              ; 37      ;
-; pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter|q[10]~0 ; 36      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_y[5]~69                                                ; 35      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_x[8]~256                                               ; 35      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_column[8]~250                                          ; 37      ;
+; pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5|alt_counter_f10ke:wysi_counter|q[10]~0 ; 36      ;
 ; pacman_core:core_0|game_state.game_load_map_start~29                                                ; 35      ;
-; pacman_core:core_0|pacman_y[0]~58                                                                   ; 34      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_y[4]~75                                                ; 31      ;
-; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[2]                                                ; 29      ;
-; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[0]                                                ; 29      ;
-; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[1]                                                ; 29      ;
-; pacman_core:core_0|game_state.game_start_wait~77                                                    ; 27      ;
-; pacman_core:core_0|pacman_x[0]~48                                                                   ; 26      ;
-; pacman_core:core_0|pacman_y[1]~56                                                                   ; 26      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_y[6]~73                                                ; 25      ;
-; pacman_core:core_0|video~519                                                                        ; 24      ;
-; pacman_core:core_0|pacman_y[2]~54                                                                   ; 24      ;
-; pacman_core:core_0|game_state.game_win_map~68                                                       ; 24      ;
-; pacman_core:core_0|pacman_y[3]~57                                                                   ; 23      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_y[7]~74                                                ; 23      ;
-; pacman_core:core_0|vga_sync:vga_sync_0|video_y[8]~72                                                ; 22      ;
-; pacman_core:core_0|ghost_action[3].run~24                                                           ; 21      ;
-; pacman_core:core_0|ghost_action[2].run~24                                                           ; 21      ;
-; pacman_core:core_0|ghost_action[0].run~24                                                           ; 21      ;
-; pacman_core:core_0|game_process_state.process_movement~50                                           ; 21      ;
-; pacman_core:core_0|ghost_action[1].run~24                                                           ; 21      ;
-; pacman_core:core_0|WideOr3~92                                                                       ; 21      ;
-; pacman_core:core_0|Selector107~80                                                                   ; 20      ;
-; pacman_core:core_0|Selector254~80                                                                   ; 20      ;
-; pacman_core:core_0|Selector156~80                                                                   ; 20      ;
-; pacman_core:core_0|Selector205~80                                                                   ; 20      ;
-; pacman_core:core_0|pacman_x[1]~51                                                                   ; 19      ;
-; pacman_core:core_0|pacman_y[4]~55                                                                   ; 19      ;
+; pacman_core:core_0|WideNor3~31                                                                      ; 35      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[4]~77                                              ; 34      ;
+; pacman_core:core_0|game_state.game_start_splash~115                                                 ; 32      ;
+; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[2]                                                ; 31      ;
+; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[1]                                                ; 31      ;
+; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[0]                                                ; 31      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[7]~69                                              ; 30      ;
+; pacman_core:core_0|pacman_next[2]~3                                                                 ; 28      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[6]~70                                              ; 26      ;
+; pacman_core:core_0|Equal68~26                                                                       ; 26      ;
+; pacman_core:core_0|Equal61~26                                                                       ; 26      ;
+; pacman_core:core_0|video~507                                                                        ; 26      ;
+; pacman_core:core_0|Equal47~26                                                                       ; 26      ;
+; pacman_core:core_0|pacman_state~21                                                                  ; 26      ;
+; pacman_core:core_0|pacman_next[1]~4                                                                 ; 25      ;
+; pacman_core:core_0|pacman_next[0]~5                                                                 ; 25      ;
+; pacman_core:core_0|Equal69~26                                                                       ; 25      ;
+; pacman_core:core_0|Equal54~26                                                                       ; 25      ;
+; pacman_core:core_0|Equal62~26                                                                       ; 25      ;
+; pacman_core:core_0|Equal48~26                                                                       ; 25      ;
+; pacman_core:core_0|Equal55~26                                                                       ; 24      ;
+; pacman_core:core_0|VGA_SYNC:vga_sync_0|pixel_row[8]~71                                              ; 23      ;
+; pacman_core:core_0|Equal70~26                                                                       ; 23      ;
+; pacman_core:core_0|Equal63~26                                                                       ; 23      ;
+; pacman_core:core_0|Equal56~26                                                                       ; 23      ;
 +-----------------------------------------------------------------------------------------------------+---------+
 
 
@@ -597,7 +593,7 @@ applicable agreement for further details.
 +---------------------------------+---------+----------------------------+-----------------+---------------------------+----------+
 ; Peripheral Signal               ; Source  ; Usage                      ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
 +---------------------------------+---------+----------------------------+-----------------+---------------------------+----------+
-; debouncer:debouncer_0|output[0] ; LC1_D37 ; Async. clear / Async. load ; no              ; yes                       ; +ve      ;
+; debouncer:debouncer_0|output[0] ; LC1_D48 ; Async. clear / Async. load ; no              ; yes                       ; +ve      ;
 +---------------------------------+---------+----------------------------+-----------------+---------------------------+----------+
 
 
@@ -606,15 +602,15 @@ applicable agreement for further details.
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 7              ;
-; 1                        ; 10             ;
-; 2                        ; 2              ;
-; 3                        ; 6              ;
-; 4                        ; 10             ;
-; 5                        ; 13             ;
-; 6                        ; 23             ;
-; 7                        ; 74             ;
-; 8                        ; 323            ;
+; 0                        ; 35             ;
+; 1                        ; 14             ;
+; 2                        ; 12             ;
+; 3                        ; 15             ;
+; 4                        ; 12             ;
+; 5                        ; 22             ;
+; 6                        ; 37             ;
+; 7                        ; 84             ;
+; 8                        ; 237            ;
 +--------------------------+----------------+
 
 
@@ -623,15 +619,15 @@ applicable agreement for further details.
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 34             ;
-; 1                           ; 17             ;
-; 2                           ; 21             ;
-; 3                           ; 61             ;
-; 4                           ; 107            ;
-; 5                           ; 84             ;
-; 6                           ; 94             ;
-; 7                           ; 34             ;
-; 8                           ; 16             ;
+; 0                           ; 84             ;
+; 1                           ; 16             ;
+; 2                           ; 28             ;
+; 3                           ; 60             ;
+; 4                           ; 83             ;
+; 5                           ; 83             ;
+; 6                           ; 70             ;
+; 7                           ; 33             ;
+; 8                           ; 11             ;
 +-----------------------------+----------------+
 
 
@@ -640,37 +636,37 @@ applicable agreement for further details.
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0 - 1                      ; 21             ;
-; 2 - 3                      ; 26             ;
-; 4 - 5                      ; 50             ;
-; 6 - 7                      ; 80             ;
-; 8 - 9                      ; 71             ;
-; 10 - 11                    ; 96             ;
-; 12 - 13                    ; 44             ;
-; 14 - 15                    ; 43             ;
-; 16 - 17                    ; 23             ;
+; 0 - 1                      ; 49             ;
+; 2 - 3                      ; 30             ;
+; 4 - 5                      ; 23             ;
+; 6 - 7                      ; 56             ;
+; 8 - 9                      ; 95             ;
+; 10 - 11                    ; 105            ;
+; 12 - 13                    ; 59             ;
+; 14 - 15                    ; 22             ;
+; 16 - 17                    ; 15             ;
 ; 18 - 19                    ; 9              ;
-; 20 - 21                    ; 4              ;
-; 22 - 23                    ; 1              ;
+; 20 - 21                    ; 1              ;
+; 22 - 23                    ; 4              ;
 +----------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Row Interconnect                                                                           ;
-+-------+-----------------------+-----------------------------+------------------------------+
-; Row   ; Interconnect Used     ; Left Half Interconnect Used ; Right Half Interconnect Used ;
-+-------+-----------------------+-----------------------------+------------------------------+
-;  A    ;  165 / 208 ( 79 % )   ;  73 / 104 ( 70 % )          ;  79 / 104 ( 76 % )           ;
-;  B    ;  86 / 208 ( 41 % )    ;  81 / 104 ( 78 % )          ;  80 / 104 ( 77 % )           ;
-;  C    ;  119 / 208 ( 57 % )   ;  72 / 104 ( 69 % )          ;  76 / 104 ( 73 % )           ;
-;  D    ;  123 / 208 ( 59 % )   ;  76 / 104 ( 73 % )          ;  72 / 104 ( 69 % )           ;
-;  E    ;  104 / 208 ( 50 % )   ;  63 / 104 ( 61 % )          ;  53 / 104 ( 51 % )           ;
-;  F    ;  155 / 208 ( 75 % )   ;  86 / 104 ( 83 % )          ;  69 / 104 ( 66 % )           ;
-;  G    ;  125 / 208 ( 60 % )   ;  71 / 104 ( 68 % )          ;  70 / 104 ( 67 % )           ;
-;  H    ;  103 / 208 ( 50 % )   ;  78 / 104 ( 75 % )          ;  80 / 104 ( 77 % )           ;
-;  I    ;  100 / 208 ( 48 % )   ;  67 / 104 ( 64 % )          ;  85 / 104 ( 82 % )           ;
-; Total ;  1080 / 1872 ( 58 % ) ;  667 / 936 ( 71 % )         ;  664 / 936 ( 71 % )          ;
-+-------+-----------------------+-----------------------------+------------------------------+
++-------------------------------------------------------------------------------------------+
+; Row Interconnect                                                                          ;
++-------+----------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used    ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+----------------------+-----------------------------+------------------------------+
+;  A    ;  106 / 208 ( 51 % )  ;  65 / 104 ( 63 % )          ;  57 / 104 ( 55 % )           ;
+;  B    ;  105 / 208 ( 50 % )  ;  78 / 104 ( 75 % )          ;  67 / 104 ( 64 % )           ;
+;  C    ;  82 / 208 ( 39 % )   ;  81 / 104 ( 78 % )          ;  31 / 104 ( 30 % )           ;
+;  D    ;  63 / 208 ( 30 % )   ;  79 / 104 ( 76 % )          ;  62 / 104 ( 60 % )           ;
+;  E    ;  87 / 208 ( 42 % )   ;  70 / 104 ( 67 % )          ;  68 / 104 ( 65 % )           ;
+;  F    ;  69 / 208 ( 33 % )   ;  73 / 104 ( 70 % )          ;  68 / 104 ( 65 % )           ;
+;  G    ;  41 / 208 ( 20 % )   ;  63 / 104 ( 61 % )          ;  45 / 104 ( 43 % )           ;
+;  H    ;  124 / 208 ( 60 % )  ;  78 / 104 ( 75 % )          ;  64 / 104 ( 62 % )           ;
+;  I    ;  129 / 208 ( 62 % )  ;  77 / 104 ( 74 % )          ;  65 / 104 ( 63 % )           ;
+; Total ;  806 / 1872 ( 43 % ) ;  664 / 936 ( 71 % )         ;  527 / 936 ( 56 % )          ;
++-------+----------------------+-----------------------------+------------------------------+
 
 
 +------------------------------+
@@ -678,59 +674,59 @@ applicable agreement for further details.
 +-------+----------------------+
 ; Col.  ; Interconnect Used    ;
 +-------+----------------------+
-; 1     ;  14 / 24 ( 58 % )    ;
-; 2     ;  13 / 24 ( 54 % )    ;
-; 3     ;  12 / 24 ( 50 % )    ;
-; 4     ;  13 / 24 ( 54 % )    ;
+; 1     ;  5 / 24 ( 21 % )     ;
+; 2     ;  11 / 24 ( 46 % )    ;
+; 3     ;  9 / 24 ( 38 % )     ;
+; 4     ;  7 / 24 ( 29 % )     ;
 ; 5     ;  13 / 24 ( 54 % )    ;
-; 6     ;  20 / 24 ( 83 % )    ;
+; 6     ;  9 / 24 ( 38 % )     ;
 ; 7     ;  12 / 24 ( 50 % )    ;
-; 8     ;  10 / 24 ( 42 % )    ;
-; 9     ;  16 / 24 ( 67 % )    ;
-; 10    ;  11 / 24 ( 46 % )    ;
-; 11    ;  13 / 24 ( 54 % )    ;
-; 12    ;  13 / 24 ( 54 % )    ;
-; 13    ;  11 / 24 ( 46 % )    ;
+; 8     ;  11 / 24 ( 46 % )    ;
+; 9     ;  14 / 24 ( 58 % )    ;
+; 10    ;  8 / 24 ( 33 % )     ;
+; 11    ;  12 / 24 ( 50 % )    ;
+; 12    ;  10 / 24 ( 42 % )    ;
+; 13    ;  5 / 24 ( 21 % )     ;
 ; 14    ;  9 / 24 ( 38 % )     ;
-; 15    ;  12 / 24 ( 50 % )    ;
-; 16    ;  15 / 24 ( 63 % )    ;
-; 17    ;  7 / 24 ( 29 % )     ;
-; 18    ;  10 / 24 ( 42 % )    ;
-; 19    ;  10 / 24 ( 42 % )    ;
-; 20    ;  15 / 24 ( 63 % )    ;
-; 21    ;  11 / 24 ( 46 % )    ;
-; 22    ;  9 / 24 ( 38 % )     ;
+; 15    ;  10 / 24 ( 42 % )    ;
+; 16    ;  9 / 24 ( 38 % )     ;
+; 17    ;  5 / 24 ( 21 % )     ;
+; 18    ;  7 / 24 ( 29 % )     ;
+; 19    ;  9 / 24 ( 38 % )     ;
+; 20    ;  8 / 24 ( 33 % )     ;
+; 21    ;  12 / 24 ( 50 % )    ;
+; 22    ;  13 / 24 ( 54 % )    ;
 ; 23    ;  9 / 24 ( 38 % )     ;
 ; 24    ;  8 / 24 ( 33 % )     ;
-; 25    ;  7 / 24 ( 29 % )     ;
-; 26    ;  10 / 24 ( 42 % )    ;
-; 27    ;  11 / 24 ( 46 % )    ;
+; 25    ;  12 / 24 ( 50 % )    ;
+; 26    ;  14 / 24 ( 58 % )    ;
+; 27    ;  9 / 24 ( 38 % )     ;
 ; 28    ;  11 / 24 ( 46 % )    ;
-; 29    ;  18 / 24 ( 75 % )    ;
-; 30    ;  15 / 24 ( 63 % )    ;
-; 31    ;  16 / 24 ( 67 % )    ;
-; 32    ;  13 / 24 ( 54 % )    ;
-; 33    ;  12 / 24 ( 50 % )    ;
-; 34    ;  8 / 24 ( 33 % )     ;
-; 35    ;  11 / 24 ( 46 % )    ;
-; 36    ;  12 / 24 ( 50 % )    ;
-; 37    ;  11 / 24 ( 46 % )    ;
-; 38    ;  11 / 24 ( 46 % )    ;
-; 39    ;  11 / 24 ( 46 % )    ;
-; 40    ;  12 / 24 ( 50 % )    ;
-; 41    ;  7 / 24 ( 29 % )     ;
-; 42    ;  7 / 24 ( 29 % )     ;
-; 43    ;  11 / 24 ( 46 % )    ;
-; 44    ;  6 / 24 ( 25 % )     ;
-; 45    ;  13 / 24 ( 54 % )    ;
-; 46    ;  11 / 24 ( 46 % )    ;
-; 47    ;  5 / 24 ( 21 % )     ;
-; 48    ;  11 / 24 ( 46 % )    ;
-; 49    ;  8 / 24 ( 33 % )     ;
-; 50    ;  12 / 24 ( 50 % )    ;
-; 51    ;  8 / 24 ( 33 % )     ;
-; 52    ;  6 / 24 ( 25 % )     ;
-; Total ;  580 / 1248 ( 46 % ) ;
+; 29    ;  7 / 24 ( 29 % )     ;
+; 30    ;  8 / 24 ( 33 % )     ;
+; 31    ;  4 / 24 ( 17 % )     ;
+; 32    ;  5 / 24 ( 21 % )     ;
+; 33    ;  5 / 24 ( 21 % )     ;
+; 34    ;  6 / 24 ( 25 % )     ;
+; 35    ;  6 / 24 ( 25 % )     ;
+; 36    ;  13 / 24 ( 54 % )    ;
+; 37    ;  7 / 24 ( 29 % )     ;
+; 38    ;  6 / 24 ( 25 % )     ;
+; 39    ;  4 / 24 ( 17 % )     ;
+; 40    ;  5 / 24 ( 21 % )     ;
+; 41    ;  9 / 24 ( 38 % )     ;
+; 42    ;  12 / 24 ( 50 % )    ;
+; 43    ;  4 / 24 ( 17 % )     ;
+; 44    ;  8 / 24 ( 33 % )     ;
+; 45    ;  11 / 24 ( 46 % )    ;
+; 46    ;  6 / 24 ( 25 % )     ;
+; 47    ;  7 / 24 ( 29 % )     ;
+; 48    ;  6 / 24 ( 25 % )     ;
+; 49    ;  5 / 24 ( 21 % )     ;
+; 50    ;  7 / 24 ( 29 % )     ;
+; 51    ;  7 / 24 ( 29 % )     ;
+; 52    ;  7 / 24 ( 29 % )     ;
+; Total ;  436 / 1248 ( 35 % ) ;
 +-------+----------------------+
 
 
@@ -739,34 +735,34 @@ applicable agreement for further details.
 +-------+-------------------+
 ; Col.  ; Interconnect Used ;
 +-------+-------------------+
-; 1     ;  11 / 24 ( 46 % ) ;
-; Total ;  11 / 24 ( 46 % ) ;
+; 1     ;  10 / 24 ( 42 % ) ;
+; Total ;  10 / 24 ( 42 % ) ;
 +-------+-------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                  ;
-+-----------------------------------+--------------------------------------------+
-; Resource                          ; Usage                                      ;
-+-----------------------------------+--------------------------------------------+
-; Total logic elements              ; 3,377 / 3,744 ( 90 % )                     ;
-; Registers                         ; 1,433 / 3,744 ( 38 % )                     ;
-; Logic elements in carry chains    ; 223                                        ;
-; User inserted logic elements      ; 0                                          ;
-; I/O pins                          ; 28 / 189 ( 15 % )                          ;
-;     -- Clock pins                 ; 2                                          ;
-;     -- Dedicated input pins       ; 3 / 4 ( 75 % )                             ;
-; Global signals                    ; 2                                          ;
-; EABs                              ; 8 / 9 ( 89 % )                             ;
-; Total memory bits                 ; 12,568 / 18,432 ( 68 % )                   ;
-; Total RAM block bits              ; 16,384 / 18,432 ( 89 % )                   ;
-; Maximum fan-out node              ; debouncer:debouncer_0|output[0]            ;
-; Maximum fan-out                   ; 1192                                       ;
-; Highest non-global fan-out signal ; pacman_core:core_0|game_state.game_playing ;
-; Highest non-global fan-out        ; 127                                        ;
-; Total fan-out                     ; 13059                                      ;
-; Average fan-out                   ; 3.82                                       ;
-+-----------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                                                                        ;
++-----------------------------------+--------------------------------------------------------------------------------------------------+
+; Resource                          ; Usage                                                                                            ;
++-----------------------------------+--------------------------------------------------------------------------------------------------+
+; Total logic elements              ; 2,947 / 3,744 ( 79 % )                                                                           ;
+; Registers                         ; 1,244 / 3,744 ( 33 % )                                                                           ;
+; Logic elements in carry chains    ; 225                                                                                              ;
+; User inserted logic elements      ; 0                                                                                                ;
+; I/O pins                          ; 28 / 189 ( 15 % )                                                                                ;
+;     -- Clock pins                 ; 1                                                                                                ;
+;     -- Dedicated input pins       ; 1 / 4 ( 25 % )                                                                                   ;
+; Global signals                    ; 2                                                                                                ;
+; EABs                              ; 8 / 9 ( 89 % )                                                                                   ;
+; Total memory bits                 ; 12,568 / 18,432 ( 68 % )                                                                         ;
+; Total RAM block bits              ; 16,384 / 18,432 ( 89 % )                                                                         ;
+; Maximum fan-out node              ; debouncer:debouncer_0|output[0]                                                                  ;
+; Maximum fan-out                   ; 1004                                                                                             ;
+; Highest non-global fan-out signal ; pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter|q[7] ;
+; Highest non-global fan-out        ; 500                                                                                              ;
+; Total fan-out                     ; 11238                                                                                            ;
+; Average fan-out                   ; 3.76                                                                                             ;
++-----------------------------------+--------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -774,63 +770,52 @@ applicable agreement for further details.
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                ;
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; |pacman                                      ; 3377 (0)    ; 1433         ; 12568       ; 28   ; 1944 (0)     ; 736 (0)           ; 697 (0)          ; 223 (0)         ; 0 (0)      ; |pacman                                                                                                            ;
+; |pacman                                      ; 2947 (0)    ; 1244         ; 12568       ; 28   ; 1703 (0)     ; 659 (0)           ; 585 (0)          ; 225 (0)         ; 0 (0)      ; |pacman                                                                                                            ;
 ;    |debouncer:debouncer_0|                   ; 72 (62)     ; 50           ; 0           ; 0    ; 22 (22)      ; 32 (32)           ; 18 (8)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0                                                                                      ;
-;       |lpm_counter:count_rtl_0|              ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_0                                                              ;
-;          |alt_counter_f10ke:wysi_counter|    ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter                               ;
-;    |display7:display7_0|                     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|display7:display7_0                                                                                        ;
-;    |display7:display7_1|                     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|display7:display7_1                                                                                        ;
-;    |pacman_core:core_0|                      ; 3291 (2946) ; 1383         ; 12568       ; 0    ; 1908 (1719)  ; 704 (649)         ; 679 (578)        ; 213 (14)        ; 0 (0)      ; |pacman|pacman_core:core_0                                                                                         ;
+;       |lpm_counter:count_rtl_2|              ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_2                                                              ;
+;          |alt_counter_f10ke:wysi_counter|    ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|debouncer:debouncer_0|lpm_counter:count_rtl_2|alt_counter_f10ke:wysi_counter                               ;
+;    |pacman_core:core_0|                      ; 2875 (2519) ; 1194         ; 12568       ; 0    ; 1681 (1492)  ; 627 (567)         ; 567 (460)        ; 215 (13)        ; 0 (0)      ; |pacman|pacman_core:core_0                                                                                         ;
 ;       |LFSR32:LFSR32_0|                      ; 36 (36)     ; 36           ; 0           ; 0    ; 0 (0)        ; 35 (35)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|LFSR32:LFSR32_0                                                                         ;
-;       |clk_div:clk_div_0|                    ; 11 (0)      ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (0)           ; 11 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0                                                                       ;
-;          |lpm_counter:count_rtl_3|           ; 11 (0)      ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (0)           ; 11 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_3                                               ;
-;             |alt_counter_f10ke:wysi_counter| ; 11 (11)     ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (11)          ; 11 (11)         ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter                ;
-;       |clk_div:clk_div_1|                    ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1                                                                       ;
-;          |lpm_counter:count_rtl_1|           ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_1                                               ;
-;             |alt_counter_f10ke:wysi_counter| ; 22 (22)     ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (22)          ; 22 (22)         ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_1|alt_counter_f10ke:wysi_counter                ;
-;       |clk_div:clk_div_pacman|               ; 3 (3)       ; 3            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_pacman                                                                  ;
-;       |clk_div_n:clk_div_n_0|                ; 15 (7)      ; 9            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0                                                                   ;
-;          |lpm_counter:count_rtl_8|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_8                                           ;
-;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_8|alt_counter_f10ke:wysi_counter            ;
+;       |VGA_SYNC:vga_sync_0|                  ; 77 (58)     ; 48           ; 0           ; 0    ; 29 (20)      ; 25 (25)           ; 23 (13)          ; 21 (2)          ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0                                                                     ;
+;          |lpm_add_sub:Add0|                  ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0                                                    ;
+;             |addcore:adder|                  ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0|addcore:adder                                      ;
+;                |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node              ;
+;          |lpm_counter:v_count_rtl_8|         ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_counter:v_count_rtl_8                                           ;
+;             |alt_counter_f10ke:wysi_counter| ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_counter:v_count_rtl_8|alt_counter_f10ke:wysi_counter            ;
+;       |clk_div:clk_div_0|                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0                                                                       ;
+;          |lpm_counter:count_rtl_1|           ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1                                               ;
+;             |alt_counter_f10ke:wysi_counter| ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_0|lpm_counter:count_rtl_1|alt_counter_f10ke:wysi_counter                ;
+;       |clk_div:clk_div_1|                    ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1                                                                       ;
+;          |lpm_counter:count_rtl_0|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0                                               ;
+;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_1|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter                ;
+;       |clk_div:clk_div_2|                    ; 11 (0)      ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (0)           ; 11 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_2                                                                       ;
+;          |lpm_counter:count_rtl_5|           ; 11 (0)      ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (0)           ; 11 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5                                               ;
+;             |alt_counter_f10ke:wysi_counter| ; 11 (11)     ; 11           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 11 (11)          ; 11 (11)         ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_2|lpm_counter:count_rtl_5|alt_counter_f10ke:wysi_counter                ;
+;       |clk_div:clk_div_3|                    ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_3                                                                       ;
+;          |lpm_counter:count_rtl_3|           ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3                                               ;
+;             |alt_counter_f10ke:wysi_counter| ; 22 (22)     ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (22)          ; 22 (22)         ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_3|lpm_counter:count_rtl_3|alt_counter_f10ke:wysi_counter                ;
+;       |clk_div:clk_div_pacman|               ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div:clk_div_pacman                                                                  ;
+;       |clk_div_n:clk_div_n_0|                ; 13 (5)      ; 9            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0                                                                   ;
+;          |lpm_counter:count_rtl_9|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9                                           ;
+;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_0|lpm_counter:count_rtl_9|alt_counter_f10ke:wysi_counter            ;
 ;       |clk_div_n:clk_div_n_ghost_fast|       ; 15 (7)      ; 9            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast                                                          ;
-;          |lpm_counter:count_rtl_2|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_2                                  ;
-;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_2|alt_counter_f10ke:wysi_counter   ;
-;       |clk_div_n:clk_div_n_ghost_normal|     ; 15 (7)      ; 9            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal                                                        ;
-;          |lpm_counter:count_rtl_4|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_4                                ;
-;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_4|alt_counter_f10ke:wysi_counter ;
-;       |clk_div_n:clk_div_n_ghost_slow|       ; 15 (7)      ; 9            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow                                                          ;
-;          |lpm_counter:count_rtl_5|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_5                                  ;
-;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_5|alt_counter_f10ke:wysi_counter   ;
+;          |lpm_counter:count_rtl_4|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4                                  ;
+;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_fast|lpm_counter:count_rtl_4|alt_counter_f10ke:wysi_counter   ;
+;       |clk_div_n:clk_div_n_ghost_normal|     ; 12 (4)      ; 9            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal                                                        ;
+;          |lpm_counter:count_rtl_6|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6                                ;
+;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_normal|lpm_counter:count_rtl_6|alt_counter_f10ke:wysi_counter ;
+;       |clk_div_n:clk_div_n_ghost_slow|       ; 14 (6)      ; 9            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 9 (1)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow                                                          ;
+;          |lpm_counter:count_rtl_7|           ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7                                  ;
+;             |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|clk_div_n:clk_div_n_ghost_slow|lpm_counter:count_rtl_7|alt_counter_f10ke:wysi_counter   ;
 ;       |lpm_add_sub:Add0|                     ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add0                                                                        ;
 ;          |addcore:adder|                     ; 5 (1)       ; 0            ; 0           ; 0    ; 5 (1)        ; 0 (0)             ; 0 (0)            ; 5 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add0|addcore:adder                                                          ;
 ;             |a_csnbuffer:result_node|        ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 4 (4)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node                                  ;
-;       |lpm_add_sub:Add10|                    ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add10                                                                       ;
-;          |addcore:adder|                     ; 5 (1)       ; 0            ; 0           ; 0    ; 5 (1)        ; 0 (0)             ; 0 (0)            ; 5 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add10|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 4 (4)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add10|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add11|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add11                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add11|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add11|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add28|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add28                                                                       ;
-;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add28|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add28|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add29|                    ; 10 (0)      ; 0            ; 0           ; 0    ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 10 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add29                                                                       ;
-;          |addcore:adder|                     ; 10 (1)      ; 0            ; 0           ; 0    ; 10 (1)       ; 0 (0)             ; 0 (0)            ; 10 (1)          ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add29|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 9 (9)       ; 0            ; 0           ; 0    ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 9 (9)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add29|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add30|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add30                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add30|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add30|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add31|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add31                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add31|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add31|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add32|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add32                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add32|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add32|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add33|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add34|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34                                                                       ;
-;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add33|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33                                                                       ;
+;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add33|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add34|                    ; 10 (0)      ; 0            ; 0           ; 0    ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 10 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34                                                                       ;
+;          |addcore:adder|                     ; 10 (1)      ; 0            ; 0           ; 0    ; 10 (1)       ; 0 (0)             ; 0 (0)            ; 10 (1)          ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 9 (9)       ; 0            ; 0           ; 0    ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 9 (9)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add34|addcore:adder|a_csnbuffer:result_node                                 ;
 ;       |lpm_add_sub:Add35|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add35                                                                       ;
 ;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add35|addcore:adder                                                         ;
 ;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add35|addcore:adder|a_csnbuffer:result_node                                 ;
@@ -840,21 +825,36 @@ applicable agreement for further details.
 ;       |lpm_add_sub:Add37|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add37                                                                       ;
 ;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add37|addcore:adder                                                         ;
 ;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add37|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add38|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add38                                                                       ;
+;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add38|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add38|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add39|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add39                                                                       ;
+;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add39|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add39|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add40|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add40                                                                       ;
+;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add40|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add40|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add41|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add41                                                                       ;
+;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add41|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add41|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add42|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add42                                                                       ;
+;          |addcore:adder|                     ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add42|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add42|addcore:adder|a_csnbuffer:result_node                                 ;
 ;       |lpm_add_sub:Add44|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add44                                                                       ;
 ;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add44|addcore:adder                                                         ;
 ;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add44|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add47|                    ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47                                                                       ;
-;          |addcore:adder|                     ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add48|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add48                                                                       ;
-;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add48|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add48|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add49|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add49                                                                       ;
-;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add49|addcore:adder                                                         ;
-;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add49|addcore:adder|a_csnbuffer:result_node                                 ;
-;       |lpm_add_sub:Add4|                     ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4                                                                        ;
-;          |addcore:adder|                     ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4|addcore:adder                                                          ;
-;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node                                  ;
+;       |lpm_add_sub:Add45|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add45                                                                       ;
+;          |addcore:adder|                     ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add45|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 9 (9)       ; 0            ; 0           ; 0    ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add45|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add46|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add46                                                                       ;
+;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add46|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add46|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add47|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47                                                                       ;
+;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47|addcore:adder                                                         ;
+;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add47|addcore:adder|a_csnbuffer:result_node                                 ;
+;       |lpm_add_sub:Add4|                     ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4                                                                        ;
+;          |addcore:adder|                     ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4|addcore:adder                                                          ;
+;             |a_csnbuffer:result_node|        ; 11 (11)     ; 0            ; 0           ; 0    ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node                                  ;
 ;       |lpm_add_sub:Add5|                     ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add5                                                                        ;
 ;          |addcore:adder|                     ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add5|addcore:adder                                                          ;
 ;             |a_csnbuffer:result_node|        ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node                                  ;
@@ -882,11 +882,6 @@ applicable agreement for further details.
 ;          |altrom:srom|                       ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_rom:bitmap_font|altrom:srom                                                         ;
 ;       |lpm_rom:rom_0|                        ; 0 (0)       ; 0            ; 2700        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_rom:rom_0                                                                           ;
 ;          |altrom:srom|                       ; 0 (0)       ; 0            ; 2700        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pacman|pacman_core:core_0|lpm_rom:rom_0|altrom:srom                                                               ;
-;       |vga_sync:vga_sync_0|                  ; 66 (43)     ; 48           ; 0           ; 0    ; 18 (15)      ; 20 (20)           ; 28 (8)           ; 21 (1)          ; 0 (0)      ; |pacman|pacman_core:core_0|vga_sync:vga_sync_0                                                                     ;
-;          |lpm_counter:h_count_rtl_6|         ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|vga_sync:vga_sync_0|lpm_counter:h_count_rtl_6                                           ;
-;             |alt_counter_f10ke:wysi_counter| ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|pacman_core:core_0|vga_sync:vga_sync_0|lpm_counter:h_count_rtl_6|alt_counter_f10ke:wysi_counter            ;
-;          |lpm_counter:v_count_rtl_7|         ; 13 (0)      ; 10           ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |pacman|pacman_core:core_0|vga_sync:vga_sync_0|lpm_counter:v_count_rtl_7                                           ;
-;             |alt_counter_f10ke:wysi_counter| ; 13 (13)     ; 10           ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |pacman|pacman_core:core_0|vga_sync:vga_sync_0|lpm_counter:v_count_rtl_7|alt_counter_f10ke:wysi_counter            ;
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -896,13 +891,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+----------+-------------+
 ; Name             ; Pin Type ; Pad to Core ;
 +------------------+----------+-------------+
-; clk_25Mhz        ; Input    ; OFF         ;
+; clk_25MHz        ; Input    ; OFF         ;
 ; reset_n          ; Input    ; OFF         ;
 ; game_controls[4] ; Input    ; OFF         ;
 ; game_speed[1]    ; Input    ; OFF         ;
 ; game_speed[0]    ; Input    ; OFF         ;
-; game_controls[1] ; Input    ; OFF         ;
 ; game_controls[0] ; Input    ; OFF         ;
+; game_controls[1] ; Input    ; OFF         ;
 ; game_controls[3] ; Input    ; OFF         ;
 ; game_controls[2] ; Input    ; OFF         ;
 ; horz_sync        ; Output   ; OFF         ;
@@ -932,12 +927,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+-------------+------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------------------------+--------------+
 ; Name                                                       ; Mode        ; Clock Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF                          ; Location     ;
 +------------------------------------------------------------+-------------+------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------------------------+--------------+
-; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|content    ; Single Port ;            ; 900          ; 3            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2700 ; 2    ; none                         ; ESB_F, ESB_E ;
-; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|content    ; ROM         ;            ; 1024         ; 2            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2048 ; 2    ; background\\pacman_cells.hex ; ESB_I, ESB_D ;
-; pacman_core:core_0|lpm_rom:bitmap_1|altrom:srom|content    ; ROM         ;            ; 1024         ; 1            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 1024 ; 1    ; sprites\\pacman.hex          ; ESB_I        ;
-; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|content    ; ROM         ;            ; 1024         ; 2            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2048 ; 2    ; sprites\\blue_ghost.hex      ; ESB_D, ESB_C ;
-; pacman_core:core_0|lpm_rom:bitmap_font|altrom:srom|content ; ROM         ;            ; 2304         ; 1            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2304 ; 1    ; sprites\\font.hex            ; ESB_B        ;
-; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|content       ; ROM         ;            ; 900          ; 3            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2700 ; 2    ; maps\\map_01.hex             ; ESB_H, ESB_G ;
+; pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|content    ; Single Port ;            ; 900          ; 3            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2700 ; 2    ; none                         ; ESB_I, ESB_H ;
+; pacman_core:core_0|lpm_rom:bitmap_0|altrom:srom|content    ; ROM         ;            ; 1024         ; 2            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2048 ; 2    ; background\\pacman_cells.hex ; ESB_A, ESB_B ;
+; pacman_core:core_0|lpm_rom:bitmap_1|altrom:srom|content    ; ROM         ;            ; 1024         ; 1            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 1024 ; 1    ; sprites\\pacman.hex          ; ESB_D        ;
+; pacman_core:core_0|lpm_rom:bitmap_2|altrom:srom|content    ; ROM         ;            ; 1024         ; 2            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2048 ; 2    ; sprites\\blue_ghost.hex      ; ESB_B, ESB_A ;
+; pacman_core:core_0|lpm_rom:bitmap_font|altrom:srom|content ; ROM         ;            ; 2304         ; 1            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2304 ; 1    ; sprites\\font.hex            ; ESB_F        ;
+; pacman_core:core_0|lpm_rom:rom_0|altrom:srom|content       ; ROM         ;            ; 900          ; 3            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 2700 ; 2    ; maps\\map_01.hex             ; ESB_G, ESB_E ;
 +------------------------------------------------------------+-------------+------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+------------------------------+--------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -954,7 +949,7 @@ The pin-out file can be found in C:/Documents and Settings/ra030845/Desktop/Pacm
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 6.1 Build 201 11/27/2006 SJ Full Version
-    Info: Processing started: Mon Aug 27 19:55:36 2007
+    Info: Processing started: Tue Aug 28 23:34:21 2007
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off pacman -c pacman
 Info: Selected device EPF10K70RC240-4 for design "pacman"
 Info: Design contains non-registered write enable "pacman_core:core_0|lpm_ram_dq:ram_0|altram:sram|q[2]". Random data may be written to it during initialization.
@@ -967,16 +962,16 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Mon Aug 27 2007 at 19:56:37
+Info: Started fitting attempt 1 on Tue Aug 28 2007 at 23:35:20
 Info: Fitter placement preparation operations beginning
-Info: Fitter placement preparation operations ending: elapsed time is 00:00:45
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:31
 Info: Fitter placement operations beginning
-Info: Fitter placement operations ending: elapsed time is 00:00:46
+Info: Fitter placement operations ending: elapsed time is 00:02:10
 Info: Fitter routing operations beginning
-Info: Fitter routing operations ending: elapsed time is 00:01:14
+Info: Fitter routing operations ending: elapsed time is 00:00:08
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Allocated 176 megabytes of memory during processing
-    Info: Processing ended: Mon Aug 27 19:59:31 2007
-    Info: Elapsed time: 00:03:55
+    Info: Allocated 173 megabytes of memory during processing
+    Info: Processing ended: Tue Aug 28 23:38:18 2007
+    Info: Elapsed time: 00:03:57
 
 

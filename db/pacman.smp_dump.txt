@@ -366,34 +366,6 @@ pacman_direction.down 0 0 1 1
 pacman_direction.up 0 1 0 1 
 pacman_direction.right 1 0 0 1 
 
-State Machine - |pacman|pacman_core:core_0|level_ai[0]
-Name level_ai[0].follow_pen level_ai[0].run_pacman level_ai[0].follow_pacman level_ai[0].wander_around 
-level_ai[0].wander_around 0 0 0 0 
-level_ai[0].follow_pacman 0 0 1 1 
-level_ai[0].run_pacman 0 1 0 1 
-level_ai[0].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai[1]
-Name level_ai[1].follow_pen level_ai[1].run_pacman level_ai[1].follow_pacman level_ai[1].wander_around 
-level_ai[1].wander_around 0 0 0 0 
-level_ai[1].follow_pacman 0 0 1 1 
-level_ai[1].run_pacman 0 1 0 1 
-level_ai[1].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai[2]
-Name level_ai[2].follow_pen level_ai[2].run_pacman level_ai[2].follow_pacman level_ai[2].wander_around 
-level_ai[2].wander_around 0 0 0 0 
-level_ai[2].follow_pacman 0 0 1 1 
-level_ai[2].run_pacman 0 1 0 1 
-level_ai[2].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai[3]
-Name level_ai[3].follow_pen level_ai[3].run_pacman level_ai[3].follow_pacman level_ai[3].wander_around 
-level_ai[3].wander_around 0 0 0 0 
-level_ai[3].follow_pacman 0 0 1 1 
-level_ai[3].run_pacman 0 1 0 1 
-level_ai[3].follow_pen 1 0 0 1 
-
 State Machine - |pacman|pacman_core:core_0|game_process_state_signal
 Name game_process_state_signal.process_collision game_process_state_signal.assert_collision game_process_state_signal.process_pellet game_process_state_signal.process_movement 
 game_process_state_signal.process_movement 0 0 0 0 
@@ -454,34 +426,6 @@ pacman_change_direction_signal.left 0 0 0 0
 pacman_change_direction_signal.down 0 0 1 1 
 pacman_change_direction_signal.up 0 1 0 1 
 pacman_change_direction_signal.right 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai_signal[0]
-Name level_ai_signal[0].follow_pen level_ai_signal[0].run_pacman level_ai_signal[0].follow_pacman level_ai_signal[0].wander_around 
-level_ai_signal[0].wander_around 0 0 0 0 
-level_ai_signal[0].follow_pacman 0 0 1 1 
-level_ai_signal[0].run_pacman 0 1 0 1 
-level_ai_signal[0].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai_signal[1]
-Name level_ai_signal[1].follow_pen level_ai_signal[1].run_pacman level_ai_signal[1].follow_pacman level_ai_signal[1].wander_around 
-level_ai_signal[1].wander_around 0 0 0 0 
-level_ai_signal[1].follow_pacman 0 0 1 1 
-level_ai_signal[1].run_pacman 0 1 0 1 
-level_ai_signal[1].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai_signal[2]
-Name level_ai_signal[2].follow_pen level_ai_signal[2].run_pacman level_ai_signal[2].follow_pacman level_ai_signal[2].wander_around 
-level_ai_signal[2].wander_around 0 0 0 0 
-level_ai_signal[2].follow_pacman 0 0 1 1 
-level_ai_signal[2].run_pacman 0 1 0 1 
-level_ai_signal[2].follow_pen 1 0 0 1 
-
-State Machine - |pacman|pacman_core:core_0|level_ai_signal[3]
-Name level_ai_signal[3].follow_pen level_ai_signal[3].run_pacman level_ai_signal[3].follow_pacman level_ai_signal[3].wander_around 
-level_ai_signal[3].wander_around 0 0 0 0 
-level_ai_signal[3].follow_pacman 0 0 1 1 
-level_ai_signal[3].run_pacman 0 1 0 1 
-level_ai_signal[3].follow_pen 1 0 0 1 
 
 State Machine - |pacman|pacman_core:core_0|ghost_ai_state_signal[3]
 Name ghost_ai_state_signal[3].moving ghost_ai_state_signal[3].waiting ghost_ai_state_signal[3].confirming_move ghost_ai_state_signal[3].asserting ghost_ai_state_signal[3].deciding ghost_ai_state_signal[3].acquiring ghost_ai_state_signal[3].analysing ghost_ai_state_signal[3].selecting 

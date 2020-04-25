@@ -17,8 +17,9 @@ package pacman_types is
 	constant START_WAIT_TIME  : positive := 10;
 	constant SUPER_TIME       : positive := 60;
 	constant SUPER_ALERT      : positive := 15;
-	constant GHOST_SLOW       : positive := 40;
-	constant GHOST_FAST       : positive := 40;
+	constant GHOST_SLOW       : integer  := 40;
+	constant GHOST_NORMAL     : integer  := 5;
+	constant GHOST_FAST       : integer  := -40;
 	constant ROM_LENGTH       : positive := MAP_WIDTH*MAP_HEIGHT;
 	constant ROM_ADDR_LENGTH  : positive := 10; -- ceil(lg(MAP_WIDTH*MAP_HEIGHT))
 

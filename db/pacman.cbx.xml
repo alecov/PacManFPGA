@@ -1,29 +1,28 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="pacman">
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add32" CBX_FILE_NAME="add_sub_cnh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add49" CBX_FILE_NAME="add_sub_29h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add41" CBX_FILE_NAME="add_sub_cnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add5" CBX_FILE_NAME="add_sub_u8h.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|LPM_ROM:bitmap_font|altrom:srom|lpm_mux:mux" CBX_FILE_NAME="mux_hbc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add33" CBX_FILE_NAME="add_sub_cnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add33" CBX_FILE_NAME="add_sub_ooh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add42" CBX_FILE_NAME="add_sub_cnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add6" CBX_FILE_NAME="add_sub_29h.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add29" CBX_FILE_NAME="add_sub_ooh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add30" CBX_FILE_NAME="add_sub_cnh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add34" CBX_FILE_NAME="add_sub_cnh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add47" CBX_FILE_NAME="add_sub_jch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add34" CBX_FILE_NAME="add_sub_ooh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add38" CBX_FILE_NAME="add_sub_cnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add47" CBX_FILE_NAME="add_sub_29h.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add7" CBX_FILE_NAME="add_sub_lch.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_jch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add31" CBX_FILE_NAME="add_sub_cnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add35" CBX_FILE_NAME="add_sub_cnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add39" CBX_FILE_NAME="add_sub_cnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_kch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add40" CBX_FILE_NAME="add_sub_cnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add44" CBX_FILE_NAME="add_sub_udh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add48" CBX_FILE_NAME="add_sub_u8h.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add8" CBX_FILE_NAME="add_sub_lch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add10" CBX_FILE_NAME="add_sub_ich.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|VGA_SYNC:vga_sync_0|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_ooh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add36" CBX_FILE_NAME="add_sub_cnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add45" CBX_FILE_NAME="add_sub_jch.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add9" CBX_FILE_NAME="add_sub_lch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add11" CBX_FILE_NAME="add_sub_cnh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add28" CBX_FILE_NAME="add_sub_ooh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add37" CBX_FILE_NAME="add_sub_cnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pacman|pacman_core:core_0|lpm_add_sub:Add46" CBX_FILE_NAME="add_sub_u8h.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
